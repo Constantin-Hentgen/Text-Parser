@@ -1,6 +1,5 @@
 # French-text-analyzer
 
-The goal of this repo is to experience coding by using git and github (for the first time).
 The python program is made to analyze a .txt file and tell you the letters' frequency or the words' one.
 It basically will have some features just like the text editor in linux terminal nano.
 
