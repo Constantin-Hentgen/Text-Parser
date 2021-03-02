@@ -2,32 +2,54 @@
 #aussi pouvoir dire quel sont les mots les plus fréquents
 #faire l'intégralité du dev en POO
 #permettre l'exploration par mot et par phrase
+#permettre la lecture par ligne
 
 f = open('hugo_notre_dame_de_paris.txt','r')
 lecture = f.read()
-#on stocke tout le texte dans la liste lecture
-#print(lecture)
 f.close()
 
-number = 0
-numbera = 0
-numbere = 0
-numberw = 0
+#si il y a un espace c'est un nouveau mot je lis, dès que c'est un espace j'ajoute les caractères
 
-for a in lecture:
-    number += 1
+#faire une fonction pour afficher un arrondi super propre à lire
 
-    if a == "a":
-        numbera += 1
+#variable = 0.12345
+#variable = str(variable) faire attention puisque le point est considéré comme un caratère
+#print(variable[3])
+
+def arrondi(number):
+    number = str(number)
+    product = ""
+    iteration = 0
+    test = 0
+
+    while iteration < 2:
+        if number[test] != "0" and number[test] != ".":
+            iteration += 1
+
+        product += number[test]
+        test += 1
+
+    return product,iteration,test
+
+print("fonction arrondi pour number = 0.0000000323123456 : ", arrondi(0.000000032312346))
+
+#il va de chiffre en chiffre, il lui faut 3 chiffres non nuls . compris
+
+
+
+
+def frequency(element):
+    element = str(element)
+    total = 0
+    number = 0
+
+    for letter in lecture:
+        total += 1
+
+        if letter == element:
+            number += 1
     
-    elif a == "e":
-        numbere += 1
-        
-    elif a == "w":
-        numberw += 1
+    return number*100/total, "%"
 
-#print(number)
-#faire un arrondi à la deuxième décimale non-nulle
-print("a = ",int(numbera*1000/number)/10)
-print("e = ",int(numbere*1000/number)/10)
-print("w = ",int(numberw*1000/number)/10)
+#element = input("Enter a character : ")
+#print(frequency(element))
