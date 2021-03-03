@@ -94,6 +94,8 @@ def ranker():
 rank = ranker()
 
 # print(split[randint(0,len(split))])
-
+#faire un algo de recherche sous forme de fonction
 print(split)
 print(rank)
+
+#let's add some comments
