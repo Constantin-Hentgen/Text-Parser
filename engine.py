@@ -101,3 +101,4 @@ print(rank)
 #let's add some comments
 #finally I can bring some modifications to this branch just like this comment
 #I hope there isn't even one single issue with that
+#ici c'est la branche maîtresse et seul les nouvelle fonctionnalités vérifiées peuvent être ajoutées
