@@ -1,43 +1,32 @@
 from random import randint
 
-# utiliser un fichier remplis de français pour pouvoir y faire une analyse de fréquence des lettres
-# aussi pouvoir dire quel sont les mots les plus fréquents
-# faire l'intégralité du dev en POO
-# permettre l'exploration par mot et par phrase
-# permettre la lecture par ligne
-
 f = open("hugo_notre_dame_de_paris.txt", "r")
 lecture = f.read()
 f.close()
 
-def frequency(element):
-    element = str(element)
+
+def frequency(character, document):
     total = 0
     number = 0
-    space = 0
 
-    for letter in lecture:
+    for letter in document:
         total += 1
 
-        if letter == element:
+        if letter == character:
             number += 1
 
-        elif letter == " ":
-            space += 1
-
-    return number * 100 / total, space * 100 / total, total / space
+    return number * 100 / total
 
 
-# element = input("Enter a character : ")
-# print(frequency(element))
+# print(frequency("e",lecture))
 
 
-def split():
+def split(document):
     split = []
     iterator = 0
     iteration = 0
 
-    for a in lecture:
+    for a in document:
         if (
             a == " "
             or a == "."
@@ -63,8 +52,8 @@ def split():
             or a == "8"
             or a == "9"
         ):
-            if lecture[iterator:iteration] != "":
-                split.append(lecture[iterator:iteration])
+            if document[iterator:iteration] != "":
+                split.append(document[iterator:iteration])
             iterator = iteration + 1
 
         iteration += 1
@@ -72,33 +61,58 @@ def split():
     return split
 
 
-# split = split()
-split = ["bonsoir", "je", "suis", "bonsoir", "bonjour"]
+# print(split(lecture))
 
 
-def ranker():
+def ranker(liste):
     rank = []
     count = 0
 
-    for a in range(len(split)):
-        for b in range(len(split)):
-            if split[b] == split[a]:
+    for a in range(len(liste)):
+        for b in range(len(liste)):
+            if liste[b] == liste[a]:
                 count += 1
         rank.append(count)
         count = 0
 
     return rank
 
-#faire un top 50 des mots les plus utilisés par hugo
 
-rank = ranker()
+def merger(liste_A, liste_B):
 
+    for a in range(len(liste_A)):
+        liste_A[a] += "_" + str(liste_B[a])
+
+    return liste_A
+
+
+def sorter(liste):
+    for a in range(len(liste)):
+        temp = liste[a]
+        for b in range(len(liste)):
+            if str(liste[b]) == str(liste[a]):
+                a = 5
+    return liste
+
+
+split = ["bonsoir", "je", "suis", "bonsoir", "bonjour"]
+rank = ranker(split)
+# print(split)
+# print(rank)
+
+# merged = merger(split, rank)
+# print(sorter(merged))
+
+
+# faire une fonction pour clean le nombre d'occurences
+# faire une fonction qui permet de trouver un mot en fonction de caractéristiques
+# telle que la longueur ou encore les lettres qui le compose
+
+# faire un top 50 des mots les plus utilisés par hugo
 # print(split[randint(0,len(split))])
-#faire un algo de recherche sous forme de fonction
-print(split)
-print(rank)
+# je peux merge les deux puis les classer et supprimer les doublons
 
-#let's add some comments
-#finally I can bring some modifications to this branch just like this comment
-#I hope there isn't even one single issue with that
-#ici c'est la branche maîtresse et seul les nouvelle fonctionnalités vérifiées peuvent être ajoutées
+# utiliser un fichier remplis de français pour pouvoir y faire une analyse de fréquence des lettres
+# aussi pouvoir dire quel sont les mots les plus fréquents
+# permettre l'exploration par mot et par phrase
+# permettre la lecture par ligne
