@@ -97,4 +97,4 @@ rank = ranker()
 #faire un algo de recherche sous forme de fonction
 print(split)
 print(rank)
-#ici c'est la branche de test
+#ici c'est la branche de test et je fais un peu ce que je veux pour faire des tests
