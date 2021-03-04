@@ -78,41 +78,43 @@ def ranker(liste):
     return rank
 
 
-def merger(liste_A, liste_B):
+def sorter(liste_rank,real_liste):
+    for a in range(len(liste_rank)):
+        for b in range(len(liste_rank)):
+            if liste_rank[b] < liste_rank[a]:
+                liste_rank[a],liste_rank[b] = liste_rank[b],liste_rank[a]
+                real_liste[a],real_liste[b] = real_liste[b],real_liste[a]
 
-    for a in range(len(liste_A)):
-        liste_A[a] += "_" + str(liste_B[a])
+    a = 0
+    b = 1
+        
+    while real_liste[a] == real_liste[b]:
+        del real_liste[b]
+        del liste_rank[b]
 
-    return liste_A
+        if real_liste[a] != real_liste[b]:
+            a += 1
+            b += 1
+    
+    return real_liste,liste_rank
 
 
-def sorter(liste):
-    for a in range(len(liste)):
-        temp = liste[a]
-        for b in range(len(liste)):
-            if str(liste[b]) == str(liste[a]):
-                a = 5
-    return liste
-
-
-split = ["bonsoir", "je", "suis", "bonsoir", "bonjour"]
+split = ["bonsoir", "je", "suis", "bonsoir", "bonjour","bonsoir","bonsoir", "suis", "bonsoir", "suis", "bonsoir"]
 rank = ranker(split)
-# print(split)
-# print(rank)
+world = sorter(rank,split)
+resultat = 0
 
-# merged = merger(split, rank)
-# print(sorter(merged))
+for a in range(len(world[1])):
+    resultat += world[1][a]
 
+for a in range(len(world[1])-1):
+    prop = 100*world[1][a]/resultat
+    print(prop," : ", world[0][a])
 
+# print(split[randint(0,len(split))])
+
+# faire un top 50 des mots les plus utilisés par hugo : donner le proportions
 # faire une fonction pour clean le nombre d'occurences
 # faire une fonction qui permet de trouver un mot en fonction de caractéristiques
-# telle que la longueur ou encore les lettres qui le compose
-
-# faire un top 50 des mots les plus utilisés par hugo
-# print(split[randint(0,len(split))])
-# je peux merge les deux puis les classer et supprimer les doublons
-
-# utiliser un fichier remplis de français pour pouvoir y faire une analyse de fréquence des lettres
-# aussi pouvoir dire quel sont les mots les plus fréquents
 # permettre l'exploration par mot et par phrase
 # permettre la lecture par ligne
