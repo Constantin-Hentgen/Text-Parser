@@ -78,16 +78,17 @@ def ranker(liste):
     return rank
 
 
-def sorter(liste_rank,real_liste):
+# algo de tri est mauvais
+def sorter(liste_rank, real_liste):
     for a in range(len(liste_rank)):
         for b in range(len(liste_rank)):
             if liste_rank[b] < liste_rank[a]:
-                liste_rank[a],liste_rank[b] = liste_rank[b],liste_rank[a]
-                real_liste[a],real_liste[b] = real_liste[b],real_liste[a]
+                liste_rank[a], liste_rank[b] = liste_rank[b], liste_rank[a]
+                real_liste[a], real_liste[b] = real_liste[b], real_liste[a]
 
     a = 0
     b = 1
-        
+
     while real_liste[a] == real_liste[b]:
         del real_liste[b]
         del liste_rank[b]
@@ -95,26 +96,25 @@ def sorter(liste_rank,real_liste):
         if real_liste[a] != real_liste[b]:
             a += 1
             b += 1
-    
-    return real_liste,liste_rank
+
+    return real_liste, liste_rank
 
 
-split = ["bonsoir", "je", "suis", "bonsoir", "bonjour","bonsoir","bonsoir", "suis", "bonsoir", "suis", "bonsoir"]
-rank = ranker(split)
-world = sorter(rank,split)
+lecture = split(lecture)
+rank = ranker(lecture)
+world = sorter(rank, lecture)
 resultat = 0
 
+print(world[0])
 for a in range(len(world[1])):
     resultat += world[1][a]
 
-for a in range(len(world[1])-1):
-    prop = 100*world[1][a]/resultat
-    print(prop," : ", world[0][a])
+for a in range(50):
+    prop = 100 * world[1][a] / resultat
+    print(prop, " : ", world[0][a])
 
 # print(split[randint(0,len(split))])
 
-# faire un top 50 des mots les plus utilisés par hugo : donner le proportions
-# faire une fonction pour clean le nombre d'occurences
-# faire une fonction qui permet de trouver un mot en fonction de caractéristiques
-# permettre l'exploration par mot et par phrase
-# permettre la lecture par ligne
+# trouver un mot en fonction de caractéristiques
+# exploration par mot et par phrase
+# lecture par ligne
