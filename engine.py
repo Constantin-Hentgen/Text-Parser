@@ -78,14 +78,24 @@ def ranker(liste):
     return rank
 
 
-# algo de tri est mauvais
-def sorter(liste_rank, real_liste):
-    for a in range(len(liste_rank)):
-        for b in range(len(liste_rank)):
-            if liste_rank[b] < liste_rank[a]:
-                liste_rank[a], liste_rank[b] = liste_rank[b], liste_rank[a]
-                real_liste[a], real_liste[b] = real_liste[b], real_liste[a]
+def algotri(liste, real_liste):
+    for a in range(len(liste)):
+        maximum = 0
+        rank = 0
+        for b in range(len(liste) - a):
+            if liste[b] >= maximum:
+                maximum = liste[b]
+                rank = b
+        liste[rank], liste[len(liste) - a - 1] = liste[len(liste) - a - 1], liste[rank]
+        real_liste[rank], real_liste[len(liste) - a - 1] = (
+            real_liste[len(liste) - a - 1],
+            real_liste[rank],
+        )
 
+    return real_liste
+
+
+def sorter(liste_rank, real_liste):
     a = 0
     b = 1
 
@@ -100,21 +110,50 @@ def sorter(liste_rank, real_liste):
     return real_liste, liste_rank
 
 
-lecture = split(lecture)
-rank = ranker(lecture)
-world = sorter(rank, lecture)
-resultat = 0
+split = [
+    "bonsoir",
+    "je",
+    "suis",
+    "bonsoir",
+    "yo",
+    "bonjour",
+    "bonsoir",
+    "yo",
+    "bonsoir",
+    "suis",
+    "yo",
+    "bonsoir",
+    "suis",
+    "bonsoir",
+]
+rank = ranker(split)
 
-print(world[0])
-for a in range(len(world[1])):
-    resultat += world[1][a]
+algotri(rank, split)
 
-for a in range(50):
-    prop = 100 * world[1][a] / resultat
-    print(prop, " : ", world[0][a])
+world = sorter(rank, split)
 
+print(world)
+# print(rank)
+# print(algotri(rank,split))
+
+
+#
+# lecture = split(lecture)
+# rank = ranker(lecture)
+# world = sorter(rank, lecture)
+# resultat = 0
+#
+# print(world[0])
+# for a in range(len(world[1])):
+#    resultat += world[1][a]
+#
+# for a in range(10):
+#    prop = 100 * world[1][a] / resultat
+#    print(prop, " : ", world[0][a])
+#
 # print(split[randint(0,len(split))])
 
 # trouver un mot en fonction de caractéristiques
 # exploration par mot et par phrase
 # lecture par ligne
+# prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
