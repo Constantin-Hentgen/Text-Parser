@@ -91,8 +91,9 @@ def algotri(liste, real_liste):
             real_liste[len(liste) - a - 1],
             real_liste[rank],
         )
+    # trier les élements selon les chaines de caractères pour le même nombre d'occurences
 
-    return liste,real_liste
+    return liste, real_liste
 
 
 def doublon(liste_rank, real_liste):
@@ -102,56 +103,54 @@ def doublon(liste_rank, real_liste):
     liste_propre.append(real_liste[0])
     rank_propre.append(liste_rank[0])
 
-    for a in range(len(liste_rank)-1):
-        if real_liste[a+1] != real_liste[a]:
-            liste_propre.append(real_liste[a+1])
-            rank_propre.append(liste_rank[a+1])
+    for a in range(len(liste_rank) - 1):
+        if real_liste[a + 1] != real_liste[a]:
+            liste_propre.append(real_liste[a + 1])
+            rank_propre.append(liste_rank[a + 1])
 
-    return rank_propre,liste_propre
+    return rank_propre, liste_propre
 
-split = [
-    "bonsoir",
-    "je",
-    "suis",
-    "bonsoir",
-    "yo",
-    "bonjour",
-    "bonsoir",
-    "yo",
-    "bonsoir",
-    "suis",
-    "yo",
-    "bonsoir",
-    "suis",
-    "bonsoir",
-    "bonsoir",
-    "bonsoir",
-    "bonsoir",
-    "bonsoir",
-    "bonsoir"
-]
-rank = ranker(split)
-world = algotri(rank, split)
+
+# split = [
+#    "bonsoir",
+#    "je",
+#    "suis",
+#    "bonsoir",
+#    "yo",
+#    "bonjour",
+#    "bonsoir",
+#    "yo",
+#    "bonsoir",
+#    "suis",
+#    "yo",
+#    "bonsoir",
+#    "suis",
+#    "bonsoir",
+#    "bonsoir",
+#    "bonsoir",
+#    "bonsoir",
+#    "bonsoir",
+#    "bonsoir"
+# ]
+
+
+lecture = split(lecture)
+universe = len(lecture)
+rank = ranker(lecture)
+world = algotri(rank, lecture)
 world2 = doublon(world[0], world[1])
 print(world2[0])
 print(world2[1])
-# lecture = split(lecture)
-# rank = ranker(lecture)
-# world = sorter(rank, lecture)
-# resultat = 0
 
-# print(world[0])
-# for a in range(len(world[1])):
-#    resultat += world[1][a]
-
-# for a in range(10):
-#    prop = 100 * world[1][a] / resultat
-#    print(prop, " : ", world[0][a])
+# for a in range(50):
+#   prop = 100 * world2[0][a] / universe
+#   print(int(1000*prop)/1000, "% : ",world2[1][a], " : ", world2[0][a] )
 
 # print(split[randint(0,len(split))])
+
 
 # trouver un mot en fonction de caractéristiques
 # exploration par mot et par phrase
 # lecture par ligne
 # prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
-#faire les exports de données : le traitement statistique : sur un document txt ou csv
+# faire les exports de données : le traitement statistique : sur un document txt ou csv
