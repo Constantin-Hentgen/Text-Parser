@@ -92,23 +92,22 @@ def algotri(liste, real_liste):
             real_liste[rank],
         )
 
-    return real_liste
+    return liste,real_liste
 
 
-def sorter(liste_rank, real_liste):
-    a = 0
-    b = 1
+def doublon(liste_rank, real_liste):
+    liste_propre = []
+    rank_propre = []
 
-    while real_liste[a] == real_liste[b]:
-        del real_liste[b]
-        del liste_rank[b]
+    liste_propre.append(real_liste[0])
+    rank_propre.append(liste_rank[0])
 
-        if real_liste[a] != real_liste[b]:
-            a += 1
-            b += 1
+    for a in range(len(liste_rank)-1):
+        if real_liste[a+1] != real_liste[a]:
+            liste_propre.append(real_liste[a+1])
+            rank_propre.append(liste_rank[a+1])
 
-    return real_liste, liste_rank
-
+    return rank_propre,liste_propre
 
 split = [
     "bonsoir",
@@ -125,35 +124,34 @@ split = [
     "bonsoir",
     "suis",
     "bonsoir",
+    "bonsoir",
+    "bonsoir",
+    "bonsoir",
+    "bonsoir",
+    "bonsoir"
 ]
 rank = ranker(split)
-
-algotri(rank, split)
-
-world = sorter(rank, split)
-
-print(world)
-# print(rank)
-# print(algotri(rank,split))
-
-
-#
+world = algotri(rank, split)
+world2 = doublon(world[0], world[1])
+print(world2[0])
+print(world2[1])
 # lecture = split(lecture)
 # rank = ranker(lecture)
 # world = sorter(rank, lecture)
 # resultat = 0
-#
+
 # print(world[0])
 # for a in range(len(world[1])):
 #    resultat += world[1][a]
-#
+
 # for a in range(10):
 #    prop = 100 * world[1][a] / resultat
 #    print(prop, " : ", world[0][a])
-#
+
 # print(split[randint(0,len(split))])
 
 # trouver un mot en fonction de caractéristiques
 # exploration par mot et par phrase
 # lecture par ligne
 # prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
+#faire les exports de données : le traitement statistique : sur un document txt ou csv
