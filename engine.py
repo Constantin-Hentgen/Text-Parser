@@ -151,6 +151,5 @@ print(world2[1])
 
 # trouver un mot en fonction de caractéristiques
 # exploration par mot et par phrase
-# lecture par ligne
 # prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
 # faire les exports de données : le traitement statistique : sur un document txt ou csv
