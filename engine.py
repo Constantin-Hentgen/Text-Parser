@@ -18,7 +18,7 @@ def frequency(character, document):
     return number * 100 / total
 
 
-# print(frequency("e",lecture))
+#print(frequency("e",lecture))
 
 
 def split(document):
@@ -32,8 +32,17 @@ def split(document):
             or a == "."
             or a == ","
             or a == "\n"
+            or a == "/"
+            or a == "\\"
+            or a == "*"
+            or a == "%"
+            or a == "&"
             or a == " "
+            or a == "!"
+            or a == "?"
             or a == ""
+            or a == "("
+            or a == ")"
             or a == "–"
             or a == "…"
             or a == "’"
@@ -51,6 +60,7 @@ def split(document):
             or a == "7"
             or a == "8"
             or a == "9"
+            or a == "\x0c"
         ):
             if document[iterator:iteration] != "":
                 split.append(document[iterator:iteration])
@@ -61,10 +71,8 @@ def split(document):
     return split
 
 
-# print(split(lecture))
 
-
-def ranker(liste):
+def ranker(liste): #renvoie une liste complémentaire qui remplace chaque mot par son nombre d'occurences
     rank = []
     count = 0
 
@@ -78,22 +86,24 @@ def ranker(liste):
     return rank
 
 
-def algotri(liste, real_liste):
-    for a in range(len(liste)):
-        maximum = 0
-        rank = 0
-        for b in range(len(liste) - a):
-            if liste[b] >= maximum:
-                maximum = liste[b]
-                rank = b
-        liste[rank], liste[len(liste) - a - 1] = liste[len(liste) - a - 1], liste[rank]
-        real_liste[rank], real_liste[len(liste) - a - 1] = (
-            real_liste[len(liste) - a - 1],
-            real_liste[rank],
-        )
-    # trier les élements selon les chaines de caractères pour le même nombre d'occurences
+def gatherer(liste_rank,real_liste):
+    gathered = []
+    gathered_rank = []
+    
+    while len(real_liste) > 0:
+        gathered.append(real_liste[0])
+        gathered_rank.append(liste_rank[0])
+        del real_liste[0]
+        del liste_rank[0]
+        for element in real_liste:
+            if element == gathered[-1]:
+                gathered.append(element)
+                gathered_rank.append(liste_rank[real_liste.index(element)])                
+                liste_rank.remove(liste_rank[real_liste.index(element)])
+                real_liste.remove(element)
+                
+    return gathered_rank, gathered
 
-    return liste, real_liste
 
 
 def doublon(liste_rank, real_liste):
@@ -111,36 +121,66 @@ def doublon(liste_rank, real_liste):
     return rank_propre, liste_propre
 
 
-# split = [
-#    "bonsoir",
-#    "je",
-#    "suis",
-#    "bonsoir",
-#    "yo",
-#    "bonjour",
-#    "bonsoir",
-#    "yo",
-#    "bonsoir",
-#    "suis",
-#    "yo",
-#    "bonsoir",
-#    "suis",
-#    "bonsoir",
-#    "bonsoir",
-#    "bonsoir",
-#    "bonsoir",
-#    "bonsoir",
-#    "bonsoir"
-# ]
 
 
-lecture = split(lecture)
-universe = len(lecture)
-rank = ranker(lecture)
-world = algotri(rank, lecture)
-world2 = doublon(world[0], world[1])
-print(world2[0])
-print(world2[1])
+
+
+
+def algotri(liste, real_liste):
+    for a in range(len(liste)):
+        maximum = 0
+        rank = 0
+        for b in range(len(liste) - a):  # tri des valeurs numériques tout en conservant le lien avec les mots
+            if liste[b] >= maximum:
+                maximum = liste[b]
+                rank = b
+        liste[rank], liste[len(liste) - a - 1] = liste[len(liste) - a - 1], liste[rank]
+        real_liste[rank], real_liste[len(liste) - a - 1] = real_liste[len(liste) - a - 1],real_liste[rank]
+
+    return liste, real_liste
+
+
+
+
+#print(split(lecture))
+
+lecture = split(lecture)   #stock de lecture dans une liste
+
+
+
+
+#C'EST FULL CASSÉ QUAND JE FAIT LE TRI POUR LES MOTS
+
+rank = ranker(lecture)     #crée une liste tierce qui remplace les mots par leur occurence
+
+ring = gatherer(rank,lecture)   # regroupe par chaîne de caractères, ça fonctionne jusqu'ici _apparemment_
+
+doublon = doublon(ring[0],ring[1]) #je sais pas encore mais ça à l'air ok avant toute execution de tri
+
+#tri = algotri(doublon[0],doublon[1]) 
+
+#C'EST FULL CASSÉ QUAND JE FAIT LE TRI POUR LES MOTS
+print(ring[0])
+print(doublon[0])
+
+#counter = 0
+#for element in doublon:
+#    if element == "à":
+#        counter += 1
+#print(counter)
+
+#truc bizarre avec deux "de" random à la fin qui n'ont pas été regroupés
+#print(ring[1])
+#print(doublon[1])
+
+
+
+#test = ["a","b","b","c","c","c","c"]
+#rank = [1,2,2,3,3,3,3]
+#print(doublon(rank,test))
+
+
+
 
 # for a in range(50):
 #   prop = 100 * world2[0][a] / universe
