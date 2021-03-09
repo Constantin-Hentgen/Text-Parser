@@ -126,18 +126,18 @@ def doublon(liste_rank, real_liste):
 
 
 
-def algotri(liste, real_liste):
-    for a in range(len(liste)):
+def algotri(liste_rank, real_liste):
+    for a in range(len(liste_rank)):
         maximum = 0
         rank = 0
-        for b in range(len(liste) - a):  # tri des valeurs numériques tout en conservant le lien avec les mots
-            if liste[b] >= maximum:
-                maximum = liste[b]
+        for b in range(len(liste_rank) - a):  # tri des valeurs numériques tout en conservant le lien avec les mots
+            if liste_rank[b] >= maximum:
+                maximum = liste_rank[b]
                 rank = b
-        liste[rank], liste[len(liste) - a - 1] = liste[len(liste) - a - 1], liste[rank]
-        real_liste[rank], real_liste[len(liste) - a - 1] = real_liste[len(liste) - a - 1],real_liste[rank]
+        liste_rank[rank], liste_rank[len(liste_rank) - a - 1] = liste_rank[len(liste_rank) - a - 1], liste_rank[rank]
+        real_liste[rank], real_liste[len(liste_rank) - a - 1] = real_liste[len(liste_rank) - a - 1], real_liste[rank]
 
-    return liste, real_liste
+    return liste_rank, real_liste
 
 
 
@@ -146,22 +146,18 @@ def algotri(liste, real_liste):
 
 lecture = split(lecture)   #stock de lecture dans une liste
 
-
-
-
-#C'EST FULL CASSÉ QUAND JE FAIT LE TRI POUR LES MOTS
-
 rank = ranker(lecture)     #crée une liste tierce qui remplace les mots par leur occurence
 
 ring = gatherer(rank,lecture)   # regroupe par chaîne de caractères, ça fonctionne jusqu'ici _apparemment_
 
 doublon = doublon(ring[0],ring[1]) #je sais pas encore mais ça à l'air ok avant toute execution de tri
 
-#tri = algotri(doublon[0],doublon[1]) 
+rank = doublon[0]
+lecture = doublon[1]
+#tri = algotri(rank,lecture) 
+print(lecture)
 
-#C'EST FULL CASSÉ QUAND JE FAIT LE TRI POUR LES MOTS
-print(ring[0])
-print(doublon[0])
+#commentaire de test pour montrer à Gauthier
 
 #counter = 0
 #for element in doublon:
