@@ -18,7 +18,7 @@ def frequency(character, document):
     return number * 100 / total
 
 
-#print(frequency("e",lecture))
+# print(frequency("e",lecture))
 
 
 def split(document):
@@ -41,6 +41,7 @@ def split(document):
             or a == "!"
             or a == "?"
             or a == ""
+            or a == ""
             or a == "("
             or a == ")"
             or a == "–"
@@ -63,16 +64,32 @@ def split(document):
             or a == "\x0c"
         ):
             if document[iterator:iteration] != "":
-                split.append(document[iterator:iteration])
+                split.append(document[iterator:iteration].lower())
             iterator = iteration + 1
 
         iteration += 1
 
     return split
 
+#imaginer une manière de fix le problème des mots cut avec un tiret et passage à la ligne
+
+def gatherer(liste):
+    gathered = []
+
+    while len(liste) > 0:
+        gathered.append(liste[0])
+        del liste[0]
+        for element in liste:
+            if element == gathered[-1]:
+                gathered.append(element)
+                liste.remove(element)
+
+    return gathered
 
 
-def ranker(liste): #renvoie une liste complémentaire qui remplace chaque mot par son nombre d'occurences
+def ranker(
+    liste,
+):  # renvoie une liste complémentaire qui remplace chaque mot par son nombre d'occurences
     rank = []
     count = 0
 
@@ -84,26 +101,6 @@ def ranker(liste): #renvoie une liste complémentaire qui remplace chaque mot pa
         count = 0
 
     return rank
-
-
-def gatherer(liste_rank,real_liste):
-    gathered = []
-    gathered_rank = []
-    
-    while len(real_liste) > 0:
-        gathered.append(real_liste[0])
-        gathered_rank.append(liste_rank[0])
-        del real_liste[0]
-        del liste_rank[0]
-        for element in real_liste:
-            if element == gathered[-1]:
-                gathered.append(element)
-                gathered_rank.append(liste_rank[real_liste.index(element)])                
-                liste_rank.remove(liste_rank[real_liste.index(element)])
-                real_liste.remove(element)
-                
-    return gathered_rank, gathered
-
 
 
 def doublon(liste_rank, real_liste):
@@ -121,66 +118,42 @@ def doublon(liste_rank, real_liste):
     return rank_propre, liste_propre
 
 
-
-
-
-
-
 def algotri(liste_rank, real_liste):
     for a in range(len(liste_rank)):
         maximum = 0
         rank = 0
-        for b in range(len(liste_rank) - a):  # tri des valeurs numériques tout en conservant le lien avec les mots
+        # tri des valeurs numériques tout en conservant le lien avec les mots
+        for b in range(len(liste_rank) - a):
             if liste_rank[b] >= maximum:
                 maximum = liste_rank[b]
                 rank = b
-        liste_rank[rank], liste_rank[len(liste_rank) - a - 1] = liste_rank[len(liste_rank) - a - 1], liste_rank[rank]
-        real_liste[rank], real_liste[len(liste_rank) - a - 1] = real_liste[len(liste_rank) - a - 1], real_liste[rank]
+        liste_rank[rank], liste_rank[len(liste_rank) - a - 1] = (
+            liste_rank[len(liste_rank) - a - 1],
+            liste_rank[rank],
+        )
+        real_liste[rank], real_liste[len(liste_rank) - a - 1] = (
+            real_liste[len(liste_rank) - a - 1],
+            real_liste[rank],
+        )
 
     return liste_rank, real_liste
 
 
+# print(split(lecture))
 
+lecture = split(lecture)#split validé
+universe = len(lecture)
+liste = gatherer(lecture)#gatherer validé
+rank = ranker(liste)#ranker validé
+liste = doublon(rank,liste)#doublon validé
 
-#print(split(lecture))
+liste = algotri(liste[0],liste[1])
+#print(liste)
 
-lecture = split(lecture)   #stock de lecture dans une liste
+for a in range(50):
+  prop = 100 * liste[0][len(liste[1])-1-a] / universe
+  print(int(1000*prop)/1000, "% : ",liste[1][len(liste[1])-1-a], " : ", liste[0][len(liste[1])-1-a] )
 
-rank = ranker(lecture)     #crée une liste tierce qui remplace les mots par leur occurence
-
-ring = gatherer(rank,lecture)   # regroupe par chaîne de caractères, ça fonctionne jusqu'ici _apparemment_
-
-doublon = doublon(ring[0],ring[1]) #je sais pas encore mais ça à l'air ok avant toute execution de tri
-
-rank = doublon[0]
-lecture = doublon[1]
-#tri = algotri(rank,lecture) 
-print(lecture)
-
-#commentaire de test pour montrer à Gauthier
-
-#counter = 0
-#for element in doublon:
-#    if element == "à":
-#        counter += 1
-#print(counter)
-
-#truc bizarre avec deux "de" random à la fin qui n'ont pas été regroupés
-#print(ring[1])
-#print(doublon[1])
-
-
-
-#test = ["a","b","b","c","c","c","c"]
-#rank = [1,2,2,3,3,3,3]
-#print(doublon(rank,test))
-
-
-
-
-# for a in range(50):
-#   prop = 100 * world2[0][a] / universe
-#   print(int(1000*prop)/1000, "% : ",world2[1][a], " : ", world2[0][a] )
 
 # print(split[randint(0,len(split))])
 
