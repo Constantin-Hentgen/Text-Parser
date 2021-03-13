@@ -258,6 +258,8 @@ print(
 # longueurs moyenne des phrases
 # trouver un mot en fonction de caractéristiques : nombre de lettres, lettres
 # demande entrée et cherche une correspondance
+# travailler la compatibilité anglais et code
+# doublons semblent ne pas fonctionner parfaitement pour les lettres et pour l'anglais + code
 
 # ETAPE 3
 # prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
