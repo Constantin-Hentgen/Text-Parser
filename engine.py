@@ -3,19 +3,41 @@ from random import randint
 f = open("hugo_notre_dame_de_paris.txt", "r", encoding="utf-8")
 lecture = f.read()
 f.close()
+original = lecture
 
+alphabet = "abcdefghijklmnopqrstuvwxyzçêèéâûîùôœæï"
+alpha = []
 
-def frequency(character, document):
+for a in range(len(alphabet)):
+    alpha.append(alphabet[a])
+
+def frequency(original):
+    ranking = []
     total = 0
     number = 0
+    newalphabet = []
 
-    for letter in document:
-        total += 1
+    for letter in original:
+        if letter != " ":
+            total += 1
 
-        if letter == character:
-            number += 1
+    for letter in alphabet:
+        for element in original:
+            if element == letter:
+                number += 1
+        
+        if number != 0:
+            number = int(number*10000/total)/100
+            ranking.append(number)
+        number = 0
 
-    return number * 100 / total
+    for a in range(len(ranking)):
+        newalphabet.append(alphabet[a])
+        
+    return ranking,newalphabet
+
+#taille moyenne des mots
+#longueurs moyenne des phrases
 
 def split(document):
     split = []
@@ -137,15 +159,7 @@ def algotri(liste_rank, real_liste):
 
     return liste_rank, real_liste
 
-
-
-alphabet = "abcdefghijklmnopqrstuvwxyzçêèéâûùôœï"
-
-
-
-
-
-
+#faire un mode langue et code
 
 lecture = split(lecture)  # split validé
 universe = len(lecture)
@@ -159,16 +173,24 @@ liste = doublon(rank, liste)  # doublon validé
 liste = algotri(liste[0], liste[1])
 sommeA = 0
 sommeB = 0
+ranking = frequency(original)
+ranking = algotri(ranking[0],ranking[1])
 
-for a in range(5000):
+for a in range(len(ranking[0])):
+    print("\t\t\t\t\t\t\t",a+1,"\t",ranking[1][len(ranking[0]) -1 - a],"\t",ranking[0][len(ranking[0]) - 1 - a],"% ")
+#DEBUT
+print("\t\t\t\t________________________________________________________________________\n")
+for a in range(30):
     prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
     sommeA += prop
     sommeB += liste[0][len(liste[1]) - 1 - a]
+
     if len(liste[1][len(liste[1]) - 1 - a]) >= 6:
         print("\t\t\t\t\t\t",a+1,"\t",
         liste[1][len(liste[1]) - 1 - a],
        "\t", liste[0][len(liste[1]) - 1 - a],"\t",
-        int(1000 * prop) / 1000 ,"% ")
+        int(1000 * prop) / 1000 ,"% ")    
+
     else:
         print("\t\t\t\t\t\t",a+1,"\t",
         liste[1][len(liste[1]) - 1 - a],
@@ -177,11 +199,8 @@ for a in range(5000):
         )
 
 print("\n\t\t\t\t\t\t\t\t\t",sommeB,"\t",int(1000 * sommeA) / 1000 ,"% ")
-
-# print(frequency("e",lecture))
-
+#FIN
 # print(split[randint(0,len(split))])
-
 
 # trouver un mot en fonction de caractéristiques
 # exploration par mot et par phrase
