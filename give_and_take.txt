@@ -1,0 +1,904 @@
+On a sunny Saturday afternoon in Silicon Valley, two proud fathers stood on the sidelines of a soccer
+field. They were watching their young daughters play together, and it was only a matter of time before
+they struck up a conversation about work. The taller of the two men was Danny Shader, a serial
+entrepreneur who had spent time at Netscape, Motorola, and Amazon. Intense, dark-haired, and
+capable of talking about business forever, Shader was in his late thirties by the time he launched his
+first company, and he liked to call himself the “old man of the Internet.” He loved building
+companies, and he was just getting his fourth start-up off the ground.
+     Shader had instantly taken a liking to the other father, a man named David Hornik who invests in
+companies for a living. At 5'4", with dark hair, glasses, and a goatee, Hornik is a man of eclectic
+interests: he collects Alice in Wonderland books, and in college he created his own major in
+computer music. He went on to earn a master’s in criminology and a law degree, and after burning the
+midnight oil at a law firm, he accepted a job offer to join a venture capital firm, where he spent the
+next decade listening to pitches from entrepreneurs and deciding whether or not to fund them.
+     During a break between soccer games, Shader turned to Hornik and said, “I’m working on
+something—do you want to see a pitch?” Hornik specialized in Internet companies, so he seemed like
+an ideal investor to Shader. The interest was mutual. Most people who pitch ideas are first-time
+entrepreneurs, with no track record of success. In contrast, Shader was a blue-chip entrepreneur who
+had hit the jackpot not once, but twice. In 1999, his first start-up, Accept.com, was acquired by
+Amazon for $175 million. In 2007, his next company, Good Technology, was acquired by Motorola
+for $500 million. Given Shader’s history, Hornik was eager to hear what he was up to next.
+    A few days after the soccer game, Shader drove to Hornik’s office and pitched his newest idea.
+Nearly a quarter of Americans have trouble making online purchases because they don’t have a bank
+account or credit card, and Shader was proposing an innovative solution to this problem. Hornik was
+one of the first venture capitalists to hear the pitch, and right off the bat, he loved it. Within a week, he
+put Shader in front of his partners and offered him a term sheet: he wanted to fund Shader’s company.
+    Although Hornik had moved fast, Shader was in a strong position. Given Shader’s reputation, and
+the quality of his idea, Hornik knew plenty of investors would be clamoring to work with Shader.
+“You’re rarely the only investor giving an entrepreneur a term sheet,” Hornik explains. “You’re
+competing with the best venture capital firms in the country, and trying to convince the entrepreneur to
+take your money instead of theirs.”
+    The best way for Hornik to land the investment was to set a deadline for Shader to make his
+decision. If Hornik made a compelling offer with a short fuse, Shader might sign it before he had the
+chance to pitch to other investors. This is what many venture capitalists do to stack the odds in their
+favor.
+    But Hornik didn’t give Shader a deadline. In fact, he practically invited Shader to shop his offer
+around to other investors. Hornik believed that entrepreneurs need time to evaluate their options, so
+as a matter of principle, he refused to present exploding offers. “Take as much time as you need to
+make the right decision,” he said. Although Hornik hoped Shader would conclude that the right
+decision was to sign with him, he put Shader’s best interests ahead of his own, giving Shader space to
+explore other options.
+    Shader did just that: he spent the next few weeks pitching his idea to other investors. In the
+meantime, Hornik wanted to make sure he was still a strong contender, so he sent Shader his most
+valuable resource: a list of forty references who could attest to Hornik’s caliber as an investor.
+Hornik knew that entrepreneurs look for the same attributes in investors that we all seek in financial
+advisers: competence and trustworthiness. When entrepreneurs sign with an investor, the investor
+joins their board of directors and provides expert advice. Hornik’s list of references reflected the
+blood, sweat, and tears that he had devoted to entrepreneurs over the course of more than a decade in
+the venture business. He knew they would vouch for his skill and his character.
+    A few weeks later, Hornik’s phone rang. It was Shader, ready to announce his decision.
+    “I’m sorry,” Shader said, “but I’m signing with another investor.”
+    The financial terms of the offer from Hornik and the other investor were virtually identical, so
+Hornik’s list of forty references should have given him an advantage. And after speaking with the
+references, it was clear to Shader that Hornik was a great guy.
+    But it was this very same spirit of generosity that doomed Hornik’s case. Shader worried that
+Hornik would spend more time encouraging him than challenging him. Hornik might not be tough
+enough to help Shader start a successful business, and the other investor had a reputation for being a
+brilliant adviser who questioned and pushed entrepreneurs. Shader walked away thinking, “I should
+probably add somebody to the board who will challenge me more. Hornik is so affable that I don’t
+know what he’ll be like in the boardroom.” When he called Hornik, he explained, “My heart said to
+go with you, but my head said to go with them. I decided to go with my head instead of my heart.”
+    Hornik was devastated, and he began to second-guess himself. “Am I a dope? If I had applied
+pressure to take the term sheet, maybe he would have taken it. But I’ve spent a decade building my
+reputation so this wouldn’t happen. How did this happen?”
+   David Hornik learned his lesson the hard way: good guys finish last.
+   Or do they?
+
+                                                  ***
+
+According to conventional wisdom, highly successful people have three things in common:
+motivation, ability, and opportunity. If we want to succeed, we need a combination of hard work,
+talent, and luck. The story of Danny Shader and David Hornik highlights a fourth ingredient, one that’s
+critical but often neglected: success depends heavily on how we approach our interactions with other
+people. Every time we interact with another person at work, we have a choice to make: do we try to
+claim as much value as we can, or contribute value without worrying about what we receive in
+return?
+     As an organizational psychologist and Wharton professor, I’ve dedicated more than ten years of
+my professional life to studying these choices at organizations ranging from Google to the U.S. Air
+Force, and it turns out that they have staggering consequences for success. Over the past three
+decades, in a series of groundbreaking studies, social scientists have discovered that people differ
+dramatically in their preferences for reciprocity—their desired mix of taking and giving. To shed
+some light on these preferences, let me introduce you to two kinds of people who fall at opposite ends
+of the reciprocity spectrum at work. I call them takers and givers.
+     Takers have a distinctive signature: they like to get more than they give. They tilt reciprocity in
+their own favor, putting their own interests ahead of others’ needs. Takers believe that the world is a
+competitive, dog-eat-dog place. They feel that to succeed, they need to be better than others. To prove
+their competence, they self-promote and make sure they get plenty of credit for their efforts. Garden-
+variety takers aren’t cruel or cutthroat; they’re just cautious and self-protective. “If I don’t look out
+for myself first,” takers think, “no one will.” Had David Hornik been more of a taker, he would have
+given Danny Shader a deadline, putting his goal of landing the investment ahead of Shader’s desire
+for a flexible timeline.
+     But Hornik is the opposite of a taker; he’s a giver. In the workplace, givers are a relatively rare
+breed. They tilt reciprocity in the other direction, preferring to give more than they get. Whereas
+takers tend to be self-focused, evaluating what other people can offer them, givers are other-focused,
+paying more attention to what other people need from them. These preferences aren’t about money:
+givers and takers aren’t distinguished by how much they donate to charity or the compensation that
+they command from their employers. Rather, givers and takers differ in their attitudes and actions
+toward other people. If you’re a taker, you help others strategically, when the benefits to you
+outweigh the personal costs. If you’re a giver, you might use a different cost-benefit analysis: you help
+whenever the benefits to others exceed the personal costs. Alternatively, you might not think about the
+personal costs at all, helping others without expecting anything in return. If you’re a giver at work,
+you simply strive to be generous in sharing your time, energy, knowledge, skills, ideas, and
+connections with other people who can benefit from them.
+     It’s tempting to reserve the giver label for larger-than-life heroes such as Mother Teresa or
+Mahatma Gandhi, but being a giver doesn’t require extraordinary acts of sacrifice. It just involves a
+focus on acting in the interests of others, such as by giving help, providing mentoring, sharing credit,
+or making connections for others. Outside the workplace, this type of behavior is quite common.
+According to research led by Yale psychologist Margaret Clark, most people act like givers in close
+relationships. In marriages and friendships, we contribute whenever we can without keeping score.
+    But in the workplace, give and take becomes more complicated. Professionally, few of us act
+purely like givers or takers, adopting a third style instead. We become matchers, striving to preserve
+an equal balance of giving and getting. Matchers operate on the principle of fairness: when they help
+others, they protect themselves by seeking reciprocity. If you’re a matcher, you believe in tit for tat,
+and your relationships are governed by even exchanges of favors.
+    Giving, taking, and matching are three fundamental styles of social interaction, but the lines
+between them aren’t hard and fast. You might find that you shift from one reciprocity style to another
+as you travel across different work roles and relationships.* It wouldn’t be surprising if you act like a
+taker when negotiating your salary, a giver when mentoring someone with less experience than you,
+and a matcher when sharing expertise with a colleague. But evidence shows that at work, the vast
+majority of people develop a primary reciprocity style, which captures how they approach most of
+the people most of the time. And this primary style can play as much of a role in our success as hard
+work, talent, and luck.
+    In fact, the patterns of success based on reciprocity styles are remarkably clear. If I asked you to
+guess who’s the most likely to end up at the bottom of the success ladder, what would you say—
+takers, givers, or matchers?
+    Professionally, all three reciprocity styles have their own benefits and drawbacks. But there’s one
+style that proves more costly than the other two. Based on David Hornik’s story, you might predict
+that givers achieve the worst results—and you’d be right. Research demonstrates that givers sink to
+the bottom of the success ladder. Across a wide range of important occupations, givers are at a
+disadvantage: they make others better off but sacrifice their own success in the process.
+    In the world of engineering, the least productive and effective engineers are givers. In one study,
+when more than 160 professional engineers in California rated one another on help given and
+received, the least successful engineers were those who gave more than they received. These givers
+had the worst objective scores in their firm for the number of tasks, technical reports, and drawings
+completed—not to mention errors made, deadlines missed, and money wasted. Going out of their way
+to help others prevented them from getting their own work done.
+    The same pattern emerges in medical school. In a study of more than six hundred medical students
+in Belgium, the students with the lowest grades had unusually high scores on giver statements like “I
+love to help others” and “I anticipate the needs of others.” The givers went out of their way to help
+their peers study, sharing what they already knew at the expense of filling gaps in their own
+knowledge, and it gave their peers a leg up at test time. Salespeople are no different. In a study I led
+of salespeople in North Carolina, compared with takers and matchers, givers brought in two and a
+half times less annual sales revenue. They were so concerned about what was best for their customers
+that they weren’t willing to sell aggressively.
+    Across occupations, it appears that givers are just too caring, too trusting, and too willing to
+sacrifice their own interests for the benefit of others. There’s even evidence that compared with
+takers, on average, givers earn 14 percent less money, have twice the risk of becoming victims of
+crimes, and are judged as 22 percent less powerful and dominant.
+    So if givers are most likely to land at the bottom of the success ladder, who’s at the top—takers or
+matchers?
+    Neither. When I took another look at the data, I discovered a surprising pattern: It’s the givers
+again.
+    As we’ve seen, the engineers with the lowest productivity are mostly givers. But when we look at
+the engineers with the highest productivity, the evidence shows that they’re givers too. The California
+engineers with the best objective scores for quantity and quality of results are those who consistently
+give more to their colleagues than they get. The worst performers and the best performers are givers;
+takers and matchers are more likely to land in the middle.
+    This pattern holds up across the board. The Belgian medical students with the lowest grades have
+unusually high giver scores, but so do the students with the highest grades. Over the course of
+medical school, being a giver accounts for 11 percent higher grades. Even in sales, I found that the
+least productive salespeople had 25 percent higher giver scores than average performers—but so did
+the most productive salespeople. The top performers were givers, and they averaged 50 percent more
+annual revenue than the takers and matchers. Givers dominate the bottom and the top of the success
+ladder. Across occupations, if you examine the link between reciprocity styles and success, the givers
+are more likely to become champs—not only chumps.
+    Guess which one David Hornik turns out to be?
+
+                                                 —
+After Danny Shader signed with the other investor, he had a gnawing feeling. “We just closed a big
+round. We should be celebrating. Why am I not happier? I was excited about my investor, who’s
+exceptionally bright and talented, but I was missing the opportunity to work with Hornik.” Shader
+wanted to find a way to engage Hornik, but there was a catch. To involve him, Shader and his lead
+investor would have to sell more of the company, diluting their ownership.
+    Shader decided it was worth the cost to him personally. Before the financing closed, he invited
+Hornik to invest in his company. Hornik accepted the offer and made an investment, earning some
+ownership of the company. He began coming to board meetings, and Shader was impressed with
+Hornik’s ability to push him to consider new directions. “I got to see the other side of him,” Shader
+says. “It had just been overshadowed by how affable he is.” Thanks in part to Hornik’s advice,
+Shader’s start-up has taken off. It’s called PayNearMe, and it enables Americans who don’t have a
+bank account or a credit card to make online purchases with a barcode or a card, and then pay cash
+for them at participating establishments. Shader landed major partnerships with 7-Eleven and
+Greyhound to provide these services, and in the first year and a half since launching, PayNearMe has
+been growing at more than 30 percent per month. As an investor, Hornik has a small share in this
+growth.
+    Hornik has also added Shader to his list of references, which is probably even more valuable than
+the deal itself. When entrepreneurs call to ask about Hornik, Shader tells them, “You may be thinking
+he’s just a nice guy, but he’s a lot more than that. He’s phenomenal: super-hardworking and very
+courageous. He can be both challenging and supportive at the same time. And he’s incredibly
+responsive, which is one of the best characteristics you can have in an investor. He’ll get back to you
+any hour—day or night—quickly, on anything that matters.”
+    The payoff for Hornik was not limited to this single deal on PayNearMe. After seeing Hornik in
+action, Shader came to admire Hornik’s commitment to acting in the best interests of entrepreneurs,
+and he began to set Hornik up with other investment opportunities. In one case, after meeting the CEO
+of a company called Rocket Lawyer, Shader recommended Hornik as an investor. Although the CEO
+already had a term sheet from another investor, Hornik ended up winning the investment.
+    Although he recognizes the downsides, David Hornik believes that operating like a giver has been
+a driving force behind his success in venture capital. Hornik estimates that when most venture
+capitalists offer term sheets to entrepreneurs, they have a signing rate near 50 percent: “If you get half
+of the deals you offer, you’re doing pretty well.” Yet in eleven years as a venture capitalist, Hornik
+has offered twenty-eight term sheets to entrepreneurs, and twenty-five have accepted. Shader is one of
+just three people who have ever turned down an investment from Hornik. The other 89 percent of the
+time entrepreneurs have taken Hornik’s money. Thanks to his funding and expert advice, these
+entrepreneurs have gone on to build a number of successful start-ups—one was valued at more than
+$3 billion on its first day of trading in 2012, and others have been acquired by Google, Oracle,
+Ticketmaster, and Monster.
+    Hornik’s hard work and talent, not to mention his luck at being on the right sideline at his
+daughter’s soccer game, played a big part in lining up the deal with Danny Shader. But it was his
+reciprocity style that ended up winning the day for him. Even better, he wasn’t the only winner.
+Shader won too, as did the companies to which Shader later recommended Hornik. By operating as a
+giver, Hornik created value for himself while maximizing opportunities for value to flow outward for
+the benefit of others.
+
+                                                   ***
+
+In this book, I want to persuade you that we underestimate the success of givers like David Hornik.
+Although we often stereotype givers as chumps and doormats, they turn out to be surprisingly
+successful. To figure out why givers dominate the top of the success ladder, we’ll examine startling
+studies and stories that illuminate how giving can be more powerful—and less dangerous—than most
+people believe. Along the way, I’ll introduce you to successful givers from many different walks of
+life, including consultants, lawyers, doctors, engineers, salespeople, writers, entrepreneurs,
+accountants, teachers, financial advisers, and sports executives. These givers reverse the popular
+plan of succeeding first and giving back later, raising the possibility that those who give first are often
+best positioned for success later.
+     But we can’t forget about those engineers and salespeople at the bottom of the ladder. Some
+givers do become pushovers and doormats, and I want to explore what separates the champs from the
+chumps. The answer is less about raw talent or aptitude, and more about the strategies givers use and
+the choices they make. To explain how givers avoid the bottom of the success ladder, I’m going to
+debunk two common myths about givers by showing you that they’re not necessarily nice, and they’re
+not necessarily altruistic. We all have goals for our own individual achievements, and it turns out that
+successful givers are every bit as ambitious as takers and matchers. They simply have a different way
+of pursuing their goals.
+     This brings us to my third aim, which is to reveal what’s unique about the success of givers. Let
+me be clear that givers, takers, and matchers all can—and do—achieve success. But there’s
+something distinctive that happens when givers succeed: it spreads and cascades. When takers win,
+there’s usually someone else who loses. Research shows that people tend to envy successful takers
+and look for ways to knock them down a notch. In contrast, when givers like David Hornik win,
+people are rooting for them and supporting them, rather than gunning for them. Givers succeed in a
+way that creates a ripple effect, enhancing the success of people around them. You’ll see that the
+difference lies in how giver success creates value, instead of just claiming it. As the venture capitalist
+Randy Komisar remarks, “It’s easier to win if everybody wants you to win. If you don’t make enemies
+out there, it’s easier to succeed.”
+     But in some arenas, it seems that the costs of giving clearly outweigh the benefits. In politics, for
+example, Mark Twain’s opening quote suggests that diplomacy involves taking ten times as much as
+giving. “Politics,” writes former president Bill Clinton, “is a ‘getting’ business. You have to get
+support, contributions, and votes, over and over again.” Takers should have an edge in lobbying and
+outmaneuvering their opponents in competitive elections, and matchers may be well suited to the
+constant trading of favors that politics demands. What happens to givers in the world of politics?
+     Consider the political struggles of a hick who went by the name Sampson. He said his goal was to
+be the “Clinton of Illinois,” and he set his sights on winning a seat in the Senate. Sampson was an
+unlikely candidate for political office, having spent his early years working on a farm. But Sampson
+had great ambition; he made his first run for a seat in the state legislature when he was just twenty-
+three years old. There were thirteen candidates, and only the top four won seats. Sampson made a
+lackluster showing, finishing eighth.
+     After losing that race, Sampson turned his eye to business, taking out a loan to start a small shop
+with a friend. The business failed, and Sampson was unable to repay the loan, so his possessions
+were seized by local authorities. Shortly thereafter, his business partner died without assets, and
+Sampson took on the debt. Sampson jokingly called his liability “the national debt”: he owed fifteen
+times his annual income. It would take him years, but he eventually paid back every cent.
+     After his business failed, Sampson made a second run for the state legislature. Although he was
+only twenty-five years old, he finished second, landing a seat. For his first legislative session, he had
+to borrow the money to buy his first suit. For the next eight years, Sampson served in the state
+legislature, earning a law degree along the way. Eventually, at age forty-five, he was ready to pursue
+influence on the national stage. He made a bid for the Senate.
+     Sampson knew he was fighting an uphill battle. He had two primary opponents: James Shields
+and Lyman Trumbull. Both had been state Supreme Court justices, coming from backgrounds far more
+privileged than Sampson’s. Shields, the incumbent running for reelection, was the nephew of a
+congressman. Trumbull was the grandson of an eminent Yale-educated historian. By comparison,
+Sampson had little experience or political clout.
+     In the first poll, Sampson was a surprise front-runner, with 44 percent support. Shields was close
+behind at 41 percent, and Trumbull was a distant third at 5 percent. In the next poll, Sampson gained
+ground, climbing to 47 percent support. But the tide began to turn when a new candidate entered the
+race: the state’s current governor, Joel Matteson. Matteson was popular, and he had the potential to
+draw votes from both Sampson and Trumbull. When Shields withdrew from the race, Matteson
+quickly took the lead. Matteson had 44 percent, Sampson was down to 38 percent, and Trumbull was
+at just 9 percent. But hours later, Trumbull won the election with 51 percent, narrowly edging out
+Matteson’s 47 percent.
+     Why did Sampson plummet, and how did Trumbull rise so quickly? The sudden reversal of their
+positions was due to a choice made by Sampson, who seemed plagued by pathological giving. When
+Matteson entered the race, Sampson began to doubt his own ability to garner enough support to win.
+He knew that Trumbull had a small but loyal following who would not give up on him. Most people
+in Sampson’s shoes would have lobbied Trumbull’s followers to jump ship. After all, with just 9
+percent support, Trumbull was a long shot.
+    But Sampson’s primary concern wasn’t getting elected. It was to prevent Matteson from winning.
+Sampson believed that Matteson was engaging in questionable practices. Some onlookers had
+accused Matteson of trying to bribe influential voters. At minimum, Sampson had reliable information
+that some of his own key supporters had been approached by Matteson. If it appeared that Sampson
+would not stand a chance, Matteson argued, the voters should shift their loyalties and support him.
+    Sampson’s concerns about Matteson’s methods and motives proved prescient. A year later, when
+Matteson was finishing his term as governor, he redeemed old government checks that were outdated
+or had been previously redeemed, but were never canceled. Matteson took home several hundred
+thousand dollars and was indicted for fraud.
+    In addition to harboring suspicions about Matteson, Sampson believed in Trumbull, as they had
+something in common when it came to the issues. For several years, Sampson had campaigned
+passionately for a major shift in social and economic policy. He believed it was vital to the future of
+his state, and in this he and Trumbull were united. So instead of trying to convert Trumbull’s loyal
+followers, Sampson decided to fall on his own sword. He told his floor manager, Stephen Logan, that
+he would withdraw from the race and ask his supporters to vote for Trumbull. Logan was
+incredulous: why should the man with a larger following hand over the election to an adversary with
+a smaller following? Logan broke down into tears, but Sampson would not yield. He withdrew and
+asked his supporters to vote for Trumbull. It was enough to propel Trumbull to victory, at Sampson’s
+expense.
+    That was not the first time Sampson put the interests of others ahead of his own. Before he helped
+Trumbull win the Senate race, despite earning acclaim for his work as a lawyer, Sampson’s success
+was stifled by a crushing liability. He could not bring himself to defend clients if he felt they were
+guilty. According to a colleague, Sampson’s clients knew “they would win their case—if it was fair;
+if not, that it was a waste of time to take it to him.” In one case, a client was accused of theft, and
+Sampson approached the judge. “If you can say anything for the man, do it—I can’t. If I attempt it, the
+jury will see I think he is guilty, and convict him.” In another case, during a criminal trial, Sampson
+leaned over and said to an associate, “This man is guilty; you defend him, I can’t.” Sampson handed
+the case over to the associate, walking away from a sizable fee. These decisions earned him respect,
+but they raised questions about whether he was tenacious enough to make tough political decisions.
+    Sampson “comes very near being a perfect man,” said one of his political rivals. “He lacks but
+one thing.” The rival explained that Sampson was unfit to be trusted with power, because his
+judgment was too easily clouded by concern for others. In politics, operating like a giver put
+Sampson at a disadvantage. His reluctance to put himself first cost him the Senate election, and left
+onlookers wondering whether he was strong enough for the unforgiving world of politics. Trumbull
+was a fierce debater; Sampson was a pushover. “I regret my defeat,” Sampson admitted, but he
+maintained that Trumbull’s election would help to advance the causes they shared. After the election,
+a local reporter wrote that in comparison with Sampson, Trumbull was “a man of more real talent and
+power.”
+    But Sampson wasn’t ready to step aside forever. Four years after helping Lyman Trumbull win the
+seat, Sampson ran for the Senate again. He lost again. But in the weeks leading up to the vote, one of
+the most outspoken supporters of Sampson’s was none other than Lyman Trumbull. Sampson’s
+sacrifice had earned goodwill, and Trumbull was not the only adversary who became an advocate in
+response to Sampson’s giving. In the first Senate race, when Sampson had 47 percent of the vote and
+seemed to be on the brink of victory, a Chicago lawyer and politician named Norman Judd led a
+strong 5 percent who would not waver in their loyalty to Trumbull. During Sampson’s second Senate
+bid, Judd became a strong supporter.
+     Two years later, after two failed Senate races, Sampson finally won his first election at the
+national level. According to one commentator, Judd never forgot Sampson’s “generous behavior” and
+did “more than anyone else” to secure Sampson’s nomination.
+     In 1999, C-SPAN, the cable TV network that covers politics, polled more than a thousand
+knowledgeable viewers. They rated the effectiveness of Sampson and three dozen other politicians
+who vied for similar offices. Sampson came out at the very top of the poll, receiving the highest
+evaluations. Despite his losses, he was more popular than any other politician on the list. You see,
+Sampson’s Ghost was a pen name that the hick used in letters.
+     His real name was Abraham Lincoln.
+     In the 1830s, Lincoln was striving to be the DeWitt Clinton of Illinois, referencing a U.S. senator
+and New York governor who spearheaded the construction of the Erie Canal. When Lincoln withdrew
+from his first Senate race to help Lyman Trumbull win the seat, they shared a commitment to
+abolishing slavery. From emancipating slaves, to sacrificing his own political opportunities for the
+cause, to refusing to defend clients who appeared to be guilty, Lincoln consistently acted for the
+greater good. When experts in history, political science, and psychology rated the presidents, they
+identified Lincoln as a clear giver. “Even if it was inconvenient, Lincoln went out of his way to help
+others,” wrote two experts, demonstrating “obvious concern for the well-being of individual
+citizens.” It is noteworthy that Lincoln is seen as one of the least self-centered, egotistical, boastful
+presidents ever. In independent ratings of presidential biographies, Lincoln scored in the top three—
+along with Washington and Fillmore—in giving credit to others and acting in the best interests of
+others. In the words of a military general who worked with Lincoln, “he seemed to possess more of
+the elements of greatness, combined with goodness, than any other.”
+     In the Oval Office, Lincoln was determined to put the good of the nation above his own ego. When
+he won the presidency in 1860, he invited the three candidates whom he defeated for the Republican
+nomination to become his secretary of state, secretary of the treasury, and attorney general. In Team of
+Rivals, the historian Doris Kearns Goodwin documents how unusual Lincoln’s cabinet was. “Every
+member of the administration was better known, better educated, and more experienced in public life
+than Lincoln. Their presence in the cabinet might have threatened to eclipse the obscure prairie
+lawyer.”
+     In Lincoln’s position, a taker might have preferred to protect his ego and power by inviting “yes
+men” to join him. A matcher might have offered appointments to allies who had supported him. Yet
+Lincoln invited his bitter competitors instead. “We needed the strongest men of the party in the
+Cabinet,” Lincoln told an incredulous reporter. “I had no right to deprive the country of their
+services.” Some of these rivals despised Lincoln, and others viewed him as incompetent, but he
+managed to win them all over. According to Kearns Goodwin, Lincoln’s “success in dealing with the
+strong egos of the men in his cabinet suggests that in the hands of a truly great politician the qualities
+we generally associate with decency and morality—kindness, sensitivity, compassion, honesty, and
+empathy—can also be impressive political resources.”
+     If politics can be fertile ground for givers, it’s possible that givers can succeed in any job.
+Whether giving is effective, though, depends on the particular kind of exchange in which it’s
+employed. This is one important feature of giving to keep in mind as we move through the ideas in
+this book: on any particular morning, giving may well be incompatible with success. In purely zero-
+sum situations and win-lose interactions, giving rarely pays off. This is a lesson that Abraham Lincoln
+learned each time he chose to give to others at his own expense. “If I have one vice,” Lincoln said,
+“and I can call it nothing else—it is not to be able to say no!”
+     But most of life isn’t zero-sum, and on balance, people who choose giving as their primary
+reciprocity style end up reaping rewards. For Lincoln, like David Hornik, seemingly self-sacrificing
+decisions ultimately worked to his advantage. When we initially concluded that Lincoln and Hornik
+lost, we hadn’t stretched the time horizons out far enough. It takes time for givers to build goodwill
+and trust, but eventually, they establish reputations and relationships that enhance their success. In
+fact, you’ll see that in sales and medical school, the giver advantage grows over time. In the long run,
+giving can be every bit as powerful as it is dangerous. As Chip Conley, the renowned entrepreneur
+who founded Joie de Vivre Hotels, explains, “Being a giver is not good for a 100-yard dash, but it’s
+valuable in a marathon.”
+     In Lincoln’s era, the marathon took a long time to run. Without telephones, the Internet, and high-
+speed transportation, building relationships and reputations was a slow process. “In the old world,
+you could send a letter, and no one knew,” Conley says. Conley believes that in today’s connected
+world, where relationships and reputations are more visible, givers can accelerate their pace. “You
+no longer have to choose,” says Bobbi Silten, the former president of Dockers, who now runs global
+social and environmental responsibility for Gap Inc. “You can be a giver and be successful.”
+     The fact that the long run is getting shorter isn’t the only force that makes giving more
+professionally productive today. We live in an era when massive changes in the structure of work—
+and the technology that shapes it—have further amplified the advantages of being a giver. Today, more
+than half of American and European companies regularly use teams to get work done. We rely on
+teams to build cars and houses, perform surgeries, fly planes, fight wars, play symphonies, produce
+news reports, audit companies, and provide consulting services. Teams depend on givers to share
+information, volunteer for unpopular tasks, and provide help.
+     When Lincoln invited his rivals to join his cabinet, they had the chance to see firsthand how much
+he was willing to contribute for the sake of other people and his country. Several years before
+Lincoln became president, one of his rivals, Edwin Stanton, had rejected him as a cocounsel in a
+trial, calling him a “gawky, long-armed ape.” Yet after working with Lincoln, Stanton described him
+as “the most perfect ruler of men the world has ever seen.” As we organize more people into teams,
+givers have more opportunities to demonstrate their value, as Lincoln did.
+     Even if you don’t work in a team, odds are that you hold a service job. Most of our grandparents
+worked in independent jobs producing goods. They didn’t always need to collaborate with other
+people, so it was fairly inefficient to be a giver. But now, a high percentage of people work in
+interconnected jobs providing services to others. In the 1980s, the service sector made up about half
+of the world’s gross domestic product (GDP). By 1995, the service sector was responsible for nearly
+two thirds of world GDP. Today, more than 80 percent of Americans work in service jobs.
+    As the service sector continues to expand, more and more people are placing a premium on
+providers who have established relationships and reputations as givers. Whether your reciprocity
+style is primarily giver, taker, or matcher, I’m willing to bet that you want your key service providers
+to be givers. You hope your doctor, lawyer, teacher, dentist, plumber, and real estate agent will focus
+on contributing value to you, not on claiming value from you. This is why David Hornik has an 89
+percent success rate: entrepreneurs know that when he offers to invest in their companies, he has their
+best interests at heart. Whereas many venture capitalists don’t consider unsolicited pitches, preferring
+to spend their scarce time on people and ideas that have already shown promise, Hornik responds
+personally to e-mails from complete strangers. “I’m happy to be as helpful as I can independent of
+whether I have some economic interest,” he says. According to Hornik, a successful venture capitalist
+is “a service provider. Entrepreneurs are not here to serve venture capitalists. We are here to serve
+entrepreneurs.”
+    The rise of the service economy sheds light on why givers have the worst grades and the best
+grades in medical school. In the study of Belgian medical students, the givers earned significantly
+lower grades in their first year of medical school. The givers were at a disadvantage—and the
+negative correlation between giver scores and grades was stronger than the effect of smoking on the
+odds of getting lung cancer.
+    But that was the only year of medical school in which the givers underperformed. By their second
+year, the givers had made up the gap: they were now slightly outperforming their peers. By the sixth
+year, the givers earned substantially higher grades than their peers. A giver style, measured six years
+earlier, was a better predictor of medical school grades than the effect of smoking on lung cancer
+rates (and the effect of using nicotine patches on quitting smoking). By the seventh year of medical
+school, when the givers became doctors, they had climbed still further ahead. The effect of giving on
+final medical school performance was stronger than the smoking effects above; it was even greater
+than the effect of drinking alcohol on aggressive behavior.
+    Why did the giver disadvantage reverse, becoming such a strong advantage?
+    Nothing about the givers changed, but their program did. As students progress through medical
+school, they move from independent classes into clinical rotations, internships, and patient care. The
+further they advance, the more their success depends on teamwork and service. As the structure of
+class work shifts, the givers benefit from their natural tendencies to collaborate effectively with other
+medical professionals and express concern to patients.
+    This giver advantage in service roles is hardly limited to medicine. Steve Jones, the award-
+winning former CEO of one of the largest banks in Australia, wanted to know what made financial
+advisers successful. His team studied key factors such as financial expertise and effort. But “the
+single most influential factor,” Jones told me, “was whether a financial adviser had the client’s best
+interests at heart, above the company’s and even his own. It was one of my three top priorities to get
+that value instilled, and demonstrate that it’s in everybody’s best interests to treat clients that way.”
+    One financial adviser who exemplifies this giver style is Peter Audet, a broad-shouldered Aussie
+who once wore a mullet and has an affinity for Bon Jovi. He began his career as a customer service
+representative answering phones for a large insurance company. The first year after he was hired,
+Peter won the Personality of the Year award, beating out hundreds of other employees based on his
+passion for helping customers, and became the youngest department supervisor in the whole company.
+Years later, when Peter joined a group of fifteen executives for a give-and-take exercise, the average
+executive offered help to three colleagues. Peter offered help to all fifteen of them. He is such a giver
+that he even tries to help the job applicants he doesn’t hire, spending hours making connections for
+them to find other opportunities.
+    In 2011, when Peter was working as a financial adviser, he received a call from an Australian
+client. The client wanted to make changes to a small superannuation fund valued at $70,000. A staff
+member was assigned to the client, but looked him up and saw that he was a scrap metal worker.
+Thinking like a matcher, the staff member declined to make the visit: it was a waste of his time. It
+certainly wasn’t worth Peter’s time. He specialized in high net worth clients, whose funds were
+worth a thousand times more money, and his largest client had more than $100 million. If you
+calculated the dollar value of Peter’s time, the scrap metal worker’s fund was not even worth the
+amount of time it would take to drive out to his house. “He was the tiniest client, and no one wanted
+to see him; it was beneath everybody,” Peter reflects. “But you can’t just ignore someone because you
+don’t think they’re important enough.”
+    Peter scheduled an appointment to drive out to see the scrap metal worker and help him with the
+plan changes. When he pulled up to the house, his jaw dropped. The front door was covered in
+cobwebs and had not been opened in months. He drove around to the back, where a thirty-four-year-
+old man opened the door. The living room was full of bugs, and he could see straight through to the
+roof: the entire ceiling had been ripped out. The client made a feeble gesture to some folding chairs,
+and Peter began working through the client’s plan changes. Feeling sympathy for the client, who
+seemed like an earnest, hardworking blue-collar man, Peter made a generous offer. “While I’m here,
+why don’t you tell me a bit about yourself and I’ll see if there’s anything else I can help you with.”
+    The client mentioned a love of cars, and walked him around back to a dingy shed. Peter braced
+himself for another depressing display of poverty, envisioning a pile of rusted metal. When Peter
+stepped inside the shed, he gasped. Spread out before him in immaculate condition were a first-
+generation Chevy Camaro, built in 1966; two vintage Australian Valiant cars with 1,000-horsepower
+engines for drag racing; a souped-up coupe utility car; and a Ford coupe from the movie Mad Max.
+The client was not a scrap metal worker; he owned a lucrative scrap metal business. He had just
+bought the house to fix it up; it was on eleven acres, and it cost $1.4 million. Peter spent the next year
+reengineering the client’s business, improving his tax position, and helping him renovate the house.
+“All I did was start out by doing a kindness,” Peter notes. “When I got to work the next day, I had to
+laugh at my colleague who wasn’t prepared to give a bit by driving out to visit the client.” Peter went
+on to develop a strong relationship with the client, whose fees multiplied by a factor of a hundred the
+following year, and expects to continue working with him for decades.
+    Over the course of his career, giving has enabled Peter Audet to access opportunities that takers
+and matchers routinely miss, but it has also cost him dearly. As you’ll see in chapter 7, he was
+exploited by two takers who nearly put him out of business. Yet Peter managed to climb from the
+bottom to the top of the success ladder, becoming one of the more productive financial advisers in
+Australia. The key, he believes, was learning to harness the benefits of giving while minimizing the
+costs. As a managing director at Genesys Wealth Advisers, he managed to rescue his firm from the
+brink of bankruptcy and turn it into an industry leader, and he chalks his success up to being a giver.
+“There’s no doubt that I’ve succeeded in business because I give to other people. It’s my weapon of
+choice,” Peter says. “When I’m head-to-head with another adviser to try and win business, people tell
+me this is why I win.”
+    Although technological and organizational changes have made giving more advantageous, there’s
+one feature of giving that’s more timeless: when we reflect on our guiding principles in life, many of
+us are intuitively drawn to giving. Over the past three decades, the esteemed psychologist Shalom
+Schwartz has studied the values and guiding principles that matter to people in different cultures
+around the world. One of his studies surveyed reasonably representative samples of thousands of
+adults in Australia, Chile, Finland, France, Germany, Israel, Malaysia, the Netherlands, South Africa,
+Spain, Sweden, and the United States. He translated his survey into a dozen languages, and asked
+respondents to rate the importance of different values. Here are a few examples:
+
+     List 1
+               Wealth (money, material possessions)
+               Power (dominance, control over others)
+               Pleasure (enjoying life)
+               Winning (doing better than others)
+
+     List 2
+               Helpfulness (working for the well-being of others)
+               Responsibility (being dependable)
+               Social justice (caring for the disadvantaged)
+               Compassion (responding to the needs of others)
+
+     Takers favor the values in List 1, whereas givers prioritize the values in List 2. Schwartz wanted
+to know where most people would endorse giver values. Take a look back at the twelve countries
+above. Where do the majority of people endorse giver values above taker values?
+     All of them. In all twelve countries, most people rate giving as their single most important value.
+They report caring more about giving than about power, achievement, excitement, freedom, tradition,
+conformity, security, and pleasure. In fact, this was true in more than seventy different countries
+around the world. Giver values are the number-one guiding principle in life to most people in most
+countries—from Argentina to Armenia, Belgium to Brazil, and Slovakia to Singapore. In the majority
+of the world’s cultures, including that of the United States, the majority of people endorse giving as
+their single most important guiding principle.
+     On some level, this comes as no surprise. As parents, we read our children books like The Giving
+Tree and emphasize the importance of sharing and caring. But we tend to compartmentalize giving,
+reserving a different set of values for the sphere of work. We may love Shel Silverstein for our kids,
+but the popularity of books like Robert Greene’s The 48 Laws of Power—not to mention the
+fascination of many business gurus with Sun Tzu’s The Art of War—suggests that we don’t see much
+room for giver values in our professional lives.
+     As a result, even people who operate like givers at work are often afraid to admit it. In the
+summer of 2011, I met a woman named Sherryann Plesse, an executive at a prestigious financial
+services firm. Sherryann was clearly a giver: she spent countless hours mentoring junior colleagues
+and volunteered to head up a women’s leadership initiative and a major charitable fund-raising
+initiative at her firm. “My default is to give,” she says. “I’m not looking for quid pro quo; I’m looking
+to make a difference and have an impact, and I focus on the people who can benefit from my help the
+most.”
+    To enrich her business acumen, Sherryann left her job for six weeks, enrolling in a leadership
+program with sixty executives from companies around the world. To identify her strengths, she
+underwent a comprehensive psychological assessment. Sherryann was shocked to learn that her top
+professional strengths were kindness and compassion. Fearing that the results would jeopardize her
+reputation as a tough and successful leader, Sherryann decided not to tell anyone. “I didn’t want to
+sound like a flake. I was afraid people would perceive me differently, perhaps as a less serious
+executive,” Sherryann confided. “I was conditioned to leave my human feelings at the door, and win. I
+want my primary skills to be seen as hardworking and results-oriented, not kindness and compassion.
+In business, sometimes you have to wear different masks.”
+    The fear of being judged as weak or naïve prevents many people from operating like givers at
+work. Many people who hold giver values in life choose matching as their primary reciprocity style
+at work, seeking an even balance of give and take. In one study, people completed a survey about
+whether their default approach to work relationships was to give, take, or match. Only 8 percent
+described themselves as givers; the other 92 percent were not willing to contribute more than they
+received at work. In another study, I found that in the office, more than three times as many people
+prefer to be matchers than givers.
+    People who prefer to give or match often feel pressured to lean in the taker direction when they
+perceive a workplace as zero-sum. Whether it’s a company with forced ranking systems, a group of
+firms vying to win the same clients, or a school with required grading curves and more demand than
+supply for desirable jobs, it’s only natural to assume that peers will lean more toward taking than
+giving. “When they anticipate self-interested behavior from others,” explains the Stanford
+psychologist Dale Miller, people fear that they’ll be exploited if they operate like givers, so they
+conclude that “pursuing a competitive orientation is the rational and appropriate thing to do.” There’s
+even evidence that just putting on a business suit and analyzing a Harvard Business School case is
+enough to significantly reduce the attention that people pay to relationships and the interests of others.
+The fear of exploitation by takers is so pervasive, writes the Cornell economist Robert Frank, that
+“by encouraging us to expect the worst in others it brings out the worst in us: dreading the role of the
+chump, we are often loath to heed our nobler instincts.”
+    Giving is especially risky when dealing with takers, and David Hornik believes that many of the
+world’s most successful venture capitalists operate like takers—they insist on disproportionately
+large shares of entrepreneurs’ start-ups and claim undue credit when their investments prove
+successful. Hornik is determined to change these norms. When a financial planner asked him what he
+wanted to achieve in life, Hornik said that “above all, I want to demonstrate that success doesn’t have
+to come at someone else’s expense.”
+    In an attempt to prove it, Hornik has broken two of the most sacred rules in the venture business.
+In 2004, he became the first venture capitalist to start a blog. Venture capital was a black box, so
+Hornik invited entrepreneurs inside. He began to share information openly online, helping
+entrepreneurs to improve their pitches by gaining a deeper understanding of how venture capitalists
+think. Hornik’s partners, and his firm’s general counsel, discouraged him from doing it. Why would he
+want to give away trade secrets? If other investors read his blog, they could steal ideas without
+sharing any in return. “The idea of a venture capitalist talking about what he was doing was
+considered insane,” Hornik reflects. “But I really wanted to engage in a conversation with a broad set
+of entrepreneurs, and be helpful to them.” His critics were right: “Lots of venture capitalists ended up
+reading it. When I talked about specific companies I was excited about, getting deals became more
+competitive.” But that was a price that Hornik was willing to pay. “My focus was entirely on creating
+value for entrepreneurs,” he says, and he has maintained the blog for the past eight years.
+     Hornik’s second unconventional move was ignited by his frustration with dull speakers at
+conferences. Back in college, he had teamed up with a professor to run a speakers’ bureau so he could
+invite interesting people to campus. The lineup included the inventor of the game Dungeons &
+Dragons, the world yo-yo champion, and the animator who created the Wile E. Coyote and Road
+Runner cartoon characters for Warner Bros. By comparison, speakers at venture capital and
+technology conferences weren’t measuring up. “I discovered that I stopped going in to hear the
+speakers, and I would spend all my time chatting with people in the lobby about what they’re working
+on. The real value of these events was the conversations and relationships that were created between
+people. What if a conference was about conversations and relationships, not content?”
+     In 2007, Hornik planned his first annual conference. It was called The Lobby, and the goal was to
+bring entrepreneurs together to share ideas about new media. Hornik was putting about $400,000 on
+the line, and people tried to talk him out of it. “You could destroy your firm’s reputation,” they
+warned, hinting that if the conference failed, Hornik’s own career might be ruined. But he pressed
+forward, and when it was time to send out invitations, Hornik did the unthinkable. He invited venture
+capitalists at rival firms to attend the conference.
+     Several colleagues thought he was out of his mind. “Why in the world would you let other venture
+capitalists come to the conference?” they asked. If Hornik met an entrepreneur with a hot new idea at
+The Lobby, he would have a leg up on landing the investment. Why would he want to give away his
+advantage and help his competitors find opportunities? Once again, Hornik ignored the naysayers. “I
+want to create an experience to benefit everyone, not just me.” One of the rival venture capitalists
+who attended liked the format so much that he created his own Lobby-style conference, but he didn’t
+invite Hornik—or any other venture capitalists. His partners wouldn’t let him. Nevertheless, Hornik
+kept inviting venture capitalists to The Lobby.
+     David Hornik recognizes the costs of operating like a giver. “Some people think I’m delusional.
+They believe the way you achieve is by being a taker,” he says. If he were more of a taker, he
+probably wouldn’t accept unsolicited pitches, respond personally to e-mails, share information with
+competitors on his blog, or invite his rivals to benefit from The Lobby conference. He would protect
+his time, guard his knowledge, and leverage his connections more carefully. And if he were more of a
+matcher, he would have asked for quid pro quo with the venture capitalist who attended The Lobby
+but didn’t invite Hornik to his own conference. But Hornik pays more attention to what other people
+need than to what he gets from them. Hornik has been extremely successful as a venture capitalist
+while living by his values, and he’s widely respected for his generosity. “It’s a win-win,” Hornik
+reflects. “I get to create an environment where other people can get deals and build relationships, and
+I live in the world I want to live in.” His experience reinforces that giving not only is professionally
+risky; it can also be professionally rewarding.
+
+                                                 —
+Understanding what makes giving both powerful and dangerous is the focus of Give and Take. The
+first section unveils the principles of giver success, illuminating how and why givers rise to the top.
+I’ll show you how successful givers have unique approaches to interactions in four key domains:
+networking, collaborating, evaluating, and influencing. A close look at networking highlights fresh
+approaches for developing connections with new contacts and strengthening ties with old contacts.
+Examining collaboration reveals what it takes to work productively with colleagues and earn their
+respect. Exploring how we evaluate others offers counterintuitive techniques for judging and
+developing talent to get the best results out of others. And an analysis of influence sheds light on
+novel strategies for presenting, selling, persuading, and negotiating, all in the spirit of convincing
+others to support our ideas and interests. Across these four domains, you’ll see what successful
+givers do differently—and what takers and matchers can learn from their approach. Along the way,
+you’ll find out how America’s best networker developed his connections, why the genius behind one
+of the most successful shows in television history toiled for years in anonymity, how a basketball
+executive responsible for some of the worst draft busts in history turned things around, whether a
+lawyer who stumbles on his words can beat a lawyer who speaks with confidence, and how you can
+spot a taker just from looking at a Facebook profile.
+     In the second part of the book, the focus shifts from the benefits of giving to the costs, and how
+they can be managed. I’ll examine how givers protect themselves against burnout and avoid becoming
+pushovers and doormats. You’ll discover how a teacher reduced her burnout by giving more rather
+than less, how a billionaire made money by giving it away, and the ideal number of hours to volunteer
+if you want to become happier and live longer. You’ll see why giving slowed one consultant’s path to
+partner but accelerated another’s, why we misjudge who’s a giver and who’s a taker, and how givers
+protect themselves at the bargaining table. You’ll also gain knowledge about how givers avoid the
+bottom of the success ladder and rise to the top by nudging other people away from taking and toward
+giving. You’ll learn about a ninety-minute activity that unleashes giving in remarkable ways, and
+you’ll figure out why people give things away for free that they could easily sell for a profit on
+Craigslist, why some radiologists get better but others get worse, why thinking about Superman makes
+people less likely to volunteer, and why people named Dennis are unusually likely to become
+dentists.
+     By the time you finish reading this book, you may be reconsidering some of your fundamental
+assumptions about success. If you’re a self-sacrificing giver, you’ll find plenty of insights for
+ascending from the bottom to the top of the success ladder. If you endorse giver values but act like a
+matcher at work, you may be pleasantly surprised by the wealth of opportunities to express your
+values and find meaning in helping others without compromising your own success. Instead of aiming
+to succeed first and give back later, you might decide that giving first is a promising path to
+succeeding later. And if you currently lean toward taking, you may just be tempted to shift in the giver
+direction, seeking to master the skills of this growing breed of people who achieve success by
+contributing to others.
+     But if you do it only to succeed, it probably won’t work.
+                                                           2
+                         The Peacock and the Panda
+                       How Givers, Takers, and Matchers Build Networks
+
+
+
+
+            Every man must decide whether he will walk in the light of creative altruism or in the darkness of
+                                              destructive selfishness.
+                       —Martin Luther King Jr., civil rights leader and Nobel Peace Prize winner
+
+
+
+
+Several decades ago, a man who started his life in poverty lived the American Dream. He came from
+humble beginnings, growing up in Missouri farm towns without indoor plumbing. To help support his
+family, the young man worked long hours on farms and paper routes. He put himself through college at
+the University of Missouri, graduated Phi Beta Kappa, and completed a master’s degree and then a
+doctorate in economics. He pursued a life of public service, enlisting in the Navy and then serving in
+several important roles in the U.S. government, earning the Navy Commendation Medal and National
+Defense Service Medal. From there, he built his own company, where he was chairman and CEO for
+fifteen years. By the time he stepped down, his company was worth $110 billion, with more than
+twenty thousand employees in forty countries around the world. For five consecutive years, Fortune
+named his company “America’s Most Innovative Company” and one of the twenty-five best places to
+work in the country. When asked about his success, he acknowledged the importance of “Respect . . .
+the golden rule . . . Absolute integrity . . . Everyone knows that I personally have a very strict code of
+personal conduct that I live by.” He set up a charitable family foundation, giving over $2.5 million to
+more than 250 organizations, and donated 1 percent of his company’s annual profits to charity. His
+giving attracted the attention of former president George W. Bush, who commended him as a “good
+guy” and a “generous person.”
+     Then he was indicted.
+     His name was Kenneth Lay, and he is best remembered as a primary villain in the Enron scandal.
+Enron was an energy, commodities, and securities firm headquartered in Houston. In October 2001,
+Enron lost $1.2 billion in shareholder equity after reporting third-quarter losses of $618 million, the
+biggest earnings restatement in U.S. history. In December, Enron went bankrupt, leaving twenty
+thousand employees jobless, many watching their life savings practically erased by the company’s
+fall. Investigators found that Enron had deceived investors by reporting false profits and hiding debts
+of more than $1 billion, manipulated energy and power markets in California and Texas, and won
+international contracts by giving illegal bribes to foreign governments. Lay was convicted on six
+counts of conspiracy and fraud.
+     We can debate about how much Lay truly knew about Enron’s illegal activities, but it’s difficult to
+deny that he was a taker. Although Lay may have looked like a giver to many observers, he was a
+faker: a taker in disguise. Lay felt entitled to use Enron’s resources for personal gain. As Bethany
+McLean and Peter Elkind describe in The Smartest Guys in the Room, Lay took exorbitant loans from
+the company and had his staff put his sandwiches on silver platters and fine china. A secretary once
+tried to reserve an Enron plane for an executive to do business, only to learn that the Lay family was
+currently using three Enron planes for personal travel. From 1997 to 1998, $4.5 million in Enron
+commissions went to a travel agency owned by Lay’s sister. According to accusations, he sold more
+than $70 million in stock just before Enron went bankrupt, taking the treasure from a sinking ship.
+This behavior was foreshadowed in the 1970s when Lay worked at Exxon. A boss wrote a reference
+recommending Lay highly, but warned that he was “Maybe too ambitious.” Observers now believe
+that as early as 1987, at Enron Oil, Lay approved and helped to conceal the activities of two traders
+who set up fake companies and stole $3.8 million while allowing Enron to avoid massive trading
+losses. When the losses were discovered, Enron Oil had to report an $85 million hit, and Lay denied
+knowledge and responsibility: “If anyone could say that I knew, let them stand up.” According to
+McLean and Elkind, one trader started to stand up but was physically restrained by two colleagues.
+     How did a taker end up becoming so successful? He knew somebody. In fact, he knew a whole lot
+of somebodies. Ken Lay profited greatly from claiming his company’s financial resources as his own,
+but much of his success in growing that company came the old-fashioned way: he built a network of
+influential contacts and leveraged them for his own benefit. Lay was a master networker from the
+start. In college, he impressed an economics professor named Pinkney Walker and started his ascent
+on the shoulders of Walker’s connections. Walker helped Lay land an assignment as an economist at
+the Pentagon, and then a position as a chief assistant in the White House in the Nixon administration.
+     By the mid-1980s, Lay became the head of Enron after engineering the company’s move to
+Houston following a merger. As he consolidated his power, he began to hobnob with political power
+brokers who could support Enron’s interests. He put Pinkney Walker’s brother Charls on Enron’s
+board and developed a relationship with George H. W. Bush, who was running for president. In 1990,
+Lay cochaired an important Summit of Industrialized Nations meeting for Bush in Houston, putting on
+a dazzling show and charming the crowd, which included British prime minister Margaret Thatcher,
+German chancellor Helmut Kohl, and French president François Mitterrand. After Bush lost his
+reelection bid to Bill Clinton, Lay wasted no time in reaching out to a friend who was a key aide to
+the president-elect—the friend had gone to kindergarten with Clinton. Soon, Lay was playing golf
+with the new president. Several years later, as George W. Bush gained power, Lay used his
+connections to lobby for energy deregulation and get his supporters in important government positions
+in Texas and the White House, influencing policies in Enron’s favor. At nearly every stage in his
+career, Lay was able to dramatically improve his company’s prospects—or his own—by making use
+of well-placed contacts in his network.
+    For centuries, we have recognized the importance of networking. According to Brian Uzzi, a
+management professor at Northwestern University, networks come with three major advantages:
+private information, diverse skills, and power. By developing a strong network, people can gain
+invaluable access to knowledge, expertise, and influence. Extensive research demonstrates that
+people with rich networks achieve higher performance ratings, get promoted faster, and earn more
+money. And because networks are based on interactions and relationships, they serve as a powerful
+prism for understanding the impact of reciprocity styles on success. How do people relate to others in
+their networks, and what do they see as the purpose of networking?
+    On the one hand, the very notion of networking often has negative connotations. When we meet a
+new person who expresses enthusiasm about connecting, we frequently wonder whether he’s acting
+friendly because he’s genuinely interested in a relationship that will benefit both of us, or because he
+wants something from us. At some point in your life, you’ve probably experienced the frustration of
+dealing with slick schmoozers who are nice to your face when they want a favor, but end up stabbing
+you in the back—or simply ignoring you—after they get what they want. This faker style of
+networking casts the entire enterprise as Machiavellian, a self-serving activity in which people make
+connections for the sole purpose of advancing their own interests. On the other hand, givers and
+matchers often see networking as an appealing way to connect with new people and ideas. We meet
+many people throughout our professional and personal lives, and since we all have different
+knowledge and resources, it makes sense to turn to these people to exchange help, advice, and
+introductions. This raises a fundamental question: Can people build up networks that have breadth
+and depth using different reciprocity styles? Or does one style consistently create a richer network?
+    In this chapter, I want to examine how givers, takers, and matchers develop fundamentally distinct
+networks, and why their interactions within these networks have different characters and
+consequences. You’ll see how givers and takers build and manage their networks differently, and
+learn about some clues that they leak along the way—including how we could have recognized the
+takers at Enron four years before the company collapsed. Ultimately, I want to argue that while givers
+and takers may have equally large networks, givers are able to produce far more lasting value through
+their networks, and in ways that might not seem obvious.
+    In 2011, Fortune conducted extensive research to identify the best networker in the United States.
+The goal was to use online social networks to figure out who had the most connections to America’s
+most powerful people. The staff compiled a list of the Fortune 500 CEOs, as well as Fortune’s lists
+of the 50 smartest people in technology, the 50 most powerful women, and the 40 hottest rising stars
+in business under age forty. Then, they cross-referenced this list of 640 powerful people against
+LinkedIn’s entire database of more than ninety million members.
+    The winning networker was connected on LinkedIn to more of Fortune’s 640 movers and shakers
+than anyone else on earth. The winner had more than 3,000 LinkedIn connections, including Netscape
+cofounder Marc Andreessen, Twitter cofounder Evan Williams, Flickr cofounder Caterina Fake,
+Facebook cofounder Dustin Moskovitz, Napster cofounder Sean Parker, and Half.com founder Josh
+Kopelman—not to mention the former chef of the Grateful Dead. As you’ll see later, this networker
+extraordinaire is a giver. “It seems counterintuitive, but the more altruistic your attitude, the more
+benefits you will gain from the relationship,” writes LinkedIn founder Reid Hoffman. “If you set out
+to help others,” he explains, “you will rapidly reinforce your own reputation and expand your
+universe of possibilities.” Part of this, I’ll argue, has to do with the way networks themselves have
+changed and are still evolving. At the heart of my inquiry, though, lies an exploration of how the
+motives with which we approach networking shape the strength and reach of those networks, as well
+as the way that energy flows through them.
+Spotting the Taker in a Giver’s Clothes
+If you’ve ever put your guard up when meeting a new colleague, it’s probably because you thought
+you picked up on the scent of self-serving motives. When we see a taker coming, we protect
+ourselves by closing the door to our networks, withholding our trust and help. To avoid getting shut
+out, many takers become good fakers, acting generously so that they can waltz into our networks
+disguised as givers or matchers. For the better part of two decades, this worked for Ken Lay, whose
+favors and charitable contributions enabled people to see him in a positive light, opening the door to
+new ties and sources of help.
+    But it can be difficult for takers to keep up the façade in all of their interactions. Ken Lay was
+charming when mingling with powerful people in Washington, but many of his peers and subordinates
+saw through him. Looking back, one former Enron employee said, “If you wanted to get Lay to attend
+a meeting, you needed to invite someone important.” There’s a Dutch phrase that captures this duality
+beautifully: “kissing up, kicking down.” Although takers tend to be dominant and controlling with
+subordinates, they’re surprisingly submissive and deferential toward superiors. When takers deal
+with powerful people, they become convincing fakers. Takers want to be admired by influential
+superiors, so they go out of their way to charm and flatter. As a result, powerful people tend to form
+glowing first impressions of takers. A trio of German psychologists found that when strangers first
+encountered people, the ones they liked most were those “with a sense of entitlement and a tendency
+to manipulate and exploit others.”
+    When kissing up, takers are often good fakers. In 1998, when Wall Street analysts visited Enron,
+Lay recruited seventy employees to pretend to be busy traders, hoping to wow the analysts with the
+image of a productive energy trading business. Lay led the analysts through the charade, where the
+employees were asked to bring personal photos to a different floor of the building so it looked like
+they worked there, and put on a show. They made imaginary phone calls, creating a ruse that they
+were busy buying and selling energy and gas. This is another sign that Lay was a taker: he was
+obsessed with making a good impression upward, but worried less about how he was seen by those
+below him. As Samuel Johnson purportedly wrote, “The true measure of a man is how he treats
+someone who can do him absolutely no good.”
+    Takers may rise by kissing up, but they often fall by kicking down. When Lay sought to impress the
+Wall Street analysts, he did so by exploiting his own employees, asking them to compromise their
+integrity to construct a façade that would deceive the analysts. Research shows that as people gain
+power, they feel large and in charge: less constrained and freer to express their natural tendencies. As
+takers gain power, they pay less attention to how they’re perceived by those below and next to them;
+they feel entitled to pursue self-serving goals and claim as much value as they can. Over time, treating
+peers and subordinates poorly jeopardizes their relationships and reputations. After all, most people
+are matchers: their core values emphasize fairness, equality, and reciprocity. When takers violate
+these principles, matchers in their networks believe in an eye for an eye, so they want to see justice
+served.
+    To illustrate, imagine that you’re participating in a famous study led by Daniel Kahneman, the
+Nobel Prize–winning psychologist at Princeton. You’re playing what’s known as the ultimatum game,
+and you sit down across the table from a stranger who has just been given $10. His task is to present
+you with a proposal about how the money will be divided between the two of you. It’s an ultimatum:
+you can either accept the proposal as it stands and split the money as proposed, or you can reject it,
+and both of you will get nothing. You might never see each other again, so he acts like a taker, keeping
+$8 and offering you only $2. What do you do?
+    In terms of pure profit, it’s rational for you to accept the offer. After all, $2 is better than nothing.
+But if you’re like most people, you reject it. You’re willing to sacrifice the money to punish the taker
+for being unfair, walking away with nothing just to keep him from earning $8. Evidence shows that the
+vast majority of people in this position reject proposals that are imbalanced to the tune of 80 percent
+or more for the divider.*
+    Why do we punish takers for being unfair? It’s not spite. We’re not getting revenge on takers for
+trying to take advantage of us. It’s about justice. If you’re a matcher, you’ll also punish takers for
+acting unfairly toward other people. In another study spearheaded by Kahneman, people had a choice
+between splitting $12 evenly with a taker who had made an unfair proposal in the past or splitting
+$10 evenly with a matcher who had made a fair proposal in the past. More than 80 percent of the
+people preferred to split $10 evenly with the matcher, accepting $5 rather than $6 to prevent the taker
+from getting $6.
+    In networks, new research shows that when people get burned by takers, they punish them by
+sharing reputational information. “Gossip represents a widespread, efficient, and low-cost form of
+punishment,” write the social scientists Matthew Feinberg, Joey Cheng, and Robb Willer. When
+reputational information suggests that someone has taker tendencies, we can withhold trust and avoid
+being exploited. Over time, as their reputations spread, takers end up cutting existing ties and burning
+bridges with potential new ties. When Lay’s taking was revealed, many of his former supporters—
+including the Bush family—distanced themselves from him. As Wayne Baker, a University of
+Michigan sociologist and networking expert, explains, “If we create networks with the sole intention
+of getting something, we won’t succeed. We can’t pursue the benefits of networks; the benefits ensue
+from investments in meaningful activities and relationships.”
+    Before we make the leap of investing in relationships, though, we need to be able to recognize
+takers in our everyday interactions. For many of us, a challenge of networking lies in trying to guess
+the motives or intentions of a new contact, especially since we’ve seen that takers can be quite adept
+at posing as givers when there’s a potential return. Is the next person you meet interested in a genuine
+connection or merely seeking personal gains—and is there a good way to tell the difference?
+    Luckily, research shows that takers leak clues. Well, more precisely, takers lek clues.
+    In the animal kingdom, lekking refers to a ritual in which males show off their desirability as
+mates. When it’s time to breed, they gather in a common place and take their established positions.
+They put on extravagant displays to impress and court female audiences. Some do mating dances.
+Some sing alluring songs. Some even do acrobatics. The most striking display of lekking occurs
+among male peacocks. Each mating season, the males assume their positions and begin parading their
+plumage. They strut. They spread their feathers. They spin around to flaunt their tails.
+    In the CEO kingdom, takers do a dance that looks remarkably similar.
+    In a landmark study, strategy professors Arijit Chatterjee and Donald Hambrick studied more than
+a hundred CEOs in computer hardware and software companies. They analyzed each company’s
+annual reports over more than a decade, looking for signs of lekking. What they found would forever
+change the face of leadership.
+    It turns out that we could have anticipated the collapse of Enron as early as 1997, without ever
+meeting Ken Lay or looking at a single number. The warning signs of Enron’s demise are visible in a
+single image, captured four years before the company unraveled. Take a look at the two pictures of
+CEOs below, reproduced from their companies’ annual reports. Both men started their lives in
+poverty, worked in the Nixon administration, founded their own companies, became rich CEOs, and
+donated substantial sums of money to charity. Can you tell from their faces—or their clothes—which
+one was a taker?
+
+
+
+
+     The man on the left is Jon Huntsman Sr., a giver whom we’ll meet in chapter 6, from his
+company’s 2006 annual report. The photo on the right depicts Ken Lay. Thousands of experts have
+analyzed Enron’s financial statements, but they’ve missed an important fact: a picture really is worth
+a thousand words. Had we looked more carefully at the Enron reports, we might have recognized the
+telltale signs of takers lekking at the helm.
+     But these signs aren’t where I expected to find them—they’re not in the faces or attire of the
+CEOs. In their study of CEOs in the computer industry, Chatterjee and Hambrick had a hunch that
+takers would see themselves as the suns in their companies’ solar systems. They found several clues
+of takers lekking at the top. One signal appeared in CEO interviews. Since takers tend to be self-
+absorbed, they’re more likely to use first-person singular pronouns like I, me, mine, my, and myself—
+versus first-person plural pronouns like we, us, our, ours, and ourselves. In the computer industry,
+when talking about the company, on average, 21 percent of CEOs’ first-person pronouns were in the
+singular. For the extreme takers, 39 percent of their first-person pronouns were in the singular. Of
+every ten words that the taker CEOs uttered referencing themselves, four were about themselves
+alone and no one else.
+    Another signal was compensation: the taker CEOs earned far more money than other senior
+executives in their companies. The takers saw themselves as superior, so they felt entitled to
+substantial pay discrepancies in their own favor. In the computer industry, a typical taker CEO took
+home more than triple the annual salary and bonus of anyone else in the company. By contrast, the
+average across the industry was for CEOs to earn just over one and a half times the next highest paid.
+The taker CEOs also commanded stock options and other noncash compensation of seven times higher
+than the next highest paid, compared with the industry average of two and a half times higher.*
+    But the most interesting clue was in the annual reports that the companies produced for
+shareholders each year. At the top of the next page are the pictures of Ken Lay and Jon Huntsman Sr.
+that I showed you before, but now they’re in context.
+    The photo on the left appeared in Huntsman’s 2006 annual report. His image is tiny, taking up less
+than 10 percent of the page. The photo on the right appeared in Enron’s 1997 annual report. The image
+of Lay takes up an entire page.

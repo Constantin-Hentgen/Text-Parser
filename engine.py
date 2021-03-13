@@ -5,7 +5,7 @@ lecture = f.read()
 f.close()
 original = lecture
 
-alphabet = "abcdefghijklmnopqrstuvwxyzçêèéâûîùôœæï"
+alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï"
 alpha = []
 
 for a in range(len(alphabet)):
@@ -44,6 +44,7 @@ def split(document):
     iteration = 0
 
     for a in document:
+        # if code == "text":
         if (
             a == " "
             or a == "."
@@ -63,6 +64,9 @@ def split(document):
             or a == "("
             or a == ")"
             or a == "–"
+            or a == "*"
+            or a == "“"
+            or a == "”"
             or a == "…"
             or a == "’"
             or a == ":"
@@ -86,6 +90,14 @@ def split(document):
             iterator = iteration + 1
 
         iteration += 1
+
+    # else:
+    #    if a == " ":
+    #        if document[iterator:iteration] != "":
+    #            split.append(document[iterator:iteration].lower())
+    #        iterator = iteration + 1
+    #
+    #    iteration += 1
 
     return split
 
@@ -154,6 +166,18 @@ def algotri(liste_rank, real_liste):
 
     return liste_rank, real_liste
 
+
+print(
+    "\t\t\t\t________________________________________________________________________\n"
+)
+print("\t\t\t\t\t\t\tText Analyzer by Constantin\n")
+
+# code = ""
+# while code != "text" and code != "code":
+#    code = input(
+#        'Enter "text" if you want to analyze a text OR "code" if it\'s about a programming language : '
+#    )
+# TRAITEMENT DE LANGAGE DE PROGRAMMATION MAUVAIS
 
 lecture = split(lecture)
 universe = len(lecture)
@@ -226,9 +250,9 @@ print(
 
 # ETAPE 1
 # taille moyenne des mots
-# faire un mode langue et code (détection auto ?)
 # imaginer une manière de fix le problème des mots cut avec un tiret et passage à la ligne
 # faire une analyse de la taille du fichier pour s'assurer que c'est raisonnablement executable : prévenir et analyser
+# faire un mode langue et code (détection auto ?)
 
 # ETAPE 2
 # longueurs moyenne des phrases
