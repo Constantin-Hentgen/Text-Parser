@@ -1,6 +1,6 @@
 from random import randint
 
-f = open("hugo_notre_dame_de_paris.txt", "r")
+f = open("hugo_notre_dame_de_paris.txt", "r", encoding="utf-8")
 lecture = f.read()
 f.close()
 
@@ -16,10 +16,6 @@ def frequency(character, document):
             number += 1
 
     return number * 100 / total
-
-
-# print(frequency("e",lecture))
-
 
 def split(document):
     split = []
@@ -38,6 +34,7 @@ def split(document):
             or a == "%"
             or a == "&"
             or a == " "
+            or a == ";"
             or a == "!"
             or a == "?"
             or a == ""
@@ -71,7 +68,9 @@ def split(document):
 
     return split
 
-#imaginer une manière de fix le problème des mots cut avec un tiret et passage à la ligne
+
+# imaginer une manière de fix le problème des mots cut avec un tiret et passage à la ligne
+
 
 def gatherer(liste):
     gathered = []
@@ -139,21 +138,47 @@ def algotri(liste_rank, real_liste):
     return liste_rank, real_liste
 
 
-# print(split(lecture))
 
-lecture = split(lecture)#split validé
+alphabet = "abcdefghijklmnopqrstuvwxyzçêèéâûùôœï"
+
+
+
+
+
+
+
+lecture = split(lecture)  # split validé
 universe = len(lecture)
-liste = gatherer(lecture)#gatherer validé
-rank = ranker(liste)#ranker validé
-liste = doublon(rank,liste)#doublon validé
+liste = gatherer(lecture)  # gatherer validé à 99% mais il regroupe 2 de à la fin
 
-liste = algotri(liste[0],liste[1])
-#print(liste)
+for a in range(3):
+    liste = gatherer(liste)
 
-for a in range(50):
-  prop = 100 * liste[0][len(liste[1])-1-a] / universe
-  print(int(1000*prop)/1000, "% : ",liste[1][len(liste[1])-1-a], " : ", liste[0][len(liste[1])-1-a] )
+rank = ranker(liste)  # ranker validé
+liste = doublon(rank, liste)  # doublon validé
+liste = algotri(liste[0], liste[1])
+sommeA = 0
+sommeB = 0
 
+for a in range(5000):
+    prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
+    sommeA += prop
+    sommeB += liste[0][len(liste[1]) - 1 - a]
+    if len(liste[1][len(liste[1]) - 1 - a]) >= 6:
+        print("\t\t\t\t\t\t",a+1,"\t",
+        liste[1][len(liste[1]) - 1 - a],
+       "\t", liste[0][len(liste[1]) - 1 - a],"\t",
+        int(1000 * prop) / 1000 ,"% ")
+    else:
+        print("\t\t\t\t\t\t",a+1,"\t",
+        liste[1][len(liste[1]) - 1 - a],
+        "\t\t", liste[0][len(liste[1]) - 1 - a],"\t",
+        int(1000 * prop) / 1000 ,"% "
+        )
+
+print("\n\t\t\t\t\t\t\t\t\t",sommeB,"\t",int(1000 * sommeA) / 1000 ,"% ")
+
+# print(frequency("e",lecture))
 
 # print(split[randint(0,len(split))])
 
@@ -162,3 +187,4 @@ for a in range(50):
 # exploration par mot et par phrase
 # prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
 # faire les exports de données : le traitement statistique : sur un document txt ou csv
+# faire une analyse de la taille du fichier pour s'assurer que c'est raisonnablement executable
