@@ -3,8 +3,8 @@ from random import randint
 f = open("hugo_notre_dame_de_paris.txt", "r", encoding="utf-8")
 lecture = f.read()
 f.close()
-original = lecture
 
+original = lecture
 alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï"
 alpha = []
 
@@ -83,7 +83,6 @@ def split(document):
             or a == "7"
             or a == "8"
             or a == "9"
-            or a == "\x0c"
         ):
             if document[iterator:iteration] != "":
                 split.append(document[iterator:iteration].lower())
@@ -247,20 +246,3 @@ print("\n\t\t\t\t\t\t\t mot aléatoire :", liste[1][randint(0, len(liste[1]))])
 print(
     "\t\t\t\t________________________________________________________________________\n"
 )
-
-# ETAPE 1
-# taille moyenne des mots
-# imaginer une manière de fix le problème des mots cut avec un tiret et passage à la ligne
-# faire une analyse de la taille du fichier pour s'assurer que c'est raisonnablement executable : prévenir et analyser
-# faire un mode langue et code (détection auto ?)
-
-# ETAPE 2
-# longueurs moyenne des phrases
-# trouver un mot en fonction de caractéristiques : nombre de lettres, lettres
-# demande entrée et cherche une correspondance
-# travailler la compatibilité anglais et code
-# doublons semblent ne pas fonctionner parfaitement pour les lettres et pour l'anglais + code
-
-# ETAPE 3
-# prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
-# export de données en txt ?
