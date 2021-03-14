@@ -8,3 +8,5 @@ you're a French native person but you also chat a lot in English and code in Jav
 and finally 20% of English. By using this script you will have the required metrics to build or edit your perfect keyboard layout.
 
 I would like to had the feature of a layout creator, the program won't just give metrics but also propose a complete keyboard layout. Still a lot of code to write…
+
+To see what I'm doing or going to do you can check the project page linked to this repository.
