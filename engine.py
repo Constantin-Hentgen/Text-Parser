@@ -1,89 +1,51 @@
 from random import randint
 
+#lecture du fichier texte pour effectuer le traitement
 f = open("hugo_notre_dame_de_paris.txt", "r", encoding="utf-8")
 lecture = f.read()
 f.close()
 
 original = lecture
-alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï"
-alpha = []
+alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
+special = " .,\n/\\*%&;?(! )–*“”…’:»«-0123456789" #définition des caractères spéciaux pour effectuer des tests
 
-for a in range(len(alphabet)):
-    alpha.append(alphabet[a])
-
-
-def frequency(original):
-    ranking = []
+#faire différents mode qui prennent en compte les caractères spéciaux, espaces…
+#connaitre quelques alphabets pour pouvoir faire de l'analyse pour différentes langues
+def frequency(original): #renvoi la fréquence pour chaque caractère
+    ranking = [] #liste vide pour contenir les fréquences
     total = 0
     number = 0
-    newalphabet = []
+    verification = 0
 
-    for letter in original:
-        if letter != " ":
+    for letter in original: #boucle pour compter le nombre total de caractères non vides dans le document
+        if letter in alphabet: #comptabilisation du nombre de caractères non spéciaux
             total += 1
 
-    for letter in alphabet:
-        for element in original:
+    for letter in alphabet: #pour chaque lettre de l'alphabet
+        for element in original: #pour chaque lettre du document
             if element == letter:
-                number += 1
+                number += 1 #incrémenter pour la stat de la lettre par occurence
 
-        if number != 0:
-            number = int(number * 10000 / total) / 100
+        if number != 0: #si la lettre est apparue au moins une fois
+            number = int(number * 10000 / total) / 100 #on calcule la fréquence
             ranking.append(number)
-        number = 0
+        number = 0 #on réinitialise number pour pas qu'une lettre hérite les statistiques d'une autre
+    
+    for lettre in range(len(ranking)):
+        verification += ranking[lettre]
 
-    for a in range(len(ranking)):
-        newalphabet.append(alphabet[a])
+    return ranking,total,verification #ranking est selon l'ordre alphabétique
 
-    return ranking, newalphabet
+print(frequency(original))
 
-
-def split(document):
+def split(document): #sépare le textes en petites unités que nous allons analyser
     split = []
     iterator = 0
-    iteration = 0
+    iteration = 0   
 
     for a in document:
         # if code == "text":
-        if (
-            a == " "
-            or a == "."
-            or a == ","
-            or a == "\n"
-            or a == "/"
-            or a == "\\"
-            or a == "*"
-            or a == "%"
-            or a == "&"
-            or a == " "
-            or a == ";"
-            or a == "!"
-            or a == "?"
-            or a == ""
-            or a == ""
-            or a == "("
-            or a == ")"
-            or a == "–"
-            or a == "*"
-            or a == "“"
-            or a == "”"
-            or a == "…"
-            or a == "’"
-            or a == ":"
-            or a == "»"
-            or a == "«"
-            or a == "-"
-            or a == "0"
-            or a == "1"
-            or a == "2"
-            or a == "3"
-            or a == "4"
-            or a == "5"
-            or a == "6"
-            or a == "7"
-            or a == "8"
-            or a == "9"
-        ):
+        if (a in special):
             if document[iterator:iteration] != "":
                 split.append(document[iterator:iteration].lower())
             iterator = iteration + 1
@@ -101,7 +63,7 @@ def split(document):
     return split
 
 
-def gatherer(liste):
+def gatherer(liste): #rassemble les unités égales
     gathered = []
 
     while len(liste) > 0:
@@ -115,9 +77,7 @@ def gatherer(liste):
     return gathered
 
 
-def ranker(
-    liste,
-):
+def ranker(liste): #compte le nombre d'éléments par unités
     rank = []
     count = 0
 
@@ -131,7 +91,7 @@ def ranker(
     return rank
 
 
-def doublon(liste_rank, real_liste):
+def doublon(liste_rank, real_liste): #supprime les doublons
     liste_propre = []
     rank_propre = []
 
@@ -146,7 +106,7 @@ def doublon(liste_rank, real_liste):
     return rank_propre, liste_propre
 
 
-def algotri(liste_rank, real_liste):
+def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de leur fréquence
     for a in range(len(liste_rank)):
         maximum = 0
         rank = 0
@@ -166,10 +126,10 @@ def algotri(liste_rank, real_liste):
     return liste_rank, real_liste
 
 
-print(
-    "\t\t\t\t________________________________________________________________________\n"
-)
-print("\t\t\t\t\t\t\tText Analyzer\n")
+#print(
+#    "\t\t\t\t________________________________________________________________________\n"
+#)
+#print("\t\t\t\t\t\t\tText Analyzer\n")
 
 # code = ""
 # while code != "text" and code != "code":
