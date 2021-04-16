@@ -49,8 +49,7 @@ def split(document): #sépare le textes en petites unités que nous allons analy
 
     return split
 
-#print(split(original)) #test sur l'extrait de victor hugo
-
+print(split(original)) #test sur l'extrait de victor hugo
 
 def gatherer(liste): #rassemble les unités égales
     gathered = []
@@ -65,6 +64,7 @@ def gatherer(liste): #rassemble les unités égales
 
     return gathered
 
+#print(gatherer(original))
 
 def ranker(liste): #compte le nombre d'éléments par unités
     rank = []
@@ -125,7 +125,6 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 #    code = input(
 #        'Enter "text" if you want to analyze a text OR "code" if it\'s about a programming language : '
 #    )
-# TRAITEMENT DE LANGAGE DE PROGRAMMATION MAUVAIS
 
 #lecture = split(lecture)
 #universe = len(lecture)
