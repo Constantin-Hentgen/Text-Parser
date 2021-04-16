@@ -1,5 +1,5 @@
 from random import randint
-
+#je sais pas si changer le nom d'un repo pose problème…
 #lecture du fichier texte pour effectuer le traitement
 f = open("hugo_notre_dame_de_paris.txt", "r", encoding="utf-8")
 lecture = f.read()
@@ -27,7 +27,7 @@ def frequency(original): #renvoi la fréquence pour chaque caractère
                 number += 1 #incrémenter pour la stat de la lettre par occurence
 
         if number != 0: #si la lettre est apparue au moins une fois
-            number = int(number * 10000 / total) / 100 #on calcule la fréquence
+            number = number * 100 / total #on calcule la fréquence
             ranking.append(number)
         number = 0 #on réinitialise number pour pas qu'une lettre hérite les statistiques d'une autre
 
