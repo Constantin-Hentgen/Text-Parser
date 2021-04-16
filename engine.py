@@ -169,7 +169,7 @@ def algotri(liste_rank, real_liste):
 print(
     "\t\t\t\t________________________________________________________________________\n"
 )
-print("\t\t\t\t\t\t\tText Analyzer by Constantin\n")
+print("\t\t\t\t\t\t\tText Analyzer\n")
 
 # code = ""
 # while code != "text" and code != "code":
@@ -178,71 +178,74 @@ print("\t\t\t\t\t\t\tText Analyzer by Constantin\n")
 #    )
 # TRAITEMENT DE LANGAGE DE PROGRAMMATION MAUVAIS
 
-lecture = split(lecture)
-universe = len(lecture)
-liste = gatherer(lecture)
+#lecture = split(lecture)
+#universe = len(lecture)
+#liste = gatherer(lecture)
+#print(liste)
+#
+#for a in range(3):
+#    liste = gatherer(liste)
+#
+#rank = ranker(liste)
+#print(rank)
+#liste = doublon(rank, liste)
+#liste = algotri(liste[0], liste[1])
+#sommeA = 0
+#sommeB = 0
+#ranking = frequency(original)
+#ranking = algotri(ranking[0], ranking[1])
 
-for a in range(3):
-    liste = gatherer(liste)
+#for a in range(len(ranking[0])):
+#    print(
+#        "\t\t\t\t\t\t\t",
+#        a + 1,
+#        "\t",
+#        ranking[1][len(ranking[0]) - 1 - a],
+#        "\t",
+#        ranking[0][len(ranking[0]) - 1 - a],
+#        "% ",
+#    )
 
-rank = ranker(liste)
-liste = doublon(rank, liste)
-liste = algotri(liste[0], liste[1])
-sommeA = 0
-sommeB = 0
-ranking = frequency(original)
-ranking = algotri(ranking[0], ranking[1])
+#print(
+#    "\t\t\t\t________________________________________________________________________\n"
+#)
 
-for a in range(len(ranking[0])):
-    print(
-        "\t\t\t\t\t\t\t",
-        a + 1,
-        "\t",
-        ranking[1][len(ranking[0]) - 1 - a],
-        "\t",
-        ranking[0][len(ranking[0]) - 1 - a],
-        "% ",
-    )
+#for a in range(30):
+#    prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
+#    sommeA += prop
+#    sommeB += liste[0][len(liste[1]) - 1 - a]
+#
+#    if len(liste[1][len(liste[1]) - 1 - a]) >= 6:
+#        print(
+#            "\t\t\t\t\t\t",
+#            a + 1,
+#            "\t",
+#            liste[1][len(liste[1]) - 1 - a],
+#            "\t",
+#            liste[0][len(liste[1]) - 1 - a],
+#            "\t",
+#            int(1000 * prop) / 1000,
+#            "% ",
+#        )
 
-print(
-    "\t\t\t\t________________________________________________________________________\n"
-)
-for a in range(30):
-    prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
-    sommeA += prop
-    sommeB += liste[0][len(liste[1]) - 1 - a]
+#    else:
+#        print(
+#            "\t\t\t\t\t\t",
+#            a + 1,
+#            "\t",
+#            liste[1][len(liste[1]) - 1 - a],
+#            "\t\t",
+#            liste[0][len(liste[1]) - 1 - a],
+#            "\t",
+#            int(1000 * prop) / 1000,
+#            "% ",
+#        )
 
-    if len(liste[1][len(liste[1]) - 1 - a]) >= 6:
-        print(
-            "\t\t\t\t\t\t",
-            a + 1,
-            "\t",
-            liste[1][len(liste[1]) - 1 - a],
-            "\t",
-            liste[0][len(liste[1]) - 1 - a],
-            "\t",
-            int(1000 * prop) / 1000,
-            "% ",
-        )
-
-    else:
-        print(
-            "\t\t\t\t\t\t",
-            a + 1,
-            "\t",
-            liste[1][len(liste[1]) - 1 - a],
-            "\t\t",
-            liste[0][len(liste[1]) - 1 - a],
-            "\t",
-            int(1000 * prop) / 1000,
-            "% ",
-        )
-
-print("\n\t\t\t\t\t\t\t\t\t", sommeB, "\t", int(1000 * sommeA) / 1000, "% ")
-print(
-    "\t\t\t\t________________________________________________________________________"
-)
-print("\n\t\t\t\t\t\t\t mot aléatoire :", liste[1][randint(0, len(liste[1]))])
-print(
-    "\t\t\t\t________________________________________________________________________\n"
-)
+#print("\n\t\t\t\t\t\t\t\t\t", sommeB, "\t", int(1000 * sommeA) / 1000, "% ")
+#print(
+#    "\t\t\t\t________________________________________________________________________"
+#)
+#print("\n\t\t\t\t\t\t\t mot aléatoire :", liste[1][randint(0, len(liste[1]))])
+#print(
+#    "\t\t\t\t________________________________________________________________________\n"
+#)
