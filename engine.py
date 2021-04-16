@@ -7,7 +7,7 @@ f.close()
 
 original = lecture
 alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
-special = " .,\n/\\*%&;?(! )–*“”…’:»«-0123456789" #définition des caractères spéciaux pour effectuer des tests
+special = " .,\n/\\*%&;?(! )–*“”…’`:»«-0123456789" #définition des caractères spéciaux pour effectuer des tests
 
 #faire différents mode qui prennent en compte les caractères spéciaux, espaces…
 #connaitre quelques alphabets pour pouvoir faire de l'analyse pour différentes langues
@@ -30,7 +30,7 @@ def frequency(original): #renvoi la fréquence pour chaque caractère
             number = int(number * 10000 / total) / 100 #on calcule la fréquence
             ranking.append(number)
         number = 0 #on réinitialise number pour pas qu'une lettre hérite les statistiques d'une autre
-    
+
     for lettre in range(len(ranking)):
         verification += ranking[lettre]
 
