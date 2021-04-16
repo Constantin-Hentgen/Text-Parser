@@ -7,15 +7,12 @@ f.close()
 
 original = lecture
 alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
-special = " .,\n/\\*%&;?(! )–*“”…’`:»«-0123456789" #définition des caractères spéciaux pour effectuer des tests
+special = " .,\n/\\*%&;?(! )–*“”…’'`:»«-0123456789" #définition des caractères spéciaux pour effectuer des tests
 
-#faire différents mode qui prennent en compte les caractères spéciaux, espaces…
-#connaitre quelques alphabets pour pouvoir faire de l'analyse pour différentes langues
 def frequency(original): #renvoi la fréquence pour chaque caractère
     ranking = [] #liste vide pour contenir les fréquences
     total = 0
     number = 0
-    verification = 0
 
     for letter in original: #boucle pour compter le nombre total de caractères non vides dans le document
         if letter in alphabet: #comptabilisation du nombre de caractères non spéciaux
@@ -27,30 +24,29 @@ def frequency(original): #renvoi la fréquence pour chaque caractère
                 number += 1 #incrémenter pour la stat de la lettre par occurence
 
         if number != 0: #si la lettre est apparue au moins une fois
-            number = number * 100 / total #on calcule la fréquence
+            number = number * 100 / total #calcul de la fréquence
             ranking.append(number)
-        number = 0 #on réinitialise number pour pas qu'une lettre hérite les statistiques d'une autre
+        number = 0 #réinitialisation de number pour pas qu'une lettre hérite les statistiques d'une autre
 
-    for lettre in range(len(ranking)):
-        verification += ranking[lettre]
+    return ranking #ranking est selon l'ordre alphabétique
 
-    return ranking,total,verification #ranking est selon l'ordre alphabétique
-
-print(frequency(original))
+#print(frequency(original)) #test sur l'extrait de victor hugo
 
 def split(document): #sépare le textes en petites unités que nous allons analyser
-    split = []
-    iterator = 0
-    iteration = 0   
+    split = [] #liste résultat contenant les unités séparées
+    iterator = 0 #correspond au suivi des unités
+    iteration = 0 #correspond au suivi des caractères
 
-    for a in document:
-        # if code == "text":
-        if (a in special):
-            if document[iterator:iteration] != "":
-                split.append(document[iterator:iteration].lower())
-            iterator = iteration + 1
+    for caracter in document: #pour chaque caractère du document
+        if caracter in special: #si le caractère du document est un caractère spécial
+            split.append(document[iterator:iteration].lower()) #ajouter à split l'unité déterminée
+            iterator = iteration + 1 #évolue d'unité en unité
 
-        iteration += 1
+        iteration += 1 # évolue caractère par caractère
+
+    return split
+
+print(split(original)) #test sur l'extrait de victor hugo
 
     # else:
     #    if a == " ":
@@ -60,7 +56,7 @@ def split(document): #sépare le textes en petites unités que nous allons analy
     #
     #    iteration += 1
 
-    return split
+   # return split
 
 
 def gatherer(liste): #rassemble les unités égales
