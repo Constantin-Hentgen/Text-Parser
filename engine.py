@@ -42,21 +42,14 @@ def split(document): #sépare le textes en petites unités que nous allons analy
             split.append(document[iterator:iteration].lower()) #ajouter à split l'unité déterminée
             iterator = iteration + 1 #évolue d'unité en unité
 
+        if iteration > 1 and split[-1] == '': #supprime les éléments vides
+            del split[-1]
+
         iteration += 1 # évolue caractère par caractère
 
     return split
 
-print(split(original)) #test sur l'extrait de victor hugo
-
-    # else:
-    #    if a == " ":
-    #        if document[iterator:iteration] != "":
-    #            split.append(document[iterator:iteration].lower())
-    #        iterator = iteration + 1
-    #
-    #    iteration += 1
-
-   # return split
+#print(split(original)) #test sur l'extrait de victor hugo
 
 
 def gatherer(liste): #rassemble les unités égales
