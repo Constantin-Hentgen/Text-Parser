@@ -1,108 +1,52 @@
 from random import randint
 
-f = open("hugo_notre_dame_de_paris.txt", "r", encoding="utf-8")
-lecture = f.read()
-f.close()
-original = lecture
+#lecture du fichier texte pour effectuer le traitement
+f = open("fr.txt", "r", encoding="utf-8") #ouverture du document
+original = f.read() #assignement à une variable du contenu du document
+f.close() #fermeture du document
 
-alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï"
-alpha = []
+alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
+special = " .,\n/\\*%&;?(! )–*“”…’'`:»«-0123456789" #définition des caractères spéciaux pour effectuer des tests
 
-for a in range(len(alphabet)):
-    alpha.append(alphabet[a])
-
-
-def frequency(original):
-    ranking = []
+def frequency(original): #renvoi la fréquence pour chaque caractère
+    ranking = [] #liste vide pour contenir les fréquences
     total = 0
     number = 0
-    newalphabet = []
 
-    for letter in original:
-        if letter != " ":
+    for letter in original: #boucle pour compter le nombre total de caractères non vides dans le document
+        if letter in alphabet: #comptabilisation du nombre de caractères non spéciaux
             total += 1
 
-    for letter in alphabet:
-        for element in original:
+    for letter in alphabet: #pour chaque lettre de l'alphabet
+        for element in original: #pour chaque lettre du document
             if element == letter:
-                number += 1
+                number += 1 #incrémenter pour la stat de la lettre par occurence
 
-        if number != 0:
-            number = int(number * 10000 / total) / 100
+        if number != 0: #si la lettre est apparue au moins une fois
+            number = number * 100 / total #calcul de la fréquence
             ranking.append(number)
-        number = 0
+        number = 0 #réinitialisation de number pour pas qu'une lettre hérite les statistiques d'une autre
 
-    for a in range(len(ranking)):
-        newalphabet.append(alphabet[a])
+    return ranking #ranking est selon l'ordre alphabétique
 
-    return ranking, newalphabet
+def split(document): #sépare le textes en petites unités que nous allons analyser
+    split = [] #liste résultat contenant les unités séparées
+    iterator = 0 #correspond au suivi des unités
+    iteration = 0 #correspond au suivi des caractères
 
+    for caracter in document: #pour chaque caractère du document
+        if caracter in special: #si le caractère du document est un caractère spécial
+            split.append(document[iterator:iteration].lower()) #ajouter à split l'unité déterminée
+            iterator = iteration + 1 #évolue d'unité en unité
 
-def split(document):
-    split = []
-    iterator = 0
-    iteration = 0
+        if iteration > 1 and split[-1] == '': #supprime les éléments vides
+            del split[-1]
 
-    for a in document:
-        # if code == "text":
-        if (
-            a == " "
-            or a == "."
-            or a == ","
-            or a == "\n"
-            or a == "/"
-            or a == "\\"
-            or a == "*"
-            or a == "%"
-            or a == "&"
-            or a == " "
-            or a == ";"
-            or a == "!"
-            or a == "?"
-            or a == ""
-            or a == ""
-            or a == "("
-            or a == ")"
-            or a == "–"
-            or a == "*"
-            or a == "“"
-            or a == "”"
-            or a == "…"
-            or a == "’"
-            or a == ":"
-            or a == "»"
-            or a == "«"
-            or a == "-"
-            or a == "0"
-            or a == "1"
-            or a == "2"
-            or a == "3"
-            or a == "4"
-            or a == "5"
-            or a == "6"
-            or a == "7"
-            or a == "8"
-            or a == "9"
-            or a == "\x0c"
-        ):
-            if document[iterator:iteration] != "":
-                split.append(document[iterator:iteration].lower())
-            iterator = iteration + 1
-
-        iteration += 1
-
-    # else:
-    #    if a == " ":
-    #        if document[iterator:iteration] != "":
-    #            split.append(document[iterator:iteration].lower())
-    #        iterator = iteration + 1
-    #
-    #    iteration += 1
+        iteration += 1 # évolue caractère par caractère
 
     return split
 
-
-def gatherer(liste):
+def gatherer(liste): #rassemble les unités égales
     gathered = []
 
     while len(liste) > 0:
@@ -115,10 +59,7 @@ def gatherer(liste):
 
     return gathered
 
-
-def ranker(
-    liste,
-):
+def ranker(liste): #compte le nombre d'éléments par unités
     rank = []
     count = 0
 
@@ -131,8 +72,7 @@ def ranker(
 
     return rank
 
-
-def doublon(liste_rank, real_liste):
+def doublon(liste_rank, real_liste): #supprime les doublons
     liste_propre = []
     rank_propre = []
 
@@ -146,8 +86,7 @@ def doublon(liste_rank, real_liste):
 
     return rank_propre, liste_propre
 
-
-def algotri(liste_rank, real_liste):
+def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de leur fréquence
     for a in range(len(liste_rank)):
         maximum = 0
         rank = 0
@@ -155,110 +94,40 @@ def algotri(liste_rank, real_liste):
             if liste_rank[b] >= maximum:
                 maximum = liste_rank[b]
                 rank = b
-        liste_rank[rank], liste_rank[len(liste_rank) - a - 1] = (
-            liste_rank[len(liste_rank) - a - 1],
-            liste_rank[rank],
-        )
-        real_liste[rank], real_liste[len(liste_rank) - a - 1] = (
-            real_liste[len(liste_rank) - a - 1],
-            real_liste[rank],
-        )
+        liste_rank[rank], liste_rank[len(liste_rank) - a - 1] = (liste_rank[len(liste_rank) - a - 1], liste_rank[rank])
+        real_liste[rank], real_liste[len(real_liste) - a - 1] = (real_liste[len(real_liste) - a - 1], real_liste[rank])
 
     return liste_rank, real_liste
 
+#print(frequency(original)) 
+#print(split(original)) #partage du document en unités
+#print(gatherer(split(original))) #rassemblement des unités semblables
+#print(ranker(gatherer(split(original)))) #production des classements sur victor hugo de la liste rassemblée
 
-print(
-    "\t\t\t\t________________________________________________________________________\n"
-)
-print("\t\t\t\t\t\t\tText Analyzer by Constantin\n")
 
-# code = ""
-# while code != "text" and code != "code":
-#    code = input(
-#        'Enter "text" if you want to analyze a text OR "code" if it\'s about a programming language : '
-#    )
-# TRAITEMENT DE LANGAGE DE PROGRAMMATION MAUVAIS
+#print(algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1]))
+#concaténation des applications de toutes les fonctions
 
-lecture = split(lecture)
-universe = len(lecture)
-liste = gatherer(lecture)
+#print(algotri(frequency(original), list(alphabet))) #fréquence des lettres
 
-for a in range(3):
-    liste = gatherer(liste)
+liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
+rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
 
-rank = ranker(liste)
-liste = doublon(rank, liste)
-liste = algotri(liste[0], liste[1])
-sommeA = 0
-sommeB = 0
-ranking = frequency(original)
-ranking = algotri(ranking[0], ranking[1])
+print("***************************************************************") #séparateur graphique
 
-for a in range(len(ranking[0])):
-    print(
-        "\t\t\t\t\t\t\t",
-        a + 1,
-        "\t",
-        ranking[1][len(ranking[0]) - 1 - a],
-        "\t",
-        ranking[0][len(ranking[0]) - 1 - a],
-        "% ",
-    )
+print("mot aléatoire :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
 
-print(
-    "\t\t\t\t________________________________________________________________________\n"
-)
-for a in range(30):
-    prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
-    sommeA += prop
-    sommeB += liste[0][len(liste[1]) - 1 - a]
+liste_lettre = algotri(frequency(original), list(alphabet))[1] # liste triée dans l'ordre décroissant d'occurences des lettres de l'alphabet
+lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dans l'ordre décroissant d'occurences des fréquences des lettres de l'alphabet
 
-    if len(liste[1][len(liste[1]) - 1 - a]) >= 6:
-        print(
-            "\t\t\t\t\t\t",
-            a + 1,
-            "\t",
-            liste[1][len(liste[1]) - 1 - a],
-            "\t",
-            liste[0][len(liste[1]) - 1 - a],
-            "\t",
-            int(1000 * prop) / 1000,
-            "% ",
-        )
+print("***************************************************************")
 
-    else:
-        print(
-            "\t\t\t\t\t\t",
-            a + 1,
-            "\t",
-            liste[1][len(liste[1]) - 1 - a],
-            "\t\t",
-            liste[0][len(liste[1]) - 1 - a],
-            "\t",
-            int(1000 * prop) / 1000,
-            "% ",
-        )
+for a in range(10): #affichage du top 10 des lettres fréquentes
+    print(a + 1,liste_lettre[-a-1],lettre_rang[-a-1],"% ")
 
-print("\n\t\t\t\t\t\t\t\t\t", sommeB, "\t", int(1000 * sommeA) / 1000, "% ")
-print(
-    "\t\t\t\t________________________________________________________________________"
-)
-print("\n\t\t\t\t\t\t\t mot aléatoire :", liste[1][randint(0, len(liste[1]))])
-print(
-    "\t\t\t\t________________________________________________________________________\n"
-)
+print("***************************************************************")
 
-# ETAPE 1
-# taille moyenne des mots
-# imaginer une manière de fix le problème des mots cut avec un tiret et passage à la ligne
-# faire une analyse de la taille du fichier pour s'assurer que c'est raisonnablement executable : prévenir et analyser
-# faire un mode langue et code (détection auto ?)
+for a in range(10): #affichage du top 10 des mots fréquents
+    print(a + 1,liste[-a-1],rang[-a-1]*100/len(rang),"% ")
 
-# ETAPE 2
-# longueurs moyenne des phrases
-# trouver un mot en fonction de caractéristiques : nombre de lettres, lettres
-# demande entrée et cherche une correspondance
-
-# ETAPE 3
-# prendre en compte la morphologie des mains et les dimensions ains que le type du clavier
-# export de données en txt ?
+print("***************************************************************")
