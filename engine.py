@@ -113,7 +113,7 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
 rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
 
-print("***************************************************************") #séparateur graphique
+print("***************************************************************")
 
 print("mot aléatoire :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
 
