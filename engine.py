@@ -108,24 +108,26 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 #print(algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1]))
 #concaténation des applications de toutes les fonctions
 
-print(algotri(frequency(original), list(alphabet))) #fréquence des lettres
+#print(algotri(frequency(original), list(alphabet))) #fréquence des lettres
 
-#sommeA = 0
-#sommeB = 0
+liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
+rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
 
-#for a in range(len(ranking[0])):
-#    print(a + 1,ranking[1][len(ranking[0]) - 1 - a],ranking[0][len(ranking[0]) - 1 - a],"% ")
+print("***************************************************************")
 
-#for a in range(30):
-#    prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
-#    sommeA += prop
-#    sommeB += liste[0][len(liste[1]) - 1 - a]
-#
-#    if len(liste[1][len(liste[1]) - 1 - a]) >= 6:
-#        print(a + 1,liste[1][len(liste[1]) - 1 - a],liste[0][len(liste[1]) - 1 - a],int(1000 * prop) / 1000,"% ")
+print("mot aléatoire :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
 
-#    else:
-#        print(a + 1,liste[1][len(liste[1]) - 1 - a],liste[0][len(liste[1]) - 1 - a],int(1000 * prop) / 1000,"% ")
+liste_lettre = algotri(frequency(original), list(alphabet))[1] # liste triée dans l'ordre décroissant d'occurences des lettres de l'alphabet
+lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dans l'ordre décroissant d'occurences des fréquences des lettres de l'alphabet
 
-#print(sommeB, "\t", int(1000 * sommeA) / 1000, "% ")
-#print(mot aléatoire :", liste[1][randint(0, len(liste[1]))])
+print("***************************************************************")
+
+for a in range(10): #affichage du top 10 des lettres fréquentes
+    print(a + 1,liste_lettre[-a-1],lettre_rang[-a-1],"% ")
+
+print("***************************************************************")
+
+for a in range(10): #affichage du top 10 des mots fréquents
+    print(a + 1,liste[-a-1],rang[-a-1]*100/len(rang),"% ")
+
+print("***************************************************************")
