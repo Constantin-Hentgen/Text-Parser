@@ -2,10 +2,9 @@ from random import randint
 #je sais pas si changer le nom d'un repo pose problème…
 #lecture du fichier texte pour effectuer le traitement
 f = open("fr.txt", "r", encoding="utf-8") #ouverture du document
-lecture = f.read() #assignement à une variable du contenu du document
+original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
-original = lecture
 alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
 special = " .,\n/\\*%&;?(! )–*“”…’'`:»«-0123456789" #définition des caractères spéciaux pour effectuer des tests
 
