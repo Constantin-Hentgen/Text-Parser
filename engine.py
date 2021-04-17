@@ -1,9 +1,9 @@
 from random import randint
 #je sais pas si changer le nom d'un repo pose problème…
 #lecture du fichier texte pour effectuer le traitement
-f = open("hugo_notre_dame_de_paris.txt", "r", encoding="utf-8")
-lecture = f.read()
-f.close()
+f = open("fr.txt", "r", encoding="utf-8") #ouverture du document
+lecture = f.read() #assignement à une variable du contenu du document
+f.close() #fermeture du document
 
 original = lecture
 alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
@@ -49,7 +49,7 @@ def split(document): #sépare le textes en petites unités que nous allons analy
 
     return split
 
-print(split(original)) #test sur l'extrait de victor hugo
+#print(split(original)) #test sur l'extrait de victor hugo
 
 def gatherer(liste): #rassemble les unités égales
     gathered = []
@@ -64,7 +64,7 @@ def gatherer(liste): #rassemble les unités égales
 
     return gathered
 
-#print(gatherer(original))
+#print(gatherer(split(original))) #test de rassemblement sur victor hugo
 
 def ranker(liste): #compte le nombre d'éléments par unités
     rank = []
@@ -79,6 +79,13 @@ def ranker(liste): #compte le nombre d'éléments par unités
 
     return rank
 
+#print(ranker(gatherer(split(original)))) #production des classements sur victor hugo
+
+gatherer_test = gatherer(split(original))
+rang_test = ranker(gatherer(split(original)))
+
+#print(gatherer_test)
+#print(rang_test)
 
 def doublon(liste_rank, real_liste): #supprime les doublons
     liste_propre = []
@@ -94,6 +101,11 @@ def doublon(liste_rank, real_liste): #supprime les doublons
 
     return rank_propre, liste_propre
 
+doublon_rank_test = doublon(rang_test,gatherer_test)[0]
+doublon_liste_test = doublon(rang_test,gatherer_test)[1]
+
+#print(doublon_liste_test)
+#print(doublon_rank_test)
 
 def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de leur fréquence
     for a in range(len(liste_rank)):
@@ -114,26 +126,13 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 
     return liste_rank, real_liste
 
-
-#print(
-#    "\t\t\t\t________________________________________________________________________\n"
-#)
-#print("\t\t\t\t\t\t\tText Analyzer\n")
-
-# code = ""
-# while code != "text" and code != "code":
-#    code = input(
-#        'Enter "text" if you want to analyze a text OR "code" if it\'s about a programming language : '
-#    )
+#print(algotri(doublon_rank_test,doublon_liste_test))
 
 #lecture = split(lecture)
 #universe = len(lecture)
 #liste = gatherer(lecture)
 #print(liste)
-#
-#for a in range(3):
-#    liste = gatherer(liste)
-#
+
 #rank = ranker(liste)
 #print(rank)
 #liste = doublon(rank, liste)
@@ -153,10 +152,6 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 #        ranking[0][len(ranking[0]) - 1 - a],
 #        "% ",
 #    )
-
-#print(
-#    "\t\t\t\t________________________________________________________________________\n"
-#)
 
 #for a in range(30):
 #    prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
@@ -190,10 +185,4 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 #        )
 
 #print("\n\t\t\t\t\t\t\t\t\t", sommeB, "\t", int(1000 * sommeA) / 1000, "% ")
-#print(
-#    "\t\t\t\t________________________________________________________________________"
-#)
 #print("\n\t\t\t\t\t\t\t mot aléatoire :", liste[1][randint(0, len(liste[1]))])
-#print(
-#    "\t\t\t\t________________________________________________________________________\n"
-#)
