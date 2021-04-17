@@ -1,5 +1,5 @@
 from random import randint
-#je sais pas si changer le nom d'un repo pose problème…
+
 #lecture du fichier texte pour effectuer le traitement
 f = open("fr.txt", "r", encoding="utf-8") #ouverture du document
 original = f.read() #assignement à une variable du contenu du document
@@ -29,8 +29,6 @@ def frequency(original): #renvoi la fréquence pour chaque caractère
 
     return ranking #ranking est selon l'ordre alphabétique
 
-#print(frequency(original)) #test sur l'extrait de victor hugo
-
 def split(document): #sépare le textes en petites unités que nous allons analyser
     split = [] #liste résultat contenant les unités séparées
     iterator = 0 #correspond au suivi des unités
@@ -48,8 +46,6 @@ def split(document): #sépare le textes en petites unités que nous allons analy
 
     return split
 
-#print(split(original)) #test sur l'extrait de victor hugo
-
 def gatherer(liste): #rassemble les unités égales
     gathered = []
 
@@ -63,8 +59,6 @@ def gatherer(liste): #rassemble les unités égales
 
     return gathered
 
-#print(gatherer(split(original))) #test de rassemblement sur victor hugo
-
 def ranker(liste): #compte le nombre d'éléments par unités
     rank = []
     count = 0
@@ -77,14 +71,6 @@ def ranker(liste): #compte le nombre d'éléments par unités
         count = 0
 
     return rank
-
-#print(ranker(gatherer(split(original)))) #production des classements sur victor hugo
-
-gatherer_test = gatherer(split(original))
-rang_test = ranker(gatherer(split(original)))
-
-#print(gatherer_test)
-#print(rang_test)
 
 def doublon(liste_rank, real_liste): #supprime les doublons
     liste_propre = []
@@ -100,12 +86,6 @@ def doublon(liste_rank, real_liste): #supprime les doublons
 
     return rank_propre, liste_propre
 
-doublon_rank_test = doublon(rang_test,gatherer_test)[0]
-doublon_liste_test = doublon(rang_test,gatherer_test)[1]
-
-#print(doublon_liste_test)
-#print(doublon_rank_test)
-
 def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de leur fréquence
     for a in range(len(liste_rank)):
         maximum = 0
@@ -114,43 +94,27 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
             if liste_rank[b] >= maximum:
                 maximum = liste_rank[b]
                 rank = b
-        liste_rank[rank], liste_rank[len(liste_rank) - a - 1] = (
-            liste_rank[len(liste_rank) - a - 1],
-            liste_rank[rank],
-        )
-        real_liste[rank], real_liste[len(liste_rank) - a - 1] = (
-            real_liste[len(liste_rank) - a - 1],
-            real_liste[rank],
-        )
+        liste_rank[rank], liste_rank[len(liste_rank) - a - 1] = (liste_rank[len(liste_rank) - a - 1], liste_rank[rank])
+        real_liste[rank], real_liste[len(real_liste) - a - 1] = (real_liste[len(real_liste) - a - 1], real_liste[rank])
 
     return liste_rank, real_liste
 
-#print(algotri(doublon_rank_test,doublon_liste_test))
+#print(frequency(original)) 
+#print(split(original)) #partage du document en unités
+#print(gatherer(split(original))) #rassemblement des unités semblables
+#print(ranker(gatherer(split(original)))) #production des classements sur victor hugo de la liste rassemblée
 
-#lecture = split(lecture)
-#universe = len(lecture)
-#liste = gatherer(lecture)
-#print(liste)
 
-#rank = ranker(liste)
-#print(rank)
-#liste = doublon(rank, liste)
-#liste = algotri(liste[0], liste[1])
+#print(algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1]))
+#concaténation des applications de toutes les fonctions
+
+print(algotri(frequency(original), list(alphabet))) #fréquence des lettres
+
 #sommeA = 0
 #sommeB = 0
-#ranking = frequency(original)
-#ranking = algotri(ranking[0], ranking[1])
 
 #for a in range(len(ranking[0])):
-#    print(
-#        "\t\t\t\t\t\t\t",
-#        a + 1,
-#        "\t",
-#        ranking[1][len(ranking[0]) - 1 - a],
-#        "\t",
-#        ranking[0][len(ranking[0]) - 1 - a],
-#        "% ",
-#    )
+#    print(a + 1,ranking[1][len(ranking[0]) - 1 - a],ranking[0][len(ranking[0]) - 1 - a],"% ")
 
 #for a in range(30):
 #    prop = 100 * liste[0][len(liste[1]) - 1 - a] / universe
@@ -158,30 +122,10 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 #    sommeB += liste[0][len(liste[1]) - 1 - a]
 #
 #    if len(liste[1][len(liste[1]) - 1 - a]) >= 6:
-#        print(
-#            "\t\t\t\t\t\t",
-#            a + 1,
-#            "\t",
-#            liste[1][len(liste[1]) - 1 - a],
-#            "\t",
-#            liste[0][len(liste[1]) - 1 - a],
-#            "\t",
-#            int(1000 * prop) / 1000,
-#            "% ",
-#        )
+#        print(a + 1,liste[1][len(liste[1]) - 1 - a],liste[0][len(liste[1]) - 1 - a],int(1000 * prop) / 1000,"% ")
 
 #    else:
-#        print(
-#            "\t\t\t\t\t\t",
-#            a + 1,
-#            "\t",
-#            liste[1][len(liste[1]) - 1 - a],
-#            "\t\t",
-#            liste[0][len(liste[1]) - 1 - a],
-#            "\t",
-#            int(1000 * prop) / 1000,
-#            "% ",
-#        )
+#        print(a + 1,liste[1][len(liste[1]) - 1 - a],liste[0][len(liste[1]) - 1 - a],int(1000 * prop) / 1000,"% ")
 
-#print("\n\t\t\t\t\t\t\t\t\t", sommeB, "\t", int(1000 * sommeA) / 1000, "% ")
-#print("\n\t\t\t\t\t\t\t mot aléatoire :", liste[1][randint(0, len(liste[1]))])
+#print(sommeB, "\t", int(1000 * sommeA) / 1000, "% ")
+#print(mot aléatoire :", liste[1][randint(0, len(liste[1]))])
