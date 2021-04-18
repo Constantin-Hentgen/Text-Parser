@@ -1,7 +1,8 @@
 from random import randint
 
+path = input("Entrer le nom du fichier sans extension : ") + ".txt"
 #lecture du fichier texte pour effectuer le traitement
-f = open("fr.txt", "r", encoding="utf-8") #ouverture du document
+f = open(path, "r", encoding="utf-8") #ouverture du document
 original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
@@ -127,24 +128,28 @@ for element in split(original):
 liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
 rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
 
+print("***************************************************************")
+
 print("nombre de mots moyen par phrase : ",len(split(original))/compteur_points)
 print("nombre de lettres moyen par mot : ", compteur_lettres/len(split(original)))
 print("quotient de mots différents sur le total : ", len(liste)/len(split(original)))
 
 print("***************************************************************")
 
-print("mot aléatoire :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
+print("mot aléatoire en situation d'équiprobabilité :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
 
 liste_lettre = algotri(frequency(original), list(alphabet))[1] # liste triée dans l'ordre décroissant d'occurences des lettres de l'alphabet
 lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dans l'ordre décroissant d'occurences des fréquences des lettres de l'alphabet
 
 print("***************************************************************")
-
+print("TOP 10 DES LETTRES LES PLUS FRÉQUENTES")
+print("______________________________________")
 for a in range(10): #affichage du top 10 des lettres fréquentes
     print(a + 1,liste_lettre[-a-1],lettre_rang[-a-1],"% ")
 
 print("***************************************************************")
-
+print("TOP 10 DES MOTS LES PLUS FRÉQUENTS")
+print("______________________________________")
 for a in range(10): #affichage du top 10 des mots fréquents
     print(a + 1,liste[-a-1],rang[-a-1]*100/len(rang),"% ")
 
