@@ -1,4 +1,4 @@
-# French-text-analyzer
+# text-analyzer
 
 The python program is made to analyze a .txt file and tell you the letters' and words' frequency. This script will allow a powerful optimization of a keyboard layout.
 
