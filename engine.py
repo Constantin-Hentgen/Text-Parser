@@ -1,12 +1,23 @@
 from random import randint
 
 #lecture du fichier texte pour effectuer le traitement
-f = open("en.txt", "r", encoding="utf-8") #ouverture du document
+f = open("fr.txt", "r", encoding="utf-8") #ouverture du document
 original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
 alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
 special = " .,/\n\\*%&;?(! )–*“”…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
+
+#kara = int(input("Entre 1 si tu veux étudier la fréquence des caractères spéciaux sinon 0 : "))
+#
+#if kara == 1:
+#    alphabet,special = special,alphabet
+
+compteur_points = 0
+
+for character in original: #compteur de points pour connaître le nombre de phrase moyen
+    if character == ".":
+        compteur_points += 1
 
 def frequency(original): #renvoi la fréquence pour chaque caractère
     ranking = [] #liste vide pour contenir les fréquences
@@ -108,8 +119,17 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 
 #print(algotri(frequency(original), list(alphabet))) #fréquence des lettres
 
+compteur_lettres = 0
+
+for element in split(original):
+    compteur_lettres += len(element)
+
 liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
 rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
+
+print("nombre de mots moyen par phrase : ",len(split(original))/compteur_points)
+print("nombre de lettres moyen par mot : ", compteur_lettres/len(split(original)))
+print("quotient de mots différents sur le total : ", len(liste)/len(split(original)))
 
 print("***************************************************************")
 
