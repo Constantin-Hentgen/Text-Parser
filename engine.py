@@ -1,7 +1,7 @@
 from random import randint
 
 #lecture du fichier texte pour effectuer le traitement
-f = open("fr.txt", "r", encoding="utf-8") #ouverture du document
+f = open("en.txt", "r", encoding="utf-8") #ouverture du document
 original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
@@ -31,7 +31,7 @@ def frequency(original): #renvoi la fréquence pour chaque caractère
 
 def split(document): #sépare le textes en petites unités que nous allons analyser
     split = [] #liste résultat contenant les unités séparées
-    iterator = 0 #correspond au suivi des unités
+    iterator = 0 #correspond au suivi des unitésmi
     iteration = 0 #correspond au suivi des caractères
     document = document.replace("-\n", '') #suppresion des \n de passage à la ligne et des - de jonction
 
@@ -44,8 +44,6 @@ def split(document): #sépare le textes en petites unités que nous allons analy
         iteration += 1 # évolue caractère par caractère
                 
     return split
-
-print(split(original))
 
 def gatherer(liste): #rassemble les unités égales
     gathered = []
@@ -80,12 +78,20 @@ def doublon(liste_rank, real_liste): #supprime les doublons
     liste_propre.append(real_liste[0])
     rank_propre.append(liste_rank[0])
 
-    for a in range(len(liste_rank) - 1):
-        if real_liste[a + 1] != real_liste[a]:
+    for a in range(len(real_liste) - 1):
+        if real_liste[a + 1] not in liste_propre:
             liste_propre.append(real_liste[a + 1])
             rank_propre.append(liste_rank[a + 1])
 
+    #for a in real_liste:
+    #    if a not in liste_propre:
+    #        liste_propre.append(a)
+    #        rank_propre.append(liste_rank[a])
+
     return rank_propre, liste_propre
+
+#rang = ranker(gatherer(split(original)))
+#print(doublon(rang,gatherer(split(original))))
 
 def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de leur fréquence
     for a in range(len(liste_rank)):
@@ -113,21 +119,21 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
 rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
 
-#print("***************************************************************")
-#
-#print("mot aléatoire :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
-#
-#liste_lettre = algotri(frequency(original), list(alphabet))[1] # liste triée dans l'ordre décroissant d'occurences des lettres de l'alphabet
-#lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dans l'ordre décroissant d'occurences des fréquences des lettres de l'alphabet
-#
-#print("***************************************************************")
-#
-#for a in range(10): #affichage du top 10 des lettres fréquentes
-#    print(a + 1,liste_lettre[-a-1],lettre_rang[-a-1],"% ")
-#
-#print("***************************************************************")
-#
-#for a in range(10): #affichage du top 10 des mots fréquents
-#    print(a + 1,liste[-a-1],rang[-a-1]*100/len(rang),"% ")
-#
-#print("***************************************************************")#
+print("***************************************************************")
+
+print("mot aléatoire :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
+
+liste_lettre = algotri(frequency(original), list(alphabet))[1] # liste triée dans l'ordre décroissant d'occurences des lettres de l'alphabet
+lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dans l'ordre décroissant d'occurences des fréquences des lettres de l'alphabet
+
+print("***************************************************************")
+
+for a in range(10): #affichage du top 10 des lettres fréquentes
+    print(a + 1,liste_lettre[-a-1],lettre_rang[-a-1],"% ")
+
+print("***************************************************************")
+
+for a in range(10): #affichage du top 10 des mots fréquents
+    print(a + 1,liste[-a-1],rang[-a-1]*100/len(rang),"% ")
+
+print("***************************************************************")#
