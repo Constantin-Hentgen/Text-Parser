@@ -83,15 +83,7 @@ def doublon(liste_rank, real_liste): #supprime les doublons
             liste_propre.append(real_liste[a + 1])
             rank_propre.append(liste_rank[a + 1])
 
-    #for a in real_liste:
-    #    if a not in liste_propre:
-    #        liste_propre.append(a)
-    #        rank_propre.append(liste_rank[a])
-
     return rank_propre, liste_propre
-
-#rang = ranker(gatherer(split(original)))
-#print(doublon(rang,gatherer(split(original))))
 
 def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de leur fréquence
     for a in range(len(liste_rank)):
