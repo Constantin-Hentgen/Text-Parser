@@ -1,5 +1,6 @@
 from random import randint
 
+print("***************************************************************")
 path = input("Entrer le nom du fichier sans extension : ") + ".txt"
 #lecture du fichier texte pour effectuer le traitement
 f = open(path, "r", encoding="utf-8") #ouverture du document
@@ -145,10 +146,10 @@ lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dan
 
 print("***************************************************************")
 for a in range(10): #affichage du top 10 des lettres fréquentes
-    print(a + 1,liste_lettre[-a-1],lettre_rang[-a-1],"% ")
+    print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*100)/100,"% ")
 
 print("***************************************************************")
 for a in range(10): #affichage du top 10 des mots fréquents
-    print(a + 1,liste[-a-1],rang[-a-1]*100/len(rang),"% ")
+    print(a + 1,liste[-a-1],int(rang[-a-1]*10000/len(rang))/100,"% ")
 
 print("***************************************************************")
