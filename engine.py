@@ -7,7 +7,7 @@ original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
 alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
-special = " .,/\n\\*%&;?(! )–*“”…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
+special = " .,/\n\\*%&;?€•(! )–*“”…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
 
 #kara = int(input("Entre 1 si tu veux étudier la fréquence des caractères spéciaux sinon 0 : "))
 #
@@ -43,7 +43,7 @@ def frequency(original): #renvoi la fréquence pour chaque caractère
 
 def split(document): #sépare le textes en petites unités que nous allons analyser
     split = [] #liste résultat contenant les unités séparées
-    iterator = 0 #correspond au suivi des unitésmi
+    iterator = 0 #correspond au suivi des unités
     iteration = 0 #correspond au suivi des caractères
     document = document.replace("-\n", '') #suppresion des \n de passage à la ligne et des - de jonction
 
@@ -51,9 +51,11 @@ def split(document): #sépare le textes en petites unités que nous allons analy
         if caracter in special: #si le caractère du document est un caractère spécial
             split.append(document[iterator:iteration].lower()) #ajouter à split l'unité déterminée
             iterator = iteration + 1 #évolue d'unité en unité
-        if iteration > 1 and split[-1] == '': #supprime les éléments vides
-            del split[-1]
+
         iteration += 1 # évolue caractère par caractère
+    
+    while("" in split) : #supprime les éléments vides
+        split.remove("")
                 
     return split
 
@@ -142,14 +144,10 @@ liste_lettre = algotri(frequency(original), list(alphabet))[1] # liste triée da
 lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dans l'ordre décroissant d'occurences des fréquences des lettres de l'alphabet
 
 print("***************************************************************")
-print("TOP 10 DES LETTRES LES PLUS FRÉQUENTES")
-print("______________________________________")
 for a in range(10): #affichage du top 10 des lettres fréquentes
     print(a + 1,liste_lettre[-a-1],lettre_rang[-a-1],"% ")
 
 print("***************************************************************")
-print("TOP 10 DES MOTS LES PLUS FRÉQUENTS")
-print("______________________________________")
 for a in range(10): #affichage du top 10 des mots fréquents
     print(a + 1,liste[-a-1],rang[-a-1]*100/len(rang),"% ")
 
