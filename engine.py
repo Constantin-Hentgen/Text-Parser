@@ -7,11 +7,11 @@ f = open(path, "r", encoding="utf-8") #ouverture du document
 original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
-alphabet = "abcdefghijklmnopqrstuvwxyzçêèàéâûîùôœæï" #définition de l'alphabet pour effectuer les tests
-voyelles = "aeiouyàâéèêiïîôùû"
-consonnes = "bcdfghjklmnpqrstvwxzç"
-accents = "àâéèêiïîôùûëäü"
 special = " .,/\n\\*%&;?€•(! )–*“”…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
+alphabet = "abcdefghijklmnßopqrstuvwxyzçêèàéâûîùôœæïîôùüäëû" #définition de l'alphabet pour effectuer les tests
+voyelles = "aeiouyàâéèêiïîôùüäëû"
+consonnes = "bcdfghjklmnpqrstvwxzßç"
+accents = "àâéèêiïîôùûëäü"
 
 #kara = int(input("Entre 1 si tu veux étudier la fréquence des caractères spéciaux sinon 0 : "))
 #
@@ -154,40 +154,40 @@ for element in split(original):
 liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
 rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
 
-#print("***************************************************************")
-#
-#print("ratio de voyelles : ", int(1000000*vowel(original)[0]/vowel(original)[2])/10000,"%")
-#print("ratio de consonnes : ", int(1000000*vowel(original)[1]/vowel(original)[2])/10000,"%")
-#print("ratio de lettres accentuées françaises : ",int(1000000*vowel(original)[3]/vowel(original)[2])/10000,"%")
-#print("nombre de mots moyen par phrase : ",int(10000*len(split(original))/compteur_points)/10000)
-#print("nombre de lettres moyen par mot : ", int(10000*compteur_lettres/len(split(original)))/10000)
-#print("quotient de mots différents sur le total : ", int(10000*len(liste)/len(split(original)))/10000)
-#print("SCORE FINAL (clareté et élégance) : ",int((10**8/len(split(original))/compteur_points)*(len(liste)/len(split(original)))**2))
-#
-#print("***************************************************************")
-#
-#print("mot aléatoire en situation d'équiprobabilité :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
+print("***************************************************************")
+
+print("ratio de voyelles : ", int(1000000*vowel(original)[0]/vowel(original)[2])/10000,"%")
+print("ratio de consonnes : ", int(1000000*vowel(original)[1]/vowel(original)[2])/10000,"%")
+print("ratio de voyelles accentuées : ",int(1000000*vowel(original)[3]/vowel(original)[2])/10000,"%")
+print("nombre de mots moyen par phrase : ",int(10000*len(split(original))/compteur_points)/10000)
+print("nombre de lettres moyen par mot : ", int(10000*compteur_lettres/len(split(original)))/10000)
+print("quotient de mots différents sur le total : ", int(10000*len(liste)/len(split(original)))/10000)
+print("SCORE FINAL (clareté et élégance) : ",int((len(split(original))/compteur_points)*(len(liste)/len(split(original)))**2))
+
+print("***************************************************************")
+
+print("mot aléatoire en situation d'équiprobabilité :", liste[randint(0, len(liste)-1)]) #affichage d'un mot aléatoire avec equiprobabilité
 
 liste_lettre = algotri(frequency(original), list(alphabet))[1] # liste triée dans l'ordre décroissant d'occurences des lettres de l'alphabet
 lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dans l'ordre décroissant d'occurences des fréquences des lettres de l'alphabet
 
-print(liste_lettre)
-print(lettre_rang)
+#print(liste_lettre)
+#print(lettre_rang)
 
 print("***************************************************************")
 cumul = 0
-for a in range(15): #affichage du top 10 des lettres fréquentes
+for a in range(20): #affichage du top 10 des lettres fréquentes
     cumul += lettre_rang[-a-1]
     print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*10000)/10000,"% ")
     
-#print("***************************************************************")
-#print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
-#print("***************************************************************")
-#cumul = 0
-#for a in range(20): #affichage du top 10 des mots fréquents
-#    cumul += rang[-a-1]*100/len(split(original))
-#    print(a + 1,liste[-a-1],int(rang[-a-1]*1000000/len(split(original)))/10000,"% ")
-#
-#print("***************************************************************")
-#print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
-#print("***************************************************************")
+print("***************************************************************")
+print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
+print("***************************************************************")
+cumul = 0
+for a in range(20): #affichage du top 10 des mots fréquents
+    cumul += rang[-a-1]*100/len(split(original))
+    print(a + 1,liste[-a-1],int(rang[-a-1]*1000000/len(split(original)))/10000,"% ")
+
+print("***************************************************************")
+print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
+print("***************************************************************")
