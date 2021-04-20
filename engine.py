@@ -133,9 +133,9 @@ rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original
 
 print("***************************************************************")
 
-print("nombre de mots moyen par phrase : ",len(split(original))/compteur_points)
-print("nombre de lettres moyen par mot : ", compteur_lettres/len(split(original)))
-print("quotient de mots différents sur le total : ", len(liste)/len(split(original)))
+print("nombre de mots moyen par phrase : ",int(1000*len(split(original))/compteur_points)/1000)
+print("nombre de lettres moyen par mot : ", int(1000*compteur_lettres/len(split(original)))/1000)
+print("quotient de mots différents sur le total : ", int(1000*len(liste)/len(split(original)))/1000)
 
 print("***************************************************************")
 
@@ -146,10 +146,10 @@ lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dan
 
 print("***************************************************************")
 for a in range(10): #affichage du top 10 des lettres fréquentes
-    print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*100)/100,"% ")
+    print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*1000)/1000,"% ")
 
 print("***************************************************************")
 for a in range(10): #affichage du top 10 des mots fréquents
-    print(a + 1,liste[-a-1],int(rang[-a-1]*10000/len(rang))/100,"% ")
+    print(a + 1,liste[-a-1],int(rang[-a-1]*100000/len(rang))/1000,"% ")
 
 print("***************************************************************")
