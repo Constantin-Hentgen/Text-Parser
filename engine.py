@@ -8,7 +8,7 @@ original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
 special = " .,/\n\\*%&;?$€•(! ){#[]}–\"=+-*“”|…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
-particular = ".,/\\*%&;?$€•()}=]~!{#[–“|”…’'`:»«"
+particular = ".,/\\*%&;?$€•(=~!{#[–“|”…’'`:«"
 alphabet = "abcdefghijklmnßopqrstuvwxyzçêèàéâûîùôœæïîôùüäëû" #définition de l'alphabet pour effectuer les tests
 voyelles = "aeiouyàâéèêiïîôùüäëû"
 consonnes = "bcdfghjklmnpqrstvwxzßç"
@@ -177,9 +177,9 @@ print("***************************************************************")
 print("ratio de voyelles : ", int(1000000*vowel(original)[0]/vowel(original)[2])/10000,"%")
 print("ratio de consonnes : ", int(1000000*vowel(original)[1]/vowel(original)[2])/10000,"%")
 print("ratio de voyelles accentuées : ",int(1000000*vowel(original)[3]/vowel(original)[2])/10000,"%")
-print("nombre de mots moyen par phrase : ",int(10000*len(split(original))/compteur_points)/10000)
-print("nombre de lettres moyen par mot : ", int(10000*compteur_lettres/len(split(original)))/10000)
-print("quotient de mots différents sur le total : ", int(10000*len(liste)/len(split(original)))/10000)
+print("nombre moyen de mots par phrase : ",int(10000*len(split(original))/compteur_points)/10000)
+print("nombre moyen de lettres par mot : ", int(10000*compteur_lettres/len(split(original)))/10000)
+print("proportion de mots uniques : ", 100*int(10000*len(liste)/len(split(original)))/10000,"%")
 #print(len(liste)/len(split(original)))
 #print(len(split(original))/compteur_points)
 print("SCORE : ",int(1000000*(len(liste)/len(split(original)))**5/(len(split(original))/compteur_points)))
@@ -201,7 +201,7 @@ for a in range(20): #affichage du top 10 des lettres fréquentes
     print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*10000)/10000,"% ")
     
 print("***************************************************************")
-print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
+print("Total : ",int(10000*cumul)/10000,"%")
 print("***************************************************************")
 cumul = 0
 for a in range(20): #affichage du top 10 des mots fréquents
@@ -209,7 +209,7 @@ for a in range(20): #affichage du top 10 des mots fréquents
     print(a + 1,liste[-a-1],int(rang[-a-1]*1000000/len(split(original)))/10000,"% ")
 
 print("***************************************************************")
-print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
+print("Total : ",int(10000*cumul)/10000,"%")
 print("***************************************************************")
 
 #print(particular,frequenci(original))
@@ -233,5 +233,5 @@ for a in range(compteur_caro): #affichage du top 10 des caractères spéciaux le
     print(a + 1,liste[-a-1],int(rang[-a-1]*10000)/10000,"% ")
 
 print("***************************************************************")
-print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
+print("Total : ",int(10000*cumul)/10000,"%")
 print("***************************************************************")
