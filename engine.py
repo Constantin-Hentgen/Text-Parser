@@ -7,16 +7,12 @@ f = open(path, "r", encoding="utf-8") #ouverture du document
 original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
 
-special = " .,/\n\\*%&;?€•(! )–*“”…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
+special = " .,/\n\\*%&;?$€•(! ){#[]}–*“”|…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
+particular = ".,/\\*%&;?$€•()}=]~!{#[–*“|”…’'`:»«"
 alphabet = "abcdefghijklmnßopqrstuvwxyzçêèàéâûîùôœæïîôùüäëû" #définition de l'alphabet pour effectuer les tests
 voyelles = "aeiouyàâéèêiïîôùüäëû"
 consonnes = "bcdfghjklmnpqrstvwxzßç"
 accents = "àâéèêiïîôùûëäü"
-
-#kara = int(input("Entre 1 si tu veux étudier la fréquence des caractères spéciaux sinon 0 : "))
-#
-#if kara == 1:
-#    alphabet,special = special,alphabet
 
 compteur_points = 0
 
@@ -34,6 +30,27 @@ def frequency(original): #renvoi la fréquence pour chaque caractère
             total += 1
 
     for letter in alphabet: #pour chaque lettre de l'alphabet
+        for element in original: #pour chaque lettre du document
+            if element == letter:
+                number += 1 #incrémenter pour la stat de la lettre par occurence
+
+        number = number * 100 / total #calcul de la fréquence
+        ranking.append(number)
+
+        number = 0 #réinitialisation de number pour pas qu'une lettre hérite les statistiques d'une autre
+
+    return ranking #ranking des fréquences selon l'ordre alphabétique
+
+def frequenci(original): #renvoi la fréquence pour chaque caractère
+    ranking = [] #liste vide pour contenir les fréquences
+    total = 0
+    number = 0
+
+    for letter in original: #boucle pour compter le nombre total de caractères non vides dans le document
+        if letter in particular: #comptabilisation du nombre de caractères non spéciaux
+            total += 1
+
+    for letter in particular: #pour chaque lettre de l'alphabet
         for element in original: #pour chaque lettre du document
             if element == letter:
                 number += 1 #incrémenter pour la stat de la lettre par occurence
@@ -146,6 +163,7 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 
 #print(algotri(frequency(original), list(alphabet))) #fréquence des lettres
 
+
 compteur_lettres = 0
 
 for element in split(original):
@@ -162,7 +180,9 @@ print("ratio de voyelles accentuées : ",int(1000000*vowel(original)[3]/vowel(or
 print("nombre de mots moyen par phrase : ",int(10000*len(split(original))/compteur_points)/10000)
 print("nombre de lettres moyen par mot : ", int(10000*compteur_lettres/len(split(original)))/10000)
 print("quotient de mots différents sur le total : ", int(10000*len(liste)/len(split(original)))/10000)
-print("SCORE FINAL (clareté et élégance) : ",int((len(split(original))/compteur_points)*(len(liste)/len(split(original)))**2))
+#print(len(liste)/len(split(original)))
+#print(len(split(original))/compteur_points)
+print("SCORE : ",int(1000000*(len(liste)/len(split(original)))**5/(len(split(original))/compteur_points)))
 
 print("***************************************************************")
 
@@ -187,6 +207,30 @@ cumul = 0
 for a in range(20): #affichage du top 10 des mots fréquents
     cumul += rang[-a-1]*100/len(split(original))
     print(a + 1,liste[-a-1],int(rang[-a-1]*1000000/len(split(original)))/10000,"% ")
+
+print("***************************************************************")
+print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
+print("***************************************************************")
+
+#print(particular,frequenci(original))
+#print(frequency(original),list(particular))
+
+#faire la liste que des caractères spéciaux dans tout le document pour ensuite l'étudier dans sa population
+rang = algotri(frequenci(original),list(particular))[0]
+liste = algotri(frequenci(original),list(particular))[1]
+#print(frequenci(original))
+compteur_caro = 0
+
+for a in range(len(frequenci(original))-1):
+    if int(frequenci(original)[a]) != 0:
+        compteur_caro += 1
+    
+#print(compteur_caro)
+
+cumul = 0
+for a in range(compteur_caro): #affichage du top 10 des caractères spéciaux les plus fréquents
+    cumul += rang[-a-1]
+    print(a + 1,liste[-a-1],int(rang[-a-1]*10000)/10000,"% ")
 
 print("***************************************************************")
 print("le cumulé croissant est : ",int(10000*cumul)/10000,"%")
