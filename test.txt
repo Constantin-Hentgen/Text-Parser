@@ -1,0 +1,8 @@
+Bonsoir à tous je suis en train d'écrire un texte qui est très peu sophistiqué. En effet, je m'appelle Constantin et
+mon objectif et d'évaluer la qualité de mon français au travers d'une analyse fréquentielle effectuée par un Programme
+python. Je suis un étudiant français qui n'a pas véritablement de grandes prétentions, je veux simplement apporter
+ma pierre à l'édifice de l'innovation technologique. J'apprécie grandement l'apprentissage des langues, en particulier
+le mandarin qui a cette richesse dans l'écriture qui est tout à fait étrangère au français. Je croise les doigts pour avoir
+un score plus important que l'ouvrage de Victor Hugo, à dire vrai, je n'ai aucune idée du résultat. Néanmoins, je pense 
+être capable de produire un document écrit relativement bien travaillé qui est de par nature difficile à lire. C'est 
+ce que je qualifirai de vitrine sociale.
