@@ -173,16 +173,35 @@ liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(origina
 rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
 
 print("***************************************************************")
+mot_par_phrase = int(10000*len(split(original))/compteur_points)/10000
+lettre_par_mot = int(10000*compteur_lettres/len(split(original)))/10000
+mot_uniques_sur_total = 100*int(10000*len(liste)/len(split(original)))/10000
+nombre_total_mots = len(split(original))
+taux_voyelles = int(1000000*vowel(original)[0]/vowel(original)[2])/10000
+taux_consonnes = int(1000000*vowel(original)[1]/vowel(original)[2])/10000
 
-print("ratio de voyelles : ", int(1000000*vowel(original)[0]/vowel(original)[2])/10000,"%")
-print("ratio de consonnes : ", int(1000000*vowel(original)[1]/vowel(original)[2])/10000,"%")
+if taux_consonnes < taux_voyelles:
+    print("Voyelles majoritaires (", taux_voyelles,"% )")
+
+elif taux_voyelles == taux_consonnes:
+    print("Il y a le même taux de consonnes que de voyelles.")
+
+else:
+        print("Consonnes majoritaires (", taux_consonnes,"% )")
+
 print("ratio de voyelles accentuées : ",int(1000000*vowel(original)[3]/vowel(original)[2])/10000,"%")
-print("nombre moyen de mots par phrase : ",int(10000*len(split(original))/compteur_points)/10000)
-print("nombre moyen de lettres par mot : ", int(10000*compteur_lettres/len(split(original)))/10000)
-print("proportion de mots uniques : ", 100*int(10000*len(liste)/len(split(original)))/10000,"%")
+print("Les phrases contiennent",mot_par_phrase,"mots en moyenne.")
+print("Les mots ont en moyenne", lettre_par_mot,"lettres.")
+print("proportion de mots uniques : ", mot_uniques_sur_total,"%")
 #print(len(liste)/len(split(original)))
 #print(len(split(original))/compteur_points)
-print("SCORE : ",int(1000000*(len(liste)/len(split(original)))**5/(len(split(original))/compteur_points)))
+if mot_par_phrase >= 15 and nombre_total_mots >= 150 and nombre_total_mots < 500:
+    print("Complexité de lecture texte BETA : ",int((mot_par_phrase**2)*lettre_par_mot*(mot_uniques_sur_total**3)/10**6))
+    print("nombre de mots : ", nombre_total_mots)
+
+else:
+    print("score non pertinent")
+    print("nombre de mots : ", nombre_total_mots)
 
 print("***************************************************************")
 
@@ -195,43 +214,43 @@ lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dan
 #print(lettre_rang)
 
 print("***************************************************************")
-cumul = 0
-for a in range(20): #affichage du top 10 des lettres fréquentes
-    cumul += lettre_rang[-a-1]
-    print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*10000)/10000,"% ")
-    
-print("***************************************************************")
-print("Total : ",int(10000*cumul)/10000,"%")
-print("***************************************************************")
-cumul = 0
-for a in range(20): #affichage du top 10 des mots fréquents
-    cumul += rang[-a-1]*100/len(split(original))
-    print(a + 1,liste[-a-1],int(rang[-a-1]*1000000/len(split(original)))/10000,"% ")
-
-print("***************************************************************")
-print("Total : ",int(10000*cumul)/10000,"%")
-print("***************************************************************")
-
-#print(particular,frequenci(original))
-#print(frequency(original),list(particular))
-
-#faire la liste que des caractères spéciaux dans tout le document pour ensuite l'étudier dans sa population
-rang = algotri(frequenci(original),list(particular))[0]
-liste = algotri(frequenci(original),list(particular))[1]
-#print(frequenci(original))
-compteur_caro = 0
-
-for a in range(len(frequenci(original))-1):
-    if int(frequenci(original)[a]) != 0:
-        compteur_caro += 1
-    
-#print(compteur_caro)
-
-cumul = 0
-for a in range(compteur_caro): #affichage du top 10 des caractères spéciaux les plus fréquents
-    cumul += rang[-a-1]
-    print(a + 1,liste[-a-1],int(rang[-a-1]*10000)/10000,"% ")
-
-print("***************************************************************")
-print("Total : ",int(10000*cumul)/10000,"%")
-print("***************************************************************")
+#cumul = 0
+#for a in range(20): #affichage du top 10 des lettres fréquentes
+#    cumul += lettre_rang[-a-1]
+#    print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*10000)/10000,"% ")
+#    
+#print("***************************************************************")
+#print("Total : ",int(10000*cumul)/10000,"%")
+#print("***************************************************************")
+#cumul = 0
+#for a in range(20): #affichage du top 10 des mots fréquents
+#    cumul += rang[-a-1]*100/len(split(original))
+#    print(a + 1,liste[-a-1],int(rang[-a-1]*1000000/len(split(original)))/10000,"% ")
+#
+#print("***************************************************************")
+#print("Total : ",int(10000*cumul)/10000,"%")
+#print("***************************************************************")
+#
+##print(particular,frequenci(original))
+##print(frequency(original),list(particular))
+#
+##faire la liste que des caractères spéciaux dans tout le document pour ensuite l'étudier dans sa population
+#rang = algotri(frequenci(original),list(particular))[0]
+#liste = algotri(frequenci(original),list(particular))[1]
+##print(frequenci(original))
+#compteur_caro = 0
+#
+#for a in range(len(frequenci(original))-1):
+#    if int(frequenci(original)[a]) != 0:
+#        compteur_caro += 1
+#    
+##print(compteur_caro)
+#
+#cumul = 0
+#for a in range(compteur_caro): #affichage du top 10 des caractères spéciaux les plus fréquents
+#    cumul += rang[-a-1]
+#    print(a + 1,liste[-a-1],int(rang[-a-1]*10000)/10000,"% ")
+#
+#print("***************************************************************")
+#print("Total : ",int(10000*cumul)/10000,"%")
+#print("***************************************************************")
