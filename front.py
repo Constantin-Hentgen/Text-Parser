@@ -178,16 +178,17 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 
     return liste_rank, real_liste
 
-original = identity(pathfinder())
-
-compteur_lettres = 0
-
-for element in split(original):
-    compteur_lettres += len(element)
 
 #############################################################################################
 
 def rocket():
+    original = identity(pathfinder())
+
+    compteur_lettres = 0
+
+    for element in split(original):
+        compteur_lettres += len(element)
+
     liste = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[1] #liste propre des mots sans doublons
     rang = algotri(doublon(ranker(gatherer(split(original))),gatherer(split(original)))[0],doublon(ranker(gatherer(split(original))),gatherer(split(original)))[1])[0] #liste propre des occurences sans doublons
     mot_par_phrase = int(10000*len(split(original))/phrase_counter(original))/10000
@@ -212,9 +213,9 @@ def rocket():
         s += "\n Consonnes majoritaires ( "+ str(taux_consonnes) +" % )"
 
     s += "\n ratio de voyelles accentuées : "+str(int(1000000*vowel(original)[3]/vowel(original)[2])/10000)+"%"
-    s += "\n Les phrases contiennent"+str(mot_par_phrase)+"mots en moyenne."
-    s += "\n Les mots ont en moyenne"+str(lettre_par_mot)+"lettres."
-    s += "\n proportion de mots uniques : "+str(mot_uniques_sur_total)+"%"
+    s += "\n Les phrases contiennent "+str(mot_par_phrase)+" mots en moyenne."
+    s += "\n Les mots ont en moyenne "+str(lettre_par_mot)+" lettres."
+    s += "\n proportion de mots uniques : "+str(mot_uniques_sur_total)+" %"
     #print(len(liste)/len(split(original)))
     #print(len(split(original))/compteur_points)
     if mot_par_phrase >= 10 and mot_par_phrase <= 30 and nombre_total_mots >= 150:
@@ -226,8 +227,25 @@ def rocket():
 
     display_text.set(s)
 
-btn = Button(window, text="Get path", command=pathfinder)
-btn.place(relx=0.5, rely=0.2, anchor=CENTER)
+
+data = [75,20,5]
+
+def prop(n):
+    return 360.0 * n / 1000
+
+Label(window, text='Pie Chart').pack()
+c = Canvas(width=154, height=154)
+c.pack()
+
+c.create_arc((2,2,152,152), fill="#FAF402", outline="#FAF402", start=prop(0), extent = prop(200))
+c.create_arc((2,2,152,152), fill="#2BFFF4", outline="#2BFFF4", start=prop(200), extent = prop(400))
+c.create_arc((2,2,152,152), fill="#E00022", outline="#E00022", start=prop(600), extent = prop(50))
+c.create_arc((2,2,152,152), fill="#7A0871", outline="#7A0871", start=prop(650), extent = prop(200))
+c.create_arc((2,2,152,152), fill="#294994", outline="#294994", start=prop(850), extent = prop(150))
+
+
+#btn = Button(window, text="Get path", command=pathfinder)
+#btn.place(relx=0.5, rely=0.2, anchor=CENTER)
 
 batn = Button(window, text="launch engine", command=rocket)
 batn.place(relx=0.5, rely=0.4, anchor=CENTER)
