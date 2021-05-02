@@ -195,13 +195,13 @@ print("Les mots ont en moyenne", lettre_par_mot,"lettres.")
 print("proportion de mots uniques : ", mot_uniques_sur_total,"%")
 #print(len(liste)/len(split(original)))
 #print(len(split(original))/compteur_points)
-if mot_par_phrase >= 15 and nombre_total_mots >= 150 and nombre_total_mots < 500:
+if mot_par_phrase >= 10 and mot_par_phrase <= 30 and nombre_total_mots >= 150:
     print("Complexité de lecture texte BETA : ",int((mot_par_phrase**2)*lettre_par_mot*(mot_uniques_sur_total**3)/10**6))
-    print("nombre de mots : ", nombre_total_mots)
+    #print("nombre de mots : ", nombre_total_mots)
 
 else:
     print("score non pertinent")
-    print("nombre de mots : ", nombre_total_mots)
+    #print("nombre de mots : ", nombre_total_mots)
 
 print("***************************************************************")
 
