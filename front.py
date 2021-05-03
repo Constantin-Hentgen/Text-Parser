@@ -6,7 +6,8 @@ import os
 window = Tk()
 
 window.title("Text Analyzer by Constantin")
-window.geometry('500x500')
+#window.geometry('1500x1000')
+window.attributes('-fullscreen', True)
 
 display_text = StringVar()
 lbl = Label(window, textvariable=display_text)
@@ -227,25 +228,75 @@ def rocket():
 
     display_text.set(s)
 
-
-data = [75,20,5]
-
-def prop(n):
-    return 360.0 * n / 1000
-
-Label(window, text='Pie Chart').pack()
-c = Canvas(width=154, height=154)
-c.pack()
-
-c.create_arc((2,2,152,152), fill="#FAF402", outline="#FAF402", start=prop(0), extent = prop(200))
-c.create_arc((2,2,152,152), fill="#2BFFF4", outline="#2BFFF4", start=prop(200), extent = prop(400))
-c.create_arc((2,2,152,152), fill="#E00022", outline="#E00022", start=prop(600), extent = prop(50))
-c.create_arc((2,2,152,152), fill="#7A0871", outline="#7A0871", start=prop(650), extent = prop(200))
-c.create_arc((2,2,152,152), fill="#294994", outline="#294994", start=prop(850), extent = prop(150))
-
+    return lettre_rang,liste_lettre
 
 #btn = Button(window, text="Get path", command=pathfinder)
 #btn.place(relx=0.5, rely=0.2, anchor=CENTER)
+
+#print(rocket()[0],rocket()[1])
+
+from pandas import DataFrame
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+solution = rocket()
+counter = 0
+while solution[0][counter] == 0:
+    del solution[0][counter]
+    del solution[1][counter]
+
+print(solution)
+
+data1 = {'Lettres': solution[1],
+         'Fréquences': solution[0]
+        }
+df1 = DataFrame(data1,columns=['Lettres','Fréquences'])
+
+print(df1)
+
+#data2 = {'Year': [1920,1930,1940,1950,1960,1970,1980,1990,2000,2010],
+#         'Unemployment_Rate': [9.8,12,8,7.2,6.9,7,6.5,6.2,5.5,6.3]
+#        }
+#df2 = DataFrame(data2,columns=['Year','Unemployment_Rate'])
+#
+#
+#data3 = {'Interest_Rate': [5,5.5,6,5.5,5.25,6.5,7,8,7.5,8.5],
+#         'Stock_Index_Price': [1500,1520,1525,1523,1515,1540,1545,1560,1555,1565]
+#        }  
+#df3 = DataFrame(data3,columns=['Interest_Rate','Stock_Index_Price'])
+# 
+#####################################
+figure1 = plt.Figure(figsize=(6,5), dpi=100)
+ax1 = figure1.add_subplot(111)
+ax1.scatter(df1['Lettres'],df1['Fréquences'], color = 'g')
+scatter1 = FigureCanvasTkAgg(figure1, window)
+scatter1.get_tk_widget().pack(side=LEFT, fill=BOTH)
+ax1.legend(['Fréquences']) 
+ax1.set_xlabel('Lettres')
+ax1.set_title('Fréquence en fonction des lettres (%)')
+############################################
+#figure2 = plt.Figure(figsize=(5,4), dpi=100)
+#ax2 = figure2.add_subplot(111)
+#line2 = FigureCanvasTkAgg(figure2, window)
+#line2.get_tk_widget().pack(side=LEFT, fill=BOTH)
+#df2 = df2[['Year','Unemployment_Rate']].groupby('Year').sum()
+#df2.plot(kind='line', legend=True, ax=ax2, color='r',marker='o', fontsize=10)
+#ax2.set_title('Year Vs. Unemployment Rate')
+#
+#figure3 = plt.Figure(figsize=(5,4), dpi=100)
+#ax3 = figure3.add_subplot(111)
+#ax3.scatter(df3['Interest_Rate'],df3['Stock_Index_Price'], color = 'g')
+#scatter3 = FigureCanvasTkAgg(figure3, window) 
+#scatter3.get_tk_widget().pack(side=LEFT, fill=BOTH)
+#ax3.legend(['Stock_Index_Price']) 
+#ax3.set_xlabel('Interest Rate')
+#ax3.set_title('Interest Rate Vs. Stock Index Price')
+
+
+
+
+
+
 
 batn = Button(window, text="launch engine", command=rocket)
 batn.place(relx=0.5, rely=0.4, anchor=CENTER)
