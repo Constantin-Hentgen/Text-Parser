@@ -6,12 +6,13 @@ import os
 window = Tk()
 
 window.title("Text Analyzer by Constantin")
-#window.geometry('1500x1000')
-window.attributes('-fullscreen', True)
+window.geometry('1900x1080')
+#window.attributes('-fullscreen', True)
 
 display_text = StringVar()
 lbl = Label(window, textvariable=display_text)
-lbl.place(relx=0.5, rely=0.6, anchor=CENTER)
+#lbl.grid(column=1,row=1)
+lbl.place(relx=0.5, rely=0.4, anchor=CENTER)
 
 #txt = Entry(window,width=10)
 #txt.grid(column=1, row=0)
@@ -183,7 +184,8 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 #############################################################################################
 
 def rocket():
-    original = identity(pathfinder())
+    #original = identity(pathfinder())
+    original = identity("/home/constantin/github/text-analyzer/fasten.txt")
 
     compteur_lettres = 0
 
@@ -228,7 +230,7 @@ def rocket():
 
     display_text.set(s)
 
-    return lettre_rang,liste_lettre
+    return lettre_rang,liste_lettre,rang,liste
 
 #btn = Button(window, text="Get path", command=pathfinder)
 #btn.place(relx=0.5, rely=0.2, anchor=CENTER)
@@ -245,14 +247,28 @@ while solution[0][counter] == 0:
     del solution[0][counter]
     del solution[1][counter]
 
-print(solution)
+raffin_rang = []
+raffin_liste = []
+
+for a in range(20):
+    raffin_liste.append(solution[3][-a-1])
+    raffin_rang.append(solution[2][-a-1])
+
+#print(raffin_rang,raffin_liste)
 
 data1 = {'Lettres': solution[1],
          'Fréquences': solution[0]
         }
 df1 = DataFrame(data1,columns=['Lettres','Fréquences'])
 
-print(df1)
+
+
+data2 = {'Mots': raffin_liste,
+         'Nb': raffin_rang
+        }
+df2 = DataFrame(
+    {"Nb":raffin_rang},
+    index=raffin_liste)
 
 #data2 = {'Year': [1920,1930,1940,1950,1960,1970,1980,1990,2000,2010],
 #         'Unemployment_Rate': [9.8,12,8,7.2,6.9,7,6.5,6.2,5.5,6.3]
@@ -266,14 +282,43 @@ print(df1)
 #df3 = DataFrame(data3,columns=['Interest_Rate','Stock_Index_Price'])
 # 
 #####################################
+
 figure1 = plt.Figure(figsize=(6,5), dpi=100)
 ax1 = figure1.add_subplot(111)
-ax1.scatter(df1['Lettres'],df1['Fréquences'], color = 'g')
+ax1.scatter(df1['Lettres'],df1['Fréquences'], color = 'b')
 scatter1 = FigureCanvasTkAgg(figure1, window)
 scatter1.get_tk_widget().pack(side=LEFT, fill=BOTH)
 ax1.legend(['Fréquences']) 
 ax1.set_xlabel('Lettres')
 ax1.set_title('Fréquence en fonction des lettres (%)')
+
+
+#figure2 = plt.Figure(figsize=(6,5), dpi=100)
+#ax2 = figure2.add_subplot(111)
+#ax2.scatter(df2['Mots'],df2['Nb'], color = 'r')
+#scatter2 = FigureCanvasTkAgg(figure2, window)
+#scatter2.get_tk_widget().pack(side=RIGHT, fill=BOTH)
+#ax2.legend(["Nombre d'apparitions"])
+#ax2.set_xlabel('Mots')
+#ax2.set_title("Mots les plus courants")
+
+
+figure2 = plt.Figure(figsize=(6,5), dpi=100)
+ax2 = figure2.add_subplot(111)
+bar2 = FigureCanvasTkAgg(figure2, window)
+bar2.get_tk_widget().pack(side=RIGHT, fill=BOTH)
+#df2 = df2[['Mots','Nb']].groupby('Mots').sum()
+df2.plot(kind='barh', legend=True, ax=ax2)
+ax2.set_title("Mots les plus courants")
+
+#figure2 = plt.Figure(figsize=(6,5), dpi=100)
+#ax2 = figure2.add_subplot(111)
+#bar2 = FigureCanvasTkAgg(figure2, window)
+#bar2.get_tk_widget().pack(side=RIGHT, fill=BOTH)
+#df2 = df2.plot(x="Mots",y=["Nb"],kind="barh")
+#plt.show()
+##df2.plot(kind='bar', legend=True, ax=ax2)
+#ax2.set_title("Nombre d'apparitions des mots")
 ############################################
 #figure2 = plt.Figure(figsize=(5,4), dpi=100)
 #ax2 = figure2.add_subplot(111)
@@ -291,14 +336,21 @@ ax1.set_title('Fréquence en fonction des lettres (%)')
 #ax3.legend(['Stock_Index_Price']) 
 #ax3.set_xlabel('Interest Rate')
 #ax3.set_title('Interest Rate Vs. Stock Index Price')
+#############################################################################
+# Pie chart, where the slices will be ordered and plotted counter-clockwise:
+#labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
+#sizes = [15, 30, 45, 10]
+#explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
+#
+#fig1, ax1 = plt.subplots()
+#ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',shadow=True, startangle=90)
+#ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+#
+#plt.show()
+################################################################################
 
-
-
-
-
-
-
-batn = Button(window, text="launch engine", command=rocket)
-batn.place(relx=0.5, rely=0.4, anchor=CENTER)
+#batn = Button(window, text="launch engine", command=rocket)
+##batn.grid(column=1,row=0)
+#batn.place(relx=0.5, rely=0.2, anchor=CENTER)
 
 window.mainloop()
