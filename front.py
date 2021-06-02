@@ -265,8 +265,6 @@ def rocket():
             }
     df1 = DataFrame(data1,columns=['Lettres','Quantité'])
 
-
-
     data2 = {'Mots': raffin_liste,
              'Quantité': raffin_rang
             }
