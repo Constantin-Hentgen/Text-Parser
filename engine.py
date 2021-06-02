@@ -214,43 +214,44 @@ lettre_rang = algotri(frequency(original), list(alphabet))[0] # liste triée dan
 #print(lettre_rang)
 
 print("***************************************************************")
-#cumul = 0
-#for a in range(20): #affichage du top 10 des lettres fréquentes
-#    cumul += lettre_rang[-a-1]
-#    print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*10000)/10000,"% ")
-#    
-#print("***************************************************************")
-#print("Total : ",int(10000*cumul)/10000,"%")
-#print("***************************************************************")
-#cumul = 0
-#for a in range(20): #affichage du top 10 des mots fréquents
-#    cumul += rang[-a-1]*100/len(split(original))
-#    print(a + 1,liste[-a-1],int(rang[-a-1]*1000000/len(split(original)))/10000,"% ")
-#
-#print("***************************************************************")
-#print("Total : ",int(10000*cumul)/10000,"%")
-#print("***************************************************************")
-#
-##print(particular,frequenci(original))
-##print(frequency(original),list(particular))
-#
-##faire la liste que des caractères spéciaux dans tout le document pour ensuite l'étudier dans sa population
-#rang = algotri(frequenci(original),list(particular))[0]
-#liste = algotri(frequenci(original),list(particular))[1]
-##print(frequenci(original))
-#compteur_caro = 0
-#
-#for a in range(len(frequenci(original))-1):
-#    if int(frequenci(original)[a]) != 0:
-#        compteur_caro += 1
-#    
-##print(compteur_caro)
-#
-#cumul = 0
-#for a in range(compteur_caro): #affichage du top 10 des caractères spéciaux les plus fréquents
-#    cumul += rang[-a-1]
-#    print(a + 1,liste[-a-1],int(rang[-a-1]*10000)/10000,"% ")
-#
-#print("***************************************************************")
-#print("Total : ",int(10000*cumul)/10000,"%")
-#print("***************************************************************")
+cumul = 0
+for a in range(len(liste_lettre)): #affichage du top 10 des lettres fréquentes
+    if int(lettre_rang[-a-1]*1000)/1000 != 0:
+        cumul += lettre_rang[-a-1]
+        print(a + 1,liste_lettre[-a-1],int(lettre_rang[-a-1]*1000)/1000,"% ")
+    
+print("***************************************************************")
+print("Total : ",int(int(1000*cumul)/1000),"%")
+print("***************************************************************")
+cumul = 0
+for a in range(20): #affichage du top 10 des mots fréquents
+    cumul += rang[-a-1]*100/len(split(original))
+    print(a + 1,liste[-a-1],int(rang[-a-1]*100000/len(split(original)))/1000,"% ")
+
+print("***************************************************************")
+print("Total : ",int(1000*cumul)/1000,"%")
+print("***************************************************************")
+
+#print(particular,frequenci(original))
+#print(frequency(original),list(particular))
+
+#faire la liste que des caractères spéciaux dans tout le document pour ensuite l'étudier dans sa population
+rang = algotri(frequenci(original),list(particular))[0]
+liste = algotri(frequenci(original),list(particular))[1]
+#print(frequenci(original))
+compteur_caro = 0
+
+for a in range(len(frequenci(original))-1):
+    if int(frequenci(original)[a]) != 0:
+        compteur_caro += 1
+    
+#print(compteur_caro)
+
+cumul = 0
+for a in range(compteur_caro): #affichage du top 10 des caractères spéciaux les plus fréquents
+    cumul += rang[-a-1]
+    print(a + 1,liste[-a-1],int(rang[-a-1]*1000)/1000,"% ")
+
+print("***************************************************************")
+print("Total : ",int(1000*cumul)/1000,"%")
+print("***************************************************************")
