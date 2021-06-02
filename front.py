@@ -199,7 +199,7 @@ def algotri(liste_rank, real_liste): #trie la liste des unités en fonction de l
 def rocket():
     #path = pathfinder()
     #original = identity(path)
-    original = identity("/home/constantin/github/text-analyzer/fastfr.txt")
+    original = identity("/home/constantin/github/text-analyzer/fr.txt")
     window = Tk()
     window.title("path")
     window.geometry('1900x2000')
