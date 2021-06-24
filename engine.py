@@ -6,7 +6,6 @@ path = input("Entrer le nom du fichier sans extension : ") + ".txt"
 f = open(path, "r", encoding="utf-8") #ouverture du document
 original = f.read() #assignement à une variable du contenu du document
 f.close() #fermeture du document
-
 special = " .,/\n\\*%&;?$€•(! ){#[]}–\"=+-*“”|…’'`:»«0123456789" #définition des caractères spéciaux pour effectuer des tests
 particular = ".,/\\*%&;?$€•(=~!{#[–“|”…’'`:«"
 alphabet = "abcdefghijklmnßopqrstuvwxyzçêèàéâûîùôœæïîôùüäëû" #définition de l'alphabet pour effectuer les tests
