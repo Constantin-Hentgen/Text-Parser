@@ -1,0 +1,147 @@
+class Date
+{
+    private int jour, mois, annee;
+
+    public Date(int jour, int mois, int annee){
+        this.jour = jour;
+        this.mois = mois;
+        this.annee = annee;
+    }
+
+    // GETTER
+
+    public int Jour(){
+        return jour;
+    }
+
+    public int Mois(){
+        return mois;
+    }
+
+    public int Annee(){
+        return annee;
+    }
+
+    // SETTER
+
+    public int ModifJour(int B){
+        jour = B;
+        return jour;
+    }
+
+    public int ModifMois(int B){
+        mois = B;
+        return mois;
+    }
+
+    public int ModifAnnee(int B){
+        annee = B;
+        return annee;
+    }
+
+    // AFFICHAGE
+
+    public String toString(){
+        return jour + "/" + mois + "/" + annee;
+    }
+
+    // BISSEXTILE
+
+    public boolean Bissextile(){
+        if ((annee % 4 == 0 && annee % 100 != 0) || (annee % 400 == 0)){
+            return true;
+        }
+
+        else{
+            return false;
+        }
+    }
+
+    public void IncrJour(){     
+        
+        // gérer les fins de mois autre que février
+        if (mois != 2){
+            // de janvier à août : modulo
+            if ((mois <= 7) && ((mois % 2 != 0 && jour == 31) || (mois % 2 == 0 && jour == 30))){
+                jour = 1;
+                mois ++;
+            }
+
+            // de août à décembre : modulo inversé
+            else if ((mois > 7 && mois != 12) && ((mois % 2 != 0 && jour == 30) || (mois % 2 == 0 && jour == 31))){
+                jour = 1;
+                mois ++;
+            }
+
+            else if (mois == 12 && jour == 31)
+            {
+                jour = 1;
+                mois = 1;
+                annee ++;
+            }
+
+            else{
+                jour ++;
+            }
+        }
+
+        else{
+            if (this.Bissextile() == true){
+                if (jour == 29){
+                    jour = 1;
+                    mois ++;
+                }
+                else{
+                    jour ++;
+                }
+            }
+            
+            else{     
+                if (jour == 28){
+                    jour = 1;
+                    mois ++;
+                }
+                else{
+                    jour ++;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] arg){
+        Date date1 = new Date(19,2,2001);
+        System.out.println(date1.toString());
+        System.out.println(date1.Bissextile());
+        date1.ModifJour(28);
+        date1.ModifMois(2); 
+        date1.ModifAnnee(2000);
+        System.out.println(date1.Jour());
+        System.out.println(date1.Mois());
+        System.out.println(date1.Annee());
+        System.out.println(date1);
+        System.out.println(date1.Bissextile());
+        date1.IncrJour();
+        System.out.println(date1);
+        Date date2 = new Date(31,12,2001);
+        System.out.println(date2);
+        date2.IncrJour();
+        System.out.println(date2);
+        Date date3 = new Date(28,2,2001);
+        System.out.println (date3);
+        date3.IncrJour();
+        System.out.println (date3);
+
+        // Test pour l'inversion Juillet / Août
+
+        // Date date_thomas = new Date(30,7,2000);
+        // System.out.println(date_thomas.toString());
+        // date_thomas.IncrJour();
+        // System.out.println(date_thomas.toString());
+
+        // System.out.println("2e test avec aout");
+        // Date date_thomas_1 = new Date(30,8,2000);
+        // System.out.println(date_thomas_1.toString());
+        // date_thomas_1.IncrJour();
+        // System.out.println(date_thomas_1.toString());
+    }
+}
