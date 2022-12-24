@@ -91,7 +91,7 @@ class Report:
 
 		fruits = ['apple', 'blueberry', 'cherry', 'orange']
 		counts = [40, 100, 30, 55]
-		bar_labels = ['red', 'blue', '_red', 'orange']
+		bar_labels = ['red', 'blue', 'red', 'orange']
 		bar_colors = ['tab:red', 'tab:blue', 'tab:red', 'tab:orange']
 
 		ax2.bar(fruits, counts, label=bar_labels, color=bar_colors)
