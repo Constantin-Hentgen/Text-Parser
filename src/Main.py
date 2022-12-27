@@ -2,55 +2,66 @@ import Text
 import Report
 
 if __name__ == '__main__':
-	languages_to_compare = ['fr', 'en', 'de']
+	language_codes = ['fr', 'en', 'de']
 	# créer toutes les données à partir de ca
 
-	text_fr = Text.Text('fr')
-	text_fr.generate_ranking()
+	rankings = []
+	sentence_numbers = []
+	inventories = []
 
-	text_de = Text.Text('de')
-	text_de.generate_ranking()
+	for language in language_codes:
+		temp = Text.Text(str(language))
+		temp.generate_ranking()
+		rankings.append(temp.ranking_of_letters_frequency)
+		sentence_numbers.append(temp.number_of_sentences)
+		inventories.append(temp.letters_inventory)
 
-	text_en = Text.Text('en')
-	text_en.generate_ranking()
+	reference_language_inventory = inventories[0]
 
-	fr_sentence_number = text_fr.number_of_sentences
-	de_sentence_number = text_de.number_of_sentences
-	en_sentence_number = text_en.number_of_sentences
+	common_inventory = []
+	merged_inventories = []
 
-	fr_letters_inventory = text_fr.letters_inventory
-	de_letters_inventory = text_de.letters_inventory
-	en_letters_inventory = text_en.letters_inventory
+	for inventory in inventories:
+		for letter in inventory:
+			merged_inventories.append(letter)
 
-	common_inventory = [c for c in fr_letters_inventory if c in en_letters_inventory and c in de_letters_inventory]
+	for letter in merged_inventories:
+		count = sum([1 for c in merged_inventories if c == letter])
+		if count == len(language_codes) and letter not in common_inventory:
+			common_inventory.append(letter)
+
+	# print(common_inventory)
 
 	# faire un dictionnaire des valeurs moyennées et triée
-	mean_frequency = {k: int(10000*(v1 + v2 + v3) / 3)/1000 for k, v1 in text_fr.ranking_of_letters_frequency.items() for _, v2 in text_de.ranking_of_letters_frequency.items() for _, v3 in text_en.ranking_of_letters_frequency.items() if k in common_inventory}
+
+	# mean_frequency = {k: int(10000*(v1 + v2 + v3) / 3)/1000 for k, v1 in text_fr.ranking_of_letters_frequency.items() for _, v2 in text_de.ranking_of_letters_frequency.items() for _, v3 in text_en.ranking_of_letters_frequency.items() if k in common_inventory}
+	mean_frequency = {}
+
+	for k in common_inventory:
+		v_sum = 0
+		for ranking in rankings:
+			v_sum += ranking.get(k, 0)
+		mean_frequency[k] = int(10000 * v_sum / len(rankings)) / 1000
 
 	# prendre les 10 premières clés
 	top = len(common_inventory)
-	top_10 = {k: v for i, (k, v) in enumerate(mean_frequency.items()) if i < top}
+	top_list = {k: v for i, (k, v) in enumerate(mean_frequency.items()) if i < top}
 
-	common_inventory_sorted = list(top_10.keys())
+	common_inventory_sorted = list(top_list.keys())
 
-	fr_letters_frequency_refactored = []
-	de_letters_frequency_refactored = []
-	en_letters_frequency_refactored = []
+	letters_frequencies_refactored = []
 
-	for c in common_inventory_sorted:
-		fr_letters_frequency_refactored.append(text_fr.ranking_of_letters_frequency.get(c))
-		de_letters_frequency_refactored.append(text_de.ranking_of_letters_frequency.get(c))
-		en_letters_frequency_refactored.append(text_en.ranking_of_letters_frequency.get(c))
-
+	for ranking in rankings:
+		temp = []
+		for c in common_inventory_sorted:
+			temp.append(ranking.get(c))
+		letters_frequencies_refactored.append(temp)
+	
 	my_report = Report.Report(
-		languages_to_compare,
-		[fr_sentence_number,de_sentence_number,en_sentence_number],
+		language_codes,
+		sentence_numbers,
 		common_inventory_sorted,
-		[
-		fr_letters_frequency_refactored,
-		de_letters_frequency_refactored,
-		en_letters_frequency_refactored
-		]
+		letters_frequencies_refactored
 		)
 
 	my_report.generate()
