@@ -61,7 +61,7 @@ class Report:
 		self.pdf.ln()
 		self.pdf.cell(col_width, 5, "Total", 1, 0, "C")
 		for array in self.array_of_lang_stats:
-			self.pdf.cell(col_width, 5, str(round(sum([percent for percent in array]) - array[-1],3)) + " %", 1, 0,"C")
+			self.pdf.cell(col_width, 5, str(round(sum([percent for percent in array]),3)) + " %", 1, 0,"C")
 
 	def generate_double_column_chart(self):
 		letters_inventory = self.letters_inventory
