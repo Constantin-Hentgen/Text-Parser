@@ -4,109 +4,102 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class Report:
-	def __init__(self, list_1, list_2):
-		self.list_1 = list_1
-		self.list_2 = list_2
+	def __init__(self, language_code, number_of_sentences, letters_inventory, array_of_lang_stats):
+		self.language_code = language_code
+		self.number_of_sentences = number_of_sentences
+		self.letters_inventory = letters_inventory
+		self.array_of_lang_stats = array_of_lang_stats
+		self.pdf = FPDF()
 
-	# permettre le choix de la police
-
-	# Création de l'objet PDF
 	def generate(self):
-		pdf = FPDF()
-		pdf.add_page()
+		self.pdf.add_page()
+		self.pdf.set_margins(left=30, top=20, right=30)
+		self.pdf.add_font("OpenSans", "", "/usr/share/fonts/open-sans/OpenSans-Regular.ttf", uni=True)
+		self.pdf.set_font("OpenSans", "", 25)
+		self.pdf.cell(w=self.pdf.w-15, h=10, txt="Comparative report", border=0, ln=1, align="C")
 
-		# Définition des marges
-		pdf.set_margins(left=30, top=20, right=30)
+		self.pdf.ln()
 
-		# Définition de la police à utiliser
-		pdf.add_font("OpenSans", "", "/usr/share/fonts/open-sans/OpenSans-Regular.ttf", uni=True)
-		pdf.set_font("OpenSans", "", 25)
+		self.pdf.set_font("OpenSans", "", 10)
 
-		# Ajout du titre avec la taille de police modifiée
-		pdf.cell(w=pdf.w-15, h=10, txt="Titre du rapport", border=0, ln=1, align="C")
+		self.pdf.multi_cell(0, 5, "Be careful, the following statistics are based on the letters in common between the different sources. Indeed, you will notice that the total of the percentage doesn’t lead to 100% or something near as it is only a part of the total alphabet used.")
+		self.generate_table()
 
-		pdf.ln()
+		self.pdf.ln()
+		self.pdf.ln()
 
-		pdf.set_font("OpenSans", "", 10)
-
-		# Ajout des paragraphes "lorem ipsum"
-		pdf.multi_cell(0, 5, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum quam in tortor faucibus, auctor lobortis elit condimentum. Nulla sed pulvinar dolor. Fusce volutpat dui at dui laoreet, et aliquam metus venenatis. Aliquam at elit id lorem dignissim laoreet. Aenean ac nisi euismod, facilisis justo id, ornare tortor. Nam condimentum nisl nisi, eu tempus est faucibus sit amet. Donec bibendum ante id justo hendrerit, sit amet scelerisque mauris laoreet.")
-
-		pdf.ln()
-
-		pdf.multi_cell(0, 5, "Praesent volutpat, est ac fringilla aliquam, diam nibh tincidunt diam, ac egestas purus arcu et nisl. Sed non magna at nisl laoreet ullamcorper et at velit. Aliquam vel velit vel est dignissim luctus. Aliquam erat volutpat. Nam scelerisque urna quis quam malesuada, a tincidunt urna viverra. Maecenas condimentum felis id mauris consectetur imperdiet. Integer euismod pharetra enim, ac ultricies lacus elementum a. Nulla facilisi.")
-
-		# Largeur des colonnes
-		col_width = 2.2 + pdf.w / 6
-
-		pdf.ln()
-
-		# En-têtes du tableau
-		pdf.cell(col_width, 5, "Colonne 1", 1, 0, "C")
-		pdf.cell(col_width, 5, "Colonne 2", 1, 0, "C")
-		pdf.cell(col_width, 5, "Colonne 3", 1, 0, "C")
-		pdf.cell(col_width, 5, "Colonne 4", 1, 0, "C")
-
-		# Lignes du tableau
-		for i in range(1, 21):
-			pdf.ln()
-			pdf.cell(col_width, 5, str(i), 1, 0, "C")
-			pdf.cell(col_width, 5, str(i), 1, 0, "C")
-			pdf.cell(col_width, 5, str(i), 1, 0, "C")
-			pdf.cell(col_width, 5, str(i), 1, 0, "C")
-
-		pdf.ln()
-		pdf.ln()
-
-		# PLOT 1
-
-		labels = ['G1', 'G2', 'G3', 'G4', 'G5']
-		men_means = [20, 34, 30, 35, 27]
-		women_means = [25, 32, 34, 20, 25]
-
-		x = np.arange(len(labels))  # the label locations
-		width = 0.35  # the width of the bars
-
-		fig, ax = plt.subplots()
-		rects1 = ax.bar(x - width/2, men_means, width, label='Men')
-		rects2 = ax.bar(x + width/2, women_means, width, label='Women')
-
-		# Add some text for labels, title and custom x-axis tick labels, etc.
-		ax.set_ylabel('Scores')
-		ax.set_title('Scores by group and gender')
-		ax.set_xticks(x, labels)
-		ax.legend()
-
-		ax.bar_label(rects1, padding=3)
-		ax.bar_label(rects2, padding=3)
-
-		fig.tight_layout()
-
-		# Enregistrement du graphique en tant qu'image temporaire
-		fig.savefig("../img/graphique.png")
-
-		# FIG 2
-
-		fig2, ax2 = plt.subplots()
-
-		fruits = ['apple', 'blueberry', 'cherry', 'orange']
-		counts = [40, 100, 30, 55]
-		bar_labels = ['red', 'blue', 'red', 'orange']
-		bar_colors = ['tab:red', 'tab:blue', 'tab:red', 'tab:orange']
-
-		ax2.bar(fruits, counts, label=bar_labels, color=bar_colors)
-
-		ax2.set_ylabel('fruit supply')
-		ax2.set_title('Fruit supply by kind and color')
-		ax2.legend(title='Fruit color')
-
-		fig2.savefig("../img/graphique2.png")
-
-		pdf.multi_cell(0, 5, "Praesent volutpat, est ac fringilla aliquam, diam nibh tincidunt diam, ac egestas purus arcu et nisl. Sed non magna at nisl laoreet ullamcorper et at velit. Aliquam vel velit vel est dignissim luctus. Aliquam erat volutpat. Nam scelerisque urna quis quam malesuada, a tincidunt urna viverra. Maecenas condimentum felis id mauris consectetur imperdiet. Integer euismod pharetra enim, ac ultricies lacus elementum a. Nulla facilisi.")
+		self.generate_double_column_chart()
+		self.generate_simple_column_chart()
 
 		# Ajout du graphique au document PDF
-		pdf.image("../img/graphique.png", x=0, w=120)
-		pdf.image("../img/graphique2.png", x=0, w=120)
+		self.pdf.image("../img/graphique.png", x=0, w=180)
+		self.pdf.image("../img/graphique2.png", x=0, w=120)
 
-		# Enregistrement du fichier PDF
-		pdf.output("../report.pdf")
+		self.pdf.output("../report.pdf")
+
+
+	def generate_table(self):
+		# Largeur des colonnes
+		col_width = 2.2 + self.pdf.w / 6
+
+		self.pdf.ln()
+
+		# En-têtes du tableau
+		self.pdf.cell(col_width, 5, "Letters", 1, 0, "C")
+
+		for language in self.language_code:
+			self.pdf.cell(col_width, 5, str(language), 1, 0, "C")
+
+		# Lignes du tableau
+		for i in range(1, len(self.array_of_lang_stats[0])):
+			self.pdf.ln()
+			
+			self.pdf.cell(col_width, 5, str(self.letters_inventory[i]), 1, 0, "C")
+			for array in self.array_of_lang_stats:
+				self.pdf.cell(col_width, 5, str(array[i]) + " %", 1, 0, "C")
+		
+		self.pdf.ln()
+		self.pdf.cell(col_width, 5, "Total", 1, 0, "C")
+		for array in self.array_of_lang_stats:
+			self.pdf.cell(col_width, 5, str(round(sum([percent for percent in array]) - array[-1],3)) + " %", 1, 0,"C")
+
+	def generate_double_column_chart(self):
+		letters_inventory = self.letters_inventory
+		accuracy = 1
+
+		x = np.arange(len(letters_inventory))
+		width = 0.25 # taille des colonnes
+
+		fig, ax = plt.subplots()
+		
+		for array in self.array_of_lang_stats:
+			if self.array_of_lang_stats.index(array) != 0:
+				ax.bar(x + width*(-1)**self.array_of_lang_stats.index(array), [round(percent,accuracy) for percent in array], width, label=self.language_code[self.array_of_lang_stats.index(array)])
+			else:
+				ax.bar(x, [round(percent,accuracy) for percent in array], width, label=self.language_code[0])
+
+		ax.set_ylabel('%')
+		ax.set_title('Proportion of usage for letters')
+		ax.set_xticks(x, letters_inventory)
+		ax.legend()
+
+		fig.tight_layout()
+		fig.savefig("../img/graphique.png")
+
+	def generate_simple_column_chart(self):
+		# faire en sorte que ça accepte des tailles variables de lists
+		fig2, ax2 = plt.subplots()
+
+		x_axis = self.language_code
+		number_of_sentences = self.number_of_sentences
+		
+		bar_letters_inventory = self.language_code
+		bar_colors = ['tab:red', 'tab:blue', 'tab:orange','tab:purple','tab:green']
+
+		ax2.bar(x_axis, number_of_sentences, label=bar_letters_inventory, color=bar_colors)
+
+		ax2.set_ylabel('number of sentences')
+		ax2.set_title('Comparison of sentences number')
+		ax2.legend(title='Legend')
+
+		fig2.savefig("../img/graphique2.png")
