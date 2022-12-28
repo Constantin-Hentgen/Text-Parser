@@ -3,13 +3,14 @@ import chart
 import table
 
 class Report:
-	def __init__(self, language_code, mean_nb_words_per_sentence, letters_inventory, list_of_letters_stats, mean_nb_letters_per_word, list_of_special_characters_stats):
+	def __init__(self, language_code, mean_nb_words_per_sentence, letters_inventory, list_of_letters_stats, mean_nb_letters_per_word, list_of_special_characters_stats, special_characters_inventory):
 		self.language_code = language_code
 		self.mean_nb_words_per_sentence = mean_nb_words_per_sentence
 		self.letters_inventory = letters_inventory
 		self.list_of_letters_stats = list_of_letters_stats
 		self.mean_nb_letters_per_word = mean_nb_letters_per_word
 		self.list_of_special_characters_stats = list_of_special_characters_stats
+		self.special_characters_inventory = special_characters_inventory
 		self.pdf = FPDF()
 
 	def generate(self):
@@ -40,8 +41,8 @@ class Report:
 		table.generate_table(
 			pdf = self.pdf,
 			column_titles = self.language_code,
-			columns_as_lists_of_values = self.list_of_letters_stats,
-			line_titles = self.letters_inventory,
+			columns_as_lists_of_values = self.list_of_special_characters_stats,
+			line_titles = self.special_characters_inventory,
 			unit = " %",
 			first_column_title = 'Special characters'
 		)
@@ -52,6 +53,17 @@ class Report:
 			title = 'Proportion of usage for letters',
 			x_axis = self.letters_inventory,
 			y_axis = self.list_of_letters_stats,
+			x_label = self.language_code,
+			y_label = '%',
+			accuracy = 1
+		)
+
+		self.pdf.ln()
+
+		chart.generate_multi_column_chart(
+			title = 'Proportion of usage for special characters',
+			x_axis = self.special_characters_inventory,
+			y_axis = self.list_of_special_characters_stats,
 			x_label = self.language_code,
 			y_label = '%',
 			accuracy = 1
