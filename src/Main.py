@@ -4,8 +4,9 @@ import tool
 
 if __name__ == '__main__':
 	# maximum 3 langues
+	# assurer la variété des écrits en titrant les sources et les segmentant en fichiers dans data
+	language_codes = ['fr','en','de']
 	# language_codes = ['custom_source_a','custom_source_b','custom_source_c']
-	language_codes = ['fr','en','dk']
 
 	letters_rankings = []
 	special_characters_rankings = []

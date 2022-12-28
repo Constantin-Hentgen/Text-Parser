@@ -17,12 +17,11 @@ class Report:
 		chart.purge_chart()
 		self.pdf.add_page()
 		self.pdf.set_margins(left=30, top=20, right=30)
-		self.pdf.add_font("OpenSans", "", "/usr/share/fonts/open-sans/OpenSans-Regular.ttf", uni=True)
-		self.pdf.set_font("OpenSans", "", 25)
+		self.pdf.set_font("Arial", "", 25)
 		self.pdf.cell(w=self.pdf.w-15, h=10, txt="Comparative report", border=0, ln=1, align="C")
 		self.pdf.ln()
-		self.pdf.set_font("OpenSans", "", 10)
-		self.pdf.multi_cell(0, 5, "Be careful, the following statistics are based on the letters in common between the different sources. Indeed, you will notice that the total of the percentage doesn’t lead to 100% or something near as it is only a part of the total alphabet used.")
+		self.pdf.set_font("Arial", "", 10)
+		self.pdf.multi_cell(0, 5, "This statistics report is based on some text sources which are not diversified right now. Even though the results still partially relevant, each language reflect the writting of only one or a few authors.")
 		
 		self.pdf.ln()
 
@@ -69,8 +68,6 @@ class Report:
 			accuracy = 1
 		)
 
-		self.pdf.ln()
-
 		chart.generate_simple_column_chart(
 			title = 'Mean number of words per sentence',
 			x_axis = self.language_code,
@@ -78,8 +75,6 @@ class Report:
 			x_label = self.language_code,
 			y_label = 'number of words'
 		)
-
-		self.pdf.ln()
 
 		chart.generate_simple_column_chart(
 			title = 'Mean number of letters per word',
@@ -90,5 +85,5 @@ class Report:
 		)
 
 		chart.add_chart_to_report(self.pdf)
-
+		
 		self.pdf.output('../report.pdf', 'F')

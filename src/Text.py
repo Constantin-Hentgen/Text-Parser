@@ -50,7 +50,7 @@ class Text:
     def special_doubles_sanitizer(self, string) -> list:
         sanitized_string = []
         for character in string:
-            if character not in sanitized_string:
+            if character not in sanitized_string and character != '—':
                 sanitized_string += character
         return sanitized_string
 

@@ -1,7 +1,20 @@
 # Text Parser
 
-That python program is made to analyze a .txt file and tell you the letters and words frequency. This script will allow a powerful optimization of a keyboard layout and at the same time a better understanding of our languages and use of keyboards.
+This script is built to generate a pdf report based on the statistics analysis of one to three sources.
+Its scope is the frequency of letters (and words soon).
 
-Example of application : 
+To use this program you first have to download it :
 
-You're a French native but you also chat a lot in English and code in JavaScript, so you drop a .txt file into the programm with 40% of French, 40% of JavaScript code and 20% of English. By using this script you will have the required metrics to build or edit your perfect keyboard layout (and even a keyboard map probably).
+## Download
+
+```
+git clone https://github.com/Constantin-Hentgen/Text-Parser.git
+```
+
+## Launch
+
+```
+python3 src/Main.py
+```
+
+You will probably be asked to install some libraries such as Matplotlib, fpdf and numpy if you don’t have those installed on your system yet. If the previous commands didn’t work, make sure to execute those at the root of the project.

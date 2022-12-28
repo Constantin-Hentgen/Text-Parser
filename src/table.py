@@ -12,10 +12,17 @@ def generate_table(pdf, column_titles, columns_as_lists_of_values, line_titles, 
 	# Lines
 	for i in range(0, len(columns_as_lists_of_values[0])):
 		pdf.ln()
-		
+
+
 		pdf.cell(column_width, 5, str(line_titles[i]), 1, 0, "C")
 		for array in columns_as_lists_of_values:
+			equivalents = [list[i] for list in columns_as_lists_of_values]
+			
+			if array[i] == max(equivalents):
+				pdf.set_font('Arial', 'B', 9)
+
 			pdf.cell(column_width, 5, str(array[i]) + unit, 1, 0, "C")
+			pdf.set_font('Arial', '', 9)
 	
 	pdf.ln()
 	pdf.cell(column_width, 5, "Total", 1, 0, "C")
