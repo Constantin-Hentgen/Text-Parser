@@ -46,6 +46,10 @@ def generate_simple_column_chart(title, x_axis, y_axis, x_label, y_label):
 	ax.set_ylabel(y_label)
 	ax.set_title(title)
 	ax.legend(title='Legend')
+
+	for x_coord, y_coord in zip(x_axis, y_axis):
+		ax.text(x_coord, y_coord, y_coord, ha='center', va='bottom')
+
 	save_chart(fig)
 
 def add_chart_to_report(pdf):
