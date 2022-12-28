@@ -1,9 +1,11 @@
 import Text
 import Report
 
+
+#faire du multithreading
 if __name__ == '__main__':
-	language_codes = ['fr', 'en', 'de']
-	# créer toutes les données à partir de ca
+	# maximum 3 langues
+	language_codes = ['test','test2']
 
 	rankings = []
 	sentence_numbers = []
@@ -14,7 +16,7 @@ if __name__ == '__main__':
 		temp.generate_ranking()
 		rankings.append(temp.ranking_of_letters_frequency)
 		sentence_numbers.append(temp.number_of_sentences)
-		inventories.append(temp.letters_inventory)
+		inventories.append([k for k in temp.ranking_of_letters_frequency if temp.ranking_of_letters_frequency.get(k) > 0.05])
 
 	reference_language_inventory = inventories[0]
 
