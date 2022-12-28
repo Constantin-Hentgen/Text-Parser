@@ -14,7 +14,7 @@ def fetch_chart_name():
 def generate_multi_column_chart(title, x_axis, y_axis, x_label, y_label, accuracy):
 	x = np.arange(len(x_axis))
 	width = 0.8/len(x_label) # taille des colonnes
-	fig, ax = plt.subplots()
+	fig, ax = plt.subplots(figsize=(8, 3), dpi=300)
 	
 	if len(x_label) == 3:
 		for array in y_axis:
@@ -31,7 +31,7 @@ def generate_multi_column_chart(title, x_axis, y_axis, x_label, y_label, accurac
 	ax.set_ylabel(y_label)
 	ax.set_title(title)
 	ax.set_xticks(x, x_axis)
-	ax.legend(title='Legend')
+	ax.legend(title='Language')
 	fig.tight_layout()
 	save_chart(fig)
 
@@ -40,12 +40,11 @@ def save_chart(fig):
 	fig.savefig("../img/chart_"+str(num)+".jpeg")
 
 def generate_simple_column_chart(title, x_axis, y_axis, x_label, y_label):
-	fig, ax = plt.subplots()
+	fig, ax = plt.subplots(figsize=(8, 3), dpi=300)
 	bar_colors = ['tab:red', 'tab:blue', 'tab:orange','tab:purple','tab:green']
 	ax.bar(x_axis, y_axis, label=x_label, color=bar_colors)
 	ax.set_ylabel(y_label)
 	ax.set_title(title)
-	ax.legend(title='Legend')
 
 	for x_coord, y_coord in zip(x_axis, y_axis):
 		ax.text(x_coord, y_coord, y_coord, ha='center', va='bottom')
@@ -53,8 +52,11 @@ def generate_simple_column_chart(title, x_axis, y_axis, x_label, y_label):
 	save_chart(fig)
 
 def add_chart_to_report(pdf):
+	half_width = pdf.w / 2
+
 	for chart_name in fetch_chart_name():
-		pdf.image("../img/" + chart_name, x=0, w=120)
+
+		pdf.image("../img/" + chart_name, x=23, w=150)
 
 def purge_chart():
 	directory = '../img/'
