@@ -1,16 +1,16 @@
 from fpdf import FPDF
 
-def generate_table(pdf, column_titles, columns_as_lists_of_values, line_titles, unit):
+def generate_table(pdf, column_titles, columns_as_lists_of_values, line_titles, unit, first_column_title):
 	column_width = pdf.w / 6
 
-	# En-têtes du tableau
-	pdf.cell(column_width, 5, "Letters", 1, 0, "C")
+	# Headers
+	pdf.cell(column_width, 5, first_column_title, 1, 0, "C")
 
 	for column_title in column_titles:
 		pdf.cell(column_width, 5, column_title, 1, 0, "C")
 
-	# Lignes du tableau
-	for i in range(1, len(columns_as_lists_of_values[0])):
+	# Lines
+	for i in range(0, len(columns_as_lists_of_values[0])):
 		pdf.ln()
 		
 		pdf.cell(column_width, 5, str(line_titles[i]), 1, 0, "C")

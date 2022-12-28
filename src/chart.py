@@ -18,10 +18,10 @@ def generate_multi_column_chart(title, x_axis, y_axis, x_label, y_label, accurac
 	
 	if len(x_label) == 3:
 		for array in y_axis:
-			if x_label.index(label) != 0:
-				ax.bar(x + width*(-1)**y_label.index(array), [round(percent,accuracy) for percent in array], width, label=x_label[y_axis.index(array)])
-			else:
+			if y_axis.index(array) == 0:
 				ax.bar(x, [round(percent,accuracy) for percent in array], width, label=x_label[0])
+			else:
+				ax.bar(x + width*(-1)**y_axis.index(array), [round(percent,accuracy) for percent in array], width, label=x_label[y_axis.index(array)])
 	elif len(x_label) == 2:
 		for array in y_axis:
 			ax.bar(x + (width*0.5)*(-1)**y_axis.index(array), [round(percent,accuracy) for percent in array], width, label=x_label[y_axis.index(array)])
