@@ -1,6 +1,9 @@
 from random import randint
 import string
 
+# number of letters per word
+# number of words per sentence
+
 class Text:
     def __init__(self, country_code):
         self.file_path = f'../data/{country_code}.txt'
